@@ -1,6 +1,4 @@
-﻿using Unity.Engine;
-
-namespace DefaultNamespace
+﻿namespace DefaultNamespace
 {
     public class SomeMono
     {
