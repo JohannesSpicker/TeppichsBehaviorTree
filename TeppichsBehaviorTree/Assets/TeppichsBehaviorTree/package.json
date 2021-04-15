@@ -1,0 +1,18 @@
+{
+  "name": "com.unity.teppichsbehaviortree",
+  "version": "0.0.1",
+  "displayName": "Teppichs Behavior Tree",
+  "description": "A simple behavior tree agent intelligence.",
+  "unity": "2019.1",
+  "unityRelease": "0b5",
+  "dependencies": {
+ },
+ "keywords": [
+    "teppich"
+  ],
+  "author": {
+    "name": "Johannes Spicker",
+    "email": "johannesspicker@me.com",
+    "url": "https://github.com/JohannesSpicker"
+  }
+}
