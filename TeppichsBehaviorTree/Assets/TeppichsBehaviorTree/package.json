@@ -6,6 +6,7 @@
   "unity": "2019.1",
   "unityRelease": "0b5",
   "dependencies": {
+    "com.teppich.teppichstools": "0.0.3"
  },
  "keywords": [
     "teppich"
