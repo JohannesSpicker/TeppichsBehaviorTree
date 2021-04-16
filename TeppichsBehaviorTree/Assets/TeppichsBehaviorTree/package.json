@@ -1,5 +1,5 @@
 {
-  "name": "com.unity.teppichsbehaviortree",
+  "name": "com.teppich.teppichsbehaviortree",
   "version": "0.0.3",
   "displayName": "Teppichs Behavior Tree",
   "description": "A simple behavior tree agent intelligence.",
