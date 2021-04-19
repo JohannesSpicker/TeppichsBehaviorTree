@@ -1,0 +1,18 @@
+{
+    "name": "TreeRunner",
+    "rootNamespace": "",
+    "references": [
+        "GUID:ebc8aa3a2559e874cb0ee7c9f7a62cfa",
+        "GUID:132ffe1410a13a64fbe878117d378fc8",
+        "GUID:883d298fff41c734080734ab5416b4d1"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

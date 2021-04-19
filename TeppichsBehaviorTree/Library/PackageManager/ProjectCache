@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637541191870893720
-    m_Hash: 2793939262
+      ticks: 637542903162341568
+    m_Hash: 2749611643
   m_LockFileStatus:
     m_FilePath: D:/GitRepos/TeppichsBehaviorTree/TeppichsBehaviorTree/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637541191991773345
-    m_Hash: 774189148
+      ticks: 637542903721512252
+    m_Hash: 1087097323
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
@@ -22,6 +22,63 @@ m_LocalPackages:
 m_ProjectPath: D:/GitRepos/TeppichsBehaviorTree/TeppichsBehaviorTree/Packages
 m_EditorVersion: 2021.1.0f1 (61a549675243)
 m_ResolvedPackages:
+- packageId: com.teppich.teppichstools@0.0.4
+  testable: 0
+  isDirectDependency: 1
+  version: 0.0.4
+  source: 1
+  resolvedPath: D:\GitRepos\TeppichsBehaviorTree\TeppichsBehaviorTree\Library\PackageCache\com.teppich.teppichstools@0.0.4
+  assetPath: Packages/com.teppich.teppichstools
+  name: com.teppich.teppichstools
+  displayName: Teppichs Tools
+  author:
+    name: Johannes Spicker
+    email: johannesspicker@me.com
+    url: https://github.com/JohannesSpicker
+  category: 
+  type: 
+  description: General purpose C#/Unity tools
+  status: 4
+  errors: []
+  versions:
+    all:
+    - 0.0.1
+    - 0.0.3
+    - 0.0.4
+    compatible:
+    - 0.0.1
+    - 0.0.3
+    - 0.0.4
+    verified: 
+  dependencies: []
+  resolvedDependencies: []
+  keywords:
+  - tool
+  - utility
+  registry:
+    id: scoped:OpenUPM
+    name: OpenUPM
+    url: https://package.openupm.com
+    scopes:
+    - com.teppich
+    isDefault: 0
+    capabilities: 0
+  hasRegistry: 1
+  hideInEditor: 1
+  entitlements:
+    isAllowed: 1
+  isAssetStorePackage: 0
+  datePublishedTicks: 637542794137920000
+  documentationUrl: 
+  hasRepository: 0
+  repository:
+    type: 
+    url: 
+    revision: 
+    path: 
+  unityLifecycle:
+    version: 
+    nextVersion: 
 - packageId: com.unity.collab-proxy@1.3.9
   testable: 0
   isDirectDependency: 1
@@ -805,9 +862,11 @@ m_ResolvedPackages:
     - 1.5.1
     - 1.5.2
     - 1.6.0-pre.3
+    - 1.6.0
     compatible:
     - 1.5.2
     - 1.6.0-pre.3
+    - 1.6.0
     verified: 1.5.2
   dependencies:
   - name: com.unity.ugui

@@ -41,8 +41,8 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\TeppichsBehaviorTree\Runtime\SomeMono.cs" />
-     <None Include="Assets\TeppichsBehaviorTree\Runtime\Unity.TeppichsBehaviorTree.asmdef" />
+     <Compile Include="Assets\TeppichsBehaviorTree\Runtime\AssemblyInfo.cs" />
+     <None Include="Assets\TeppichsBehaviorTree\Runtime\TeppichsBehaviorTree.asmdef" />
      <Reference Include="UnityEngine">
      <HintPath>C:/Program Files/Engines/Unity Versions/2021.1.0f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
      </Reference>

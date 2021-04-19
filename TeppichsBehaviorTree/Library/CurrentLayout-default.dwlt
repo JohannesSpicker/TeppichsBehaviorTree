@@ -21,7 +21,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: Project
   m_RootView: {fileID: 4}
-  m_MinSize: {x: 875, y: 542}
+  m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 1
 --- !u!114 &2
@@ -162,10 +162,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 987
-  m_MinSize: {x: 781, y: 492}
-  m_MaxSize: {x: 18004, y: 14042}
+  m_MinSize: {x: 703, y: 471}
+  m_MaxSize: {x: 18003, y: 14042}
   vertical: 0
-  controlID: 68
+  controlID: 143
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -187,10 +187,10 @@ MonoBehaviour:
     y: 0
     width: 1549
     height: 987
-  m_MinSize: {x: 505, y: 492}
+  m_MinSize: {x: 403, y: 471}
   m_MaxSize: {x: 14003, y: 14042}
   vertical: 1
-  controlID: 69
+  controlID: 144
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -212,11 +212,11 @@ MonoBehaviour:
     x: 0
     y: 0
     width: 1549
-    height: 412
-  m_MinSize: {x: 505, y: 221}
-  m_MaxSize: {x: 12005, y: 4021}
+    height: 382
+  m_MinSize: {x: 403, y: 200}
+  m_MaxSize: {x: 12003, y: 4021}
   vertical: 0
-  controlID: 70
+  controlID: 145
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -234,10 +234,10 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 723
-    height: 412
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
+    width: 711
+    height: 382
+  m_MinSize: {x: 101, y: 121}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 20}
   m_Panes:
   - {fileID: 20}
@@ -253,23 +253,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: GameView
+  m_Name: TestRunnerWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 723
+    x: 711
     y: 0
-    width: 539
-    height: 412
-  m_MinSize: {x: 200, y: 200}
+    width: 551
+    height: 382
+  m_MinSize: {x: 100, y: 100}
   m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 19}
+  m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 18}
   - {fileID: 19}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -288,7 +288,7 @@ MonoBehaviour:
     x: 1262
     y: 0
     width: 287
-    height: 412
+    height: 382
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 21}
@@ -314,13 +314,13 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 412
+    y: 382
     width: 1549
-    height: 575
+    height: 605
   m_MinSize: {x: 333, y: 271}
   m_MaxSize: {x: 14003, y: 10021}
   vertical: 0
-  controlID: 125
+  controlID: 59
 --- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -338,8 +338,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 249
-    height: 575
+    width: 528
+    height: 605
   m_MinSize: {x: 231, y: 271}
   m_MaxSize: {x: 10001, y: 10021}
   m_ActualView: {fileID: 22}
@@ -362,10 +362,10 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 249
+    x: 528
     y: 0
-    width: 1300
-    height: 575
+    width: 1021
+    height: 605
   m_MinSize: {x: 102, y: 121}
   m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 23}
@@ -383,7 +383,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: InspectorWindow
+  m_Name: NavMeshEditorWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -392,16 +392,14 @@ MonoBehaviour:
     y: 0
     width: 371
     height: 987
-  m_MinSize: {x: 275, y: 100}
+  m_MinSize: {x: 300, y: 360}
   m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 24}
+  m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 24}
-  - {fileID: 25}
-  - {fileID: 26}
   - {fileID: 17}
-  m_Selected: 0
-  m_LastSelected: 3
+  m_Selected: 1
+  m_LastSelected: 0
 --- !u!114 &17
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -422,9 +420,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 3235
+    x: 1549
     y: 73
-    width: 604
+    width: 370
     height: 966
   m_ViewDataDictionary: {fileID: 0}
 --- !u!114 &18
@@ -447,18 +445,18 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 2558
+    x: 711
     y: 73
-    width: 270
-    height: 434
+    width: 549
+    height: 361
   m_ViewDataDictionary: {fileID: 0}
   m_Spl:
-    ID: 177
+    ID: 175
     splitterInitialOffset: 0
     currentActiveSplitter: -1
     realSizes:
-    - 273
-    - 91
+    - 218
+    - 73
     relativeSizes:
     - 0.75
     - 0.25
@@ -468,7 +466,7 @@ MonoBehaviour:
     maxSizes:
     - 0
     - 0
-    lastTotalSize: 364
+    lastTotalSize: 291
     splitSize: 6
     xOffset: 0
     m_Version: 1
@@ -476,17 +474,17 @@ MonoBehaviour:
     oldMinSizes: 
     oldMaxSizes: 
     oldSplitSize: 0
-  m_TestTypeToolbarIndex: 1
+  m_TestTypeToolbarIndex: 0
   m_PlayModeTestListGUI:
     m_Window: {fileID: 18}
     newResultList:
     - id: 1012
-      uniqueId: '[ModularBehaviourTree][suite]'
-      name: ModularBehaviourTree
-      fullName: ModularBehaviourTree
-      resultStatus: 1
-      duration: 0.027111
-      messages: 
+      uniqueId: '[TeppichsBehaviorTree][suite]'
+      name: TeppichsBehaviorTree
+      fullName: TeppichsBehaviorTree
+      resultStatus: 2
+      duration: 0.3334116
+      messages: One or more child tests had errors
       output: 
       stacktrace: 
       notRunnable: 0
@@ -496,13 +494,619 @@ MonoBehaviour:
       categories: []
       parentId: 
       parentUniqueId: 
-    m_ResultText: BehaviourTreeTestsSimplePasses (0.011s)
+    - id: 1029
+      uniqueId: '[TeppichsBehaviorTree.Tests.dll][suite]'
+      name: TeppichsBehaviorTree.Tests.dll
+      fullName: D:/GitRepos/TeppichsBehaviorTree/TeppichsBehaviorTree/Library/ScriptAssemblies/TeppichsBehaviorTree.Tests.dll
+      resultStatus: 2
+      duration: 0.2664065
+      messages: One or more child tests had errors
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1012
+      parentUniqueId: '[TeppichsBehaviorTree][suite]'
+    - id: 1030
+      uniqueId: TeppichsBehaviorTree.Tests.dll/[TeppichsBehaviorTree.Tests][Tests][suite]
+      name: Tests
+      fullName: Tests
+      resultStatus: 2
+      duration: 0.2307612
+      messages: One or more child tests had errors
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1029
+      parentUniqueId: '[TeppichsBehaviorTree.Tests.dll][suite]'
+    - id: 1013
+      uniqueId: TeppichsBehaviorTree.Tests.dll/Tests/[TeppichsBehaviorTree.Tests][Tests.MockPrimitives][suite]
+      name: MockPrimitives
+      fullName: Tests.MockPrimitives
+      resultStatus: 1
+      duration: 0.0306304
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1030
+      parentUniqueId: TeppichsBehaviorTree.Tests.dll/[TeppichsBehaviorTree.Tests][Tests][suite]
+    - id: 1014
+      uniqueId: TeppichsBehaviorTree.Tests.dll/Tests/MockPrimitives/[TeppichsBehaviorTree.Tests][Tests.MockPrimitives.BehaviourTreeTestsSimplePasses]
+      name: BehaviourTreeTestsSimplePasses
+      fullName: Tests.MockPrimitives.BehaviourTreeTestsSimplePasses
+      resultStatus: 1
+      duration: 0.0100763
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1013
+      parentUniqueId: TeppichsBehaviorTree.Tests.dll/Tests/[TeppichsBehaviorTree.Tests][Tests.MockPrimitives][suite]
+    - id: 1031
+      uniqueId: TeppichsBehaviorTree.Tests.dll/Tests/[TeppichsBehaviorTree.Tests][Tests.PrimitiveTests][suite]
+      name: PrimitiveTests
+      fullName: Tests.PrimitiveTests
+      resultStatus: 2
+      duration: 0.1588649
+      messages: One or more child tests had errors
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1030
+      parentUniqueId: TeppichsBehaviorTree.Tests.dll/[TeppichsBehaviorTree.Tests][Tests][suite]
+    - id: 1024
+      uniqueId: TeppichsBehaviorTree.Tests.dll/Tests/PrimitiveTests/[TeppichsBehaviorTree.Tests][Tests.PrimitiveTests.DecoratorTests][suite]
+      name: DecoratorTests
+      fullName: Tests.PrimitiveTests.DecoratorTests
+      resultStatus: 1
+      duration: 0.0056456
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1031
+      parentUniqueId: TeppichsBehaviorTree.Tests.dll/Tests/[TeppichsBehaviorTree.Tests][Tests.PrimitiveTests][suite]
+    - id: 1025
+      uniqueId: TeppichsBehaviorTree.Tests.dll/Tests/PrimitiveTests/DecoratorTests/[TeppichsBehaviorTree.Tests][Tests.PrimitiveTests.DecoratorTests.SomeDecoratorTest]
+      name: SomeDecoratorTest
+      fullName: Tests.PrimitiveTests.DecoratorTests.SomeDecoratorTest
+      resultStatus: 1
+      duration: 0.0001621
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1024
+      parentUniqueId: TeppichsBehaviorTree.Tests.dll/Tests/PrimitiveTests/[TeppichsBehaviorTree.Tests][Tests.PrimitiveTests.DecoratorTests][suite]
+    - id: 1026
+      uniqueId: TeppichsBehaviorTree.Tests.dll/Tests/PrimitiveTests/[TeppichsBehaviorTree.Tests][Tests.PrimitiveTests.LeafTests][suite]
+      name: LeafTests
+      fullName: Tests.PrimitiveTests.LeafTests
+      resultStatus: 2
+      duration: 0.0409214
+      messages: One or more child tests had errors
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1031
+      parentUniqueId: TeppichsBehaviorTree.Tests.dll/Tests/[TeppichsBehaviorTree.Tests][Tests.PrimitiveTests][suite]
+    - id: 1027
+      uniqueId: TeppichsBehaviorTree.Tests.dll/Tests/PrimitiveTests/LeafTests/[TeppichsBehaviorTree.Tests][Tests.PrimitiveTests.LeafTests.FirstTickIsRunning]
+      name: FirstTickIsRunning
+      fullName: Tests.PrimitiveTests.LeafTests.FirstTickIsRunning
+      resultStatus: 2
+      duration: 0.0095342
+      messages: 'Unhandled log message: ''[Exception] NullReferenceException: Object
+        reference not set to an instance of an object''. Use UnityEngine.TestTools.LogAssert.Expect'
+      output: 'Failed to create agent because there is no valid NavMesh
+
+        NullReferenceException:
+        Object reference not set to an instance of an object
+
+'
+      stacktrace: 'TreeTickerSpace.TreeTicker.Awake () (at Assets/TeppichsBehaviorTree/Runtime/TreeRunner/TreeTicker.cs:20)
+
+        UnityEngine.GameObject:AddComponent()
+
+        Tests.PrimitiveTests.LeafTests:Setup(Blackboard&,
+        MockLeaf&) (at Assets/TeppichsBehaviorTree/Tests/Runtime/PrimitiveTests/LeafTests.cs:41)
+
+        Tests.PrimitiveTests.LeafTests:FirstTickIsRunning()
+        (at Assets/TeppichsBehaviorTree/Tests/Runtime/PrimitiveTests/LeafTests.cs:14)
+
+        System.Reflection.MethodBase:Invoke(Object,
+        Object[])
+
+        NUnit.Framework.Internal.Reflect:InvokeMethod(MethodInfo,
+        Object, Object[])
+
+        NUnit.Framework.Internal.MethodWrapper:Invoke(Object,
+        Object[])
+
+        NUnit.Framework.Internal.Commands.TestMethodCommand:RunNonAsyncTestMethod(ITestExecutionContext)
+
+        NUnit.Framework.Internal.Commands.TestMethodCommand:RunTestMethod(ITestExecutionContext)
+
+        NUnit.Framework.Internal.Commands.TestMethodCommand:Execute(ITestExecutionContext)
+
+        UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator,
+        IntPtr)
+
+        
+
+'
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1026
+      parentUniqueId: TeppichsBehaviorTree.Tests.dll/Tests/PrimitiveTests/[TeppichsBehaviorTree.Tests][Tests.PrimitiveTests.LeafTests][suite]
+    - id: 1028
+      uniqueId: TeppichsBehaviorTree.Tests.dll/Tests/PrimitiveTests/LeafTests/[TeppichsBehaviorTree.Tests][Tests.PrimitiveTests.LeafTests.SecondTickIsSuccess]
+      name: SecondTickIsSuccess
+      fullName: Tests.PrimitiveTests.LeafTests.SecondTickIsSuccess
+      resultStatus: 2
+      duration: 0.0018975
+      messages: 'Unhandled log message: ''[Exception] NullReferenceException: Object
+        reference not set to an instance of an object''. Use UnityEngine.TestTools.LogAssert.Expect'
+      output: 'Failed to create agent because there is no valid NavMesh
+
+        NullReferenceException:
+        Object reference not set to an instance of an object
+
+'
+      stacktrace: 'TreeTickerSpace.TreeTicker.Awake () (at Assets/TeppichsBehaviorTree/Runtime/TreeRunner/TreeTicker.cs:20)
+
+        UnityEngine.GameObject:AddComponent()
+
+        Tests.PrimitiveTests.LeafTests:Setup(Blackboard&,
+        MockLeaf&) (at Assets/TeppichsBehaviorTree/Tests/Runtime/PrimitiveTests/LeafTests.cs:41)
+
+        Tests.PrimitiveTests.LeafTests:SecondTickIsSuccess()
+        (at Assets/TeppichsBehaviorTree/Tests/Runtime/PrimitiveTests/LeafTests.cs:26)
+
+        System.Reflection.MethodBase:Invoke(Object,
+        Object[])
+
+        NUnit.Framework.Internal.Reflect:InvokeMethod(MethodInfo,
+        Object, Object[])
+
+        NUnit.Framework.Internal.MethodWrapper:Invoke(Object,
+        Object[])
+
+        NUnit.Framework.Internal.Commands.TestMethodCommand:RunNonAsyncTestMethod(ITestExecutionContext)
+
+        NUnit.Framework.Internal.Commands.TestMethodCommand:RunTestMethod(ITestExecutionContext)
+
+        NUnit.Framework.Internal.Commands.TestMethodCommand:Execute(ITestExecutionContext)
+
+        UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator,
+        IntPtr)
+
+        
+
+'
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1026
+      parentUniqueId: TeppichsBehaviorTree.Tests.dll/Tests/PrimitiveTests/[TeppichsBehaviorTree.Tests][Tests.PrimitiveTests.LeafTests][suite]
+    - id: 1015
+      uniqueId: TeppichsBehaviorTree.Tests.dll/Tests/PrimitiveTests/[TeppichsBehaviorTree.Tests][Tests.PrimitiveTests.SelectorTests][suite]
+      name: SelectorTests
+      fullName: Tests.PrimitiveTests.SelectorTests
+      resultStatus: 2
+      duration: 0.0183612
+      messages: One or more child tests had errors
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1031
+      parentUniqueId: TeppichsBehaviorTree.Tests.dll/Tests/[TeppichsBehaviorTree.Tests][Tests.PrimitiveTests][suite]
+    - id: 1016
+      uniqueId: TeppichsBehaviorTree.Tests.dll/Tests/PrimitiveTests/SelectorTests/[TeppichsBehaviorTree.Tests][Tests.PrimitiveTests.SelectorTests.SelectorShouldReturnRunningOnFirstTick]
+      name: SelectorShouldReturnRunningOnFirstTick
+      fullName: Tests.PrimitiveTests.SelectorTests.SelectorShouldReturnRunningOnFirstTick
+      resultStatus: 2
+      duration: 0.002618
+      messages: 'Unhandled log message: ''[Exception] NullReferenceException: Object
+        reference not set to an instance of an object''. Use UnityEngine.TestTools.LogAssert.Expect'
+      output: 'Failed to create agent because there is no valid NavMesh
+
+        NullReferenceException:
+        Object reference not set to an instance of an object
+
+'
+      stacktrace: 'TreeTickerSpace.TreeTicker.Awake () (at Assets/TeppichsBehaviorTree/Runtime/TreeRunner/TreeTicker.cs:20)
+
+        UnityEngine.GameObject:AddComponent()
+
+        Tests.PrimitiveTests.SelectorTests:Setup(Blackboard&,
+        Selector&) (at Assets/TeppichsBehaviorTree/Tests/Runtime/CompositeTests/SelectorTests.cs:43)
+
+        Tests.PrimitiveTests.SelectorTests:SelectorShouldReturnRunningOnFirstTick()
+        (at Assets/TeppichsBehaviorTree/Tests/Runtime/CompositeTests/SelectorTests.cs:15)
+
+        System.Reflection.MethodBase:Invoke(Object,
+        Object[])
+
+        NUnit.Framework.Internal.Reflect:InvokeMethod(MethodInfo,
+        Object, Object[])
+
+        NUnit.Framework.Internal.MethodWrapper:Invoke(Object,
+        Object[])
+
+        NUnit.Framework.Internal.Commands.TestMethodCommand:RunNonAsyncTestMethod(ITestExecutionContext)
+
+        NUnit.Framework.Internal.Commands.TestMethodCommand:RunTestMethod(ITestExecutionContext)
+
+        NUnit.Framework.Internal.Commands.TestMethodCommand:Execute(ITestExecutionContext)
+
+        UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator,
+        IntPtr)
+
+        
+
+'
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1015
+      parentUniqueId: TeppichsBehaviorTree.Tests.dll/Tests/PrimitiveTests/[TeppichsBehaviorTree.Tests][Tests.PrimitiveTests.SelectorTests][suite]
+    - id: 1017
+      uniqueId: TeppichsBehaviorTree.Tests.dll/Tests/PrimitiveTests/SelectorTests/[TeppichsBehaviorTree.Tests][Tests.PrimitiveTests.SelectorTests.SelectorShouldReturnSuccessOnSecondTick]
+      name: SelectorShouldReturnSuccessOnSecondTick
+      fullName: Tests.PrimitiveTests.SelectorTests.SelectorShouldReturnSuccessOnSecondTick
+      resultStatus: 2
+      duration: 0.0018473
+      messages: 'Unhandled log message: ''[Exception] NullReferenceException: Object
+        reference not set to an instance of an object''. Use UnityEngine.TestTools.LogAssert.Expect'
+      output: 'Failed to create agent because there is no valid NavMesh
+
+        NullReferenceException:
+        Object reference not set to an instance of an object
+
+'
+      stacktrace: 'TreeTickerSpace.TreeTicker.Awake () (at Assets/TeppichsBehaviorTree/Runtime/TreeRunner/TreeTicker.cs:20)
+
+        UnityEngine.GameObject:AddComponent()
+
+        Tests.PrimitiveTests.SelectorTests:Setup(Blackboard&,
+        Selector&) (at Assets/TeppichsBehaviorTree/Tests/Runtime/CompositeTests/SelectorTests.cs:43)
+
+        Tests.PrimitiveTests.SelectorTests:SelectorShouldReturnSuccessOnSecondTick()
+        (at Assets/TeppichsBehaviorTree/Tests/Runtime/CompositeTests/SelectorTests.cs:25)
+
+        System.Reflection.MethodBase:Invoke(Object,
+        Object[])
+
+        NUnit.Framework.Internal.Reflect:InvokeMethod(MethodInfo,
+        Object, Object[])
+
+        NUnit.Framework.Internal.MethodWrapper:Invoke(Object,
+        Object[])
+
+        NUnit.Framework.Internal.Commands.TestMethodCommand:RunNonAsyncTestMethod(ITestExecutionContext)
+
+        NUnit.Framework.Internal.Commands.TestMethodCommand:RunTestMethod(ITestExecutionContext)
+
+        NUnit.Framework.Internal.Commands.TestMethodCommand:Execute(ITestExecutionContext)
+
+        UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator,
+        IntPtr)
+
+        
+
+'
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1015
+      parentUniqueId: TeppichsBehaviorTree.Tests.dll/Tests/PrimitiveTests/[TeppichsBehaviorTree.Tests][Tests.PrimitiveTests.SelectorTests][suite]
+    - id: 1018
+      uniqueId: TeppichsBehaviorTree.Tests.dll/Tests/PrimitiveTests/[TeppichsBehaviorTree.Tests][Tests.PrimitiveTests.SequenceTests][suite]
+      name: SequenceTests
+      fullName: Tests.PrimitiveTests.SequenceTests
+      resultStatus: 2
+      duration: 0.0550573
+      messages: One or more child tests had errors
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1031
+      parentUniqueId: TeppichsBehaviorTree.Tests.dll/Tests/[TeppichsBehaviorTree.Tests][Tests.PrimitiveTests][suite]
+    - id: 1022
+      uniqueId: TeppichsBehaviorTree.Tests.dll/Tests/PrimitiveTests/SequenceTests/[TeppichsBehaviorTree.Tests][Tests.PrimitiveTests.SequenceTests.SequenceShouldReturnRunningOnFirstThreeTicks][suite]
+      name: SequenceShouldReturnRunningOnFirstThreeTicks
+      fullName: Tests.PrimitiveTests.SequenceTests.SequenceShouldReturnRunningOnFirstThreeTicks
+      resultStatus: 2
+      duration: 0.0307034
+      messages: One or more child tests had errors
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1018
+      parentUniqueId: TeppichsBehaviorTree.Tests.dll/Tests/PrimitiveTests/[TeppichsBehaviorTree.Tests][Tests.PrimitiveTests.SequenceTests][suite]
+    - id: 1019
+      uniqueId: TeppichsBehaviorTree.Tests.dll/Tests/PrimitiveTests/SequenceTests/SequenceShouldReturnRunningOnFirstThreeTicks/[TeppichsBehaviorTree.Tests][Tests.PrimitiveTests.SequenceTests.SequenceShouldReturnRunningOnFirstThreeTicks(0)]
+      name: SequenceShouldReturnRunningOnFirstThreeTicks(0)
+      fullName: Tests.PrimitiveTests.SequenceTests.SequenceShouldReturnRunningOnFirstThreeTicks(0)
+      resultStatus: 2
+      duration: 0.0026779
+      messages: 'Unhandled log message: ''[Exception] NullReferenceException: Object
+        reference not set to an instance of an object''. Use UnityEngine.TestTools.LogAssert.Expect'
+      output: 'Failed to create agent because there is no valid NavMesh
+
+        NullReferenceException:
+        Object reference not set to an instance of an object
+
+'
+      stacktrace: 'TreeTickerSpace.TreeTicker.Awake () (at Assets/TeppichsBehaviorTree/Runtime/TreeRunner/TreeTicker.cs:20)
+
+        UnityEngine.GameObject:AddComponent()
+
+        Tests.PrimitiveTests.SequenceTests:Setup(Blackboard&,
+        Sequence&) (at Assets/TeppichsBehaviorTree/Tests/Runtime/CompositeTests/SequenceTests.cs:49)
+
+        Tests.PrimitiveTests.SequenceTests:SequenceShouldReturnRunningOnFirstThreeTicks(Int32)
+        (at Assets/TeppichsBehaviorTree/Tests/Runtime/CompositeTests/SequenceTests.cs:15)
+
+        System.Reflection.MethodBase:Invoke(Object,
+        Object[])
+
+        NUnit.Framework.Internal.Reflect:InvokeMethod(MethodInfo,
+        Object, Object[])
+
+        NUnit.Framework.Internal.MethodWrapper:Invoke(Object,
+        Object[])
+
+        NUnit.Framework.Internal.Commands.TestMethodCommand:RunNonAsyncTestMethod(ITestExecutionContext)
+
+        NUnit.Framework.Internal.Commands.TestMethodCommand:RunTestMethod(ITestExecutionContext)
+
+        NUnit.Framework.Internal.Commands.TestMethodCommand:Execute(ITestExecutionContext)
+
+        UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator,
+        IntPtr)
+
+        
+
+'
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1022
+      parentUniqueId: TeppichsBehaviorTree.Tests.dll/Tests/PrimitiveTests/SequenceTests/[TeppichsBehaviorTree.Tests][Tests.PrimitiveTests.SequenceTests.SequenceShouldReturnRunningOnFirstThreeTicks][suite]
+    - id: 1020
+      uniqueId: TeppichsBehaviorTree.Tests.dll/Tests/PrimitiveTests/SequenceTests/SequenceShouldReturnRunningOnFirstThreeTicks/[TeppichsBehaviorTree.Tests][Tests.PrimitiveTests.SequenceTests.SequenceShouldReturnRunningOnFirstThreeTicks(1)]
+      name: SequenceShouldReturnRunningOnFirstThreeTicks(1)
+      fullName: Tests.PrimitiveTests.SequenceTests.SequenceShouldReturnRunningOnFirstThreeTicks(1)
+      resultStatus: 2
+      duration: 0.0018319
+      messages: 'Unhandled log message: ''[Exception] NullReferenceException: Object
+        reference not set to an instance of an object''. Use UnityEngine.TestTools.LogAssert.Expect'
+      output: 'Failed to create agent because there is no valid NavMesh
+
+        NullReferenceException:
+        Object reference not set to an instance of an object
+
+'
+      stacktrace: 'TreeTickerSpace.TreeTicker.Awake () (at Assets/TeppichsBehaviorTree/Runtime/TreeRunner/TreeTicker.cs:20)
+
+        UnityEngine.GameObject:AddComponent()
+
+        Tests.PrimitiveTests.SequenceTests:Setup(Blackboard&,
+        Sequence&) (at Assets/TeppichsBehaviorTree/Tests/Runtime/CompositeTests/SequenceTests.cs:49)
+
+        Tests.PrimitiveTests.SequenceTests:SequenceShouldReturnRunningOnFirstThreeTicks(Int32)
+        (at Assets/TeppichsBehaviorTree/Tests/Runtime/CompositeTests/SequenceTests.cs:15)
+
+        System.Reflection.MethodBase:Invoke(Object,
+        Object[])
+
+        NUnit.Framework.Internal.Reflect:InvokeMethod(MethodInfo,
+        Object, Object[])
+
+        NUnit.Framework.Internal.MethodWrapper:Invoke(Object,
+        Object[])
+
+        NUnit.Framework.Internal.Commands.TestMethodCommand:RunNonAsyncTestMethod(ITestExecutionContext)
+
+        NUnit.Framework.Internal.Commands.TestMethodCommand:RunTestMethod(ITestExecutionContext)
+
+        NUnit.Framework.Internal.Commands.TestMethodCommand:Execute(ITestExecutionContext)
+
+        UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator,
+        IntPtr)
+
+        
+
+'
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1022
+      parentUniqueId: TeppichsBehaviorTree.Tests.dll/Tests/PrimitiveTests/SequenceTests/[TeppichsBehaviorTree.Tests][Tests.PrimitiveTests.SequenceTests.SequenceShouldReturnRunningOnFirstThreeTicks][suite]
+    - id: 1021
+      uniqueId: TeppichsBehaviorTree.Tests.dll/Tests/PrimitiveTests/SequenceTests/SequenceShouldReturnRunningOnFirstThreeTicks/[TeppichsBehaviorTree.Tests][Tests.PrimitiveTests.SequenceTests.SequenceShouldReturnRunningOnFirstThreeTicks(2)]
+      name: SequenceShouldReturnRunningOnFirstThreeTicks(2)
+      fullName: Tests.PrimitiveTests.SequenceTests.SequenceShouldReturnRunningOnFirstThreeTicks(2)
+      resultStatus: 2
+      duration: 0.0017805
+      messages: 'Unhandled log message: ''[Exception] NullReferenceException: Object
+        reference not set to an instance of an object''. Use UnityEngine.TestTools.LogAssert.Expect'
+      output: 'Failed to create agent because there is no valid NavMesh
+
+        NullReferenceException:
+        Object reference not set to an instance of an object
+
+'
+      stacktrace: 'TreeTickerSpace.TreeTicker.Awake () (at Assets/TeppichsBehaviorTree/Runtime/TreeRunner/TreeTicker.cs:20)
+
+        UnityEngine.GameObject:AddComponent()
+
+        Tests.PrimitiveTests.SequenceTests:Setup(Blackboard&,
+        Sequence&) (at Assets/TeppichsBehaviorTree/Tests/Runtime/CompositeTests/SequenceTests.cs:49)
+
+        Tests.PrimitiveTests.SequenceTests:SequenceShouldReturnRunningOnFirstThreeTicks(Int32)
+        (at Assets/TeppichsBehaviorTree/Tests/Runtime/CompositeTests/SequenceTests.cs:15)
+
+        System.Reflection.MethodBase:Invoke(Object,
+        Object[])
+
+        NUnit.Framework.Internal.Reflect:InvokeMethod(MethodInfo,
+        Object, Object[])
+
+        NUnit.Framework.Internal.MethodWrapper:Invoke(Object,
+        Object[])
+
+        NUnit.Framework.Internal.Commands.TestMethodCommand:RunNonAsyncTestMethod(ITestExecutionContext)
+
+        NUnit.Framework.Internal.Commands.TestMethodCommand:RunTestMethod(ITestExecutionContext)
+
+        NUnit.Framework.Internal.Commands.TestMethodCommand:Execute(ITestExecutionContext)
+
+        UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator,
+        IntPtr)
+
+        
+
+'
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1022
+      parentUniqueId: TeppichsBehaviorTree.Tests.dll/Tests/PrimitiveTests/SequenceTests/[TeppichsBehaviorTree.Tests][Tests.PrimitiveTests.SequenceTests.SequenceShouldReturnRunningOnFirstThreeTicks][suite]
+    - id: 1023
+      uniqueId: TeppichsBehaviorTree.Tests.dll/Tests/PrimitiveTests/SequenceTests/[TeppichsBehaviorTree.Tests][Tests.PrimitiveTests.SequenceTests.SequenceShouldReturnSuccessOnFourthTick]
+      name: SequenceShouldReturnSuccessOnFourthTick
+      fullName: Tests.PrimitiveTests.SequenceTests.SequenceShouldReturnSuccessOnFourthTick
+      resultStatus: 2
+      duration: 0.0020448
+      messages: 'Unhandled log message: ''[Exception] NullReferenceException: Object
+        reference not set to an instance of an object''. Use UnityEngine.TestTools.LogAssert.Expect'
+      output: 'Failed to create agent because there is no valid NavMesh
+
+        NullReferenceException:
+        Object reference not set to an instance of an object
+
+'
+      stacktrace: 'TreeTickerSpace.TreeTicker.Awake () (at Assets/TeppichsBehaviorTree/Runtime/TreeRunner/TreeTicker.cs:20)
+
+        UnityEngine.GameObject:AddComponent()
+
+        Tests.PrimitiveTests.SequenceTests:Setup(Blackboard&,
+        Sequence&) (at Assets/TeppichsBehaviorTree/Tests/Runtime/CompositeTests/SequenceTests.cs:49)
+
+        Tests.PrimitiveTests.SequenceTests:SequenceShouldReturnSuccessOnFourthTick()
+        (at Assets/TeppichsBehaviorTree/Tests/Runtime/CompositeTests/SequenceTests.cs:28)
+
+        System.Reflection.MethodBase:Invoke(Object,
+        Object[])
+
+        NUnit.Framework.Internal.Reflect:InvokeMethod(MethodInfo,
+        Object, Object[])
+
+        NUnit.Framework.Internal.MethodWrapper:Invoke(Object,
+        Object[])
+
+        NUnit.Framework.Internal.Commands.TestMethodCommand:RunNonAsyncTestMethod(ITestExecutionContext)
+
+        NUnit.Framework.Internal.Commands.TestMethodCommand:RunTestMethod(ITestExecutionContext)
+
+        NUnit.Framework.Internal.Commands.TestMethodCommand:Execute(ITestExecutionContext)
+
+        UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator,
+        IntPtr)
+
+        
+
+'
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1018
+      parentUniqueId: TeppichsBehaviorTree.Tests.dll/Tests/PrimitiveTests/[TeppichsBehaviorTree.Tests][Tests.PrimitiveTests.SequenceTests][suite]
+    m_ResultText: 'Tests (0.231s)
+
+      ---
+
+      One or more child tests had errors'
     m_ResultStacktrace: 
     m_TestListState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 8fed23e2
-      m_LastClickedID: -500961905
-      m_ExpandedIDs: 67302682f1c563dfa5dc6d7cffffff7f
+      m_SelectedIDs: 9cc2a7a1
+      m_LastClickedID: -1582841188
+      m_ExpandedIDs: 67302682f6829c89abb0a2929cc2a7a1f1c563df46b8880d571a544fa14a5255b40ef25b19bc226258ba676ca5dc6d7cffffff7f
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -532,12 +1136,12 @@ MonoBehaviour:
   m_EditModeTestListGUI:
     m_Window: {fileID: 18}
     newResultList:
-    - id: 1008
-      uniqueId: '[ModularBehaviourTree][suite]'
-      name: ModularBehaviourTree
-      fullName: ModularBehaviourTree
-      resultStatus: 0
-      duration: 0.1405775
+    - id: 1000
+      uniqueId: '[TeppichsBehaviorTree][suite]'
+      name: TeppichsBehaviorTree
+      fullName: TeppichsBehaviorTree
+      resultStatus: 1
+      duration: 0.0205994
       messages: 
       output: 
       stacktrace: 
@@ -548,327 +1152,13 @@ MonoBehaviour:
       categories: []
       parentId: 
       parentUniqueId: 
-    - id: 1006
-      uniqueId: '[Tests.dll][suite]'
-      name: Tests.dll
-      fullName: D:/GitRepos/ModularBehaviourTree/ModularBehaviourTree/Library/ScriptAssemblies/Tests.dll
-      resultStatus: 0
-      duration: 0.094306
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1000
-      parentUniqueId: '[ModularBehaviourTree][suite]'
-    - id: 1007
-      uniqueId: Tests.dll/[Tests][suite]
-      name: Tests
-      fullName: Tests
-      resultStatus: 0
-      duration: 0.0851301
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1006
-      parentUniqueId: '[Tests.dll][suite]'
-    - id: 1001
-      uniqueId: Tests.dll/Tests/[Tests][Tests.MockPrimitives][suite]
-      name: MockPrimitives
-      fullName: Tests.MockPrimitives
-      resultStatus: 0
-      duration: 0.028277
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1017
-      parentUniqueId: Tests.dll/[Tests][suite]
-    - id: 1002
-      uniqueId: Tests.dll/Tests/MockPrimitives/[Tests][Tests.MockPrimitives.BehaviourTreeTestsSimplePasses]
-      name: BehaviourTreeTestsSimplePasses
-      fullName: Tests.MockPrimitives.BehaviourTreeTestsSimplePasses
-      resultStatus: 0
-      duration: 0.0095116
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1001
-      parentUniqueId: Tests.dll/Tests/[Tests][Tests.MockPrimitives][suite]
-    - id: 1008
-      uniqueId: Tests.dll/Tests/[Tests][Tests.PrimitiveTests][suite]
-      name: PrimitiveTests
-      fullName: Tests.PrimitiveTests
-      resultStatus: 0
-      duration: 0.0472513
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1007
-      parentUniqueId: Tests.dll/[Tests][suite]
-    - id: 1005
-      uniqueId: Tests.dll/Tests/PrimitiveTests/[Tests][Tests.PrimitiveTests.DecoratorTests][suite]
-      name: DecoratorTests
-      fullName: Tests.PrimitiveTests.DecoratorTests
-      resultStatus: 0
-      duration: 0.0020218
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1012
-      parentUniqueId: Tests.dll/Tests/[Tests][Tests.PrimitiveTests][suite]
-    - id: 1006
-      uniqueId: Tests.dll/Tests/PrimitiveTests/DecoratorTests/[Tests][Tests.PrimitiveTests.DecoratorTests.SomeDecoratorTest]
-      name: SomeDecoratorTest
-      fullName: Tests.PrimitiveTests.DecoratorTests.SomeDecoratorTest
-      resultStatus: 0
-      duration: 0.0001566
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1005
-      parentUniqueId: Tests.dll/Tests/PrimitiveTests/[Tests][Tests.PrimitiveTests.DecoratorTests][suite]
-    - id: 1007
-      uniqueId: Tests.dll/Tests/PrimitiveTests/[Tests][Tests.PrimitiveTests.LeafTests][suite]
-      name: LeafTests
-      fullName: Tests.PrimitiveTests.LeafTests
-      resultStatus: 0
-      duration: 0.0084861
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1012
-      parentUniqueId: Tests.dll/Tests/[Tests][Tests.PrimitiveTests][suite]
-    - id: 1008
-      uniqueId: Tests.dll/Tests/PrimitiveTests/LeafTests/[Tests][Tests.PrimitiveTests.LeafTests.FirstTickIsRunning]
-      name: FirstTickIsRunning
-      fullName: Tests.PrimitiveTests.LeafTests.FirstTickIsRunning
-      resultStatus: 0
-      duration: 0.0017959
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1007
-      parentUniqueId: Tests.dll/Tests/PrimitiveTests/[Tests][Tests.PrimitiveTests.LeafTests][suite]
-    - id: 1009
-      uniqueId: Tests.dll/Tests/PrimitiveTests/LeafTests/[Tests][Tests.PrimitiveTests.LeafTests.SecondTickIsSuccess]
-      name: SecondTickIsSuccess
-      fullName: Tests.PrimitiveTests.LeafTests.SecondTickIsSuccess
-      resultStatus: 0
-      duration: 0.000246
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1007
-      parentUniqueId: Tests.dll/Tests/PrimitiveTests/[Tests][Tests.PrimitiveTests.LeafTests][suite]
-    - id: 1003
-      uniqueId: Tests.dll/Tests/PrimitiveTests/[Tests][Tests.PrimitiveTests.SelectorTests][suite]
-      name: SelectorTests
-      fullName: Tests.PrimitiveTests.SelectorTests
-      resultStatus: 0
-      duration: 0.0083105
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1018
-      parentUniqueId: Tests.dll/Tests/[Tests][Tests.PrimitiveTests][suite]
-    - id: 1004
-      uniqueId: Tests.dll/Tests/PrimitiveTests/SelectorTests/[Tests][Tests.PrimitiveTests.SelectorTests.SelectorShouldReturnRunningOnFirstTick]
-      name: SelectorShouldReturnRunningOnFirstTick
-      fullName: Tests.PrimitiveTests.SelectorTests.SelectorShouldReturnRunningOnFirstTick
-      resultStatus: 0
-      duration: 0.000739
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1003
-      parentUniqueId: Tests.dll/Tests/PrimitiveTests/[Tests][Tests.PrimitiveTests.SelectorTests][suite]
-    - id: 1005
-      uniqueId: Tests.dll/Tests/PrimitiveTests/SelectorTests/[Tests][Tests.PrimitiveTests.SelectorTests.SelectorShouldReturnSuccessOnSecondTick]
-      name: SelectorShouldReturnSuccessOnSecondTick
-      fullName: Tests.PrimitiveTests.SelectorTests.SelectorShouldReturnSuccessOnSecondTick
-      resultStatus: 0
-      duration: 0.0002238
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1003
-      parentUniqueId: Tests.dll/Tests/PrimitiveTests/[Tests][Tests.PrimitiveTests.SelectorTests][suite]
-    - id: 1008
-      uniqueId: Tests.dll/Tests/PrimitiveTests/[Tests][Tests.PrimitiveTests.SequenceTests][suite]
-      name: SequenceTests
-      fullName: Tests.PrimitiveTests.SequenceTests
-      resultStatus: 0
-      duration: 0.013747
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1016
-      parentUniqueId: Tests.dll/Tests/[Tests][Tests.PrimitiveTests][suite]
-    - id: 1012
-      uniqueId: Tests.dll/Tests/PrimitiveTests/SequenceTests/[Tests][Tests.PrimitiveTests.SequenceTests.SequenceShouldReturnRunningOnFirstThreeTicks][suite]
-      name: SequenceShouldReturnRunningOnFirstThreeTicks
-      fullName: Tests.PrimitiveTests.SequenceTests.SequenceShouldReturnRunningOnFirstThreeTicks
-      resultStatus: 0
-      duration: 0.0047411
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1008
-      parentUniqueId: Tests.dll/Tests/PrimitiveTests/[Tests][Tests.PrimitiveTests.SequenceTests][suite]
-    - id: 1009
-      uniqueId: Tests.dll/Tests/PrimitiveTests/SequenceTests/SequenceShouldReturnRunningOnFirstThreeTicks/[Tests][Tests.PrimitiveTests.SequenceTests.SequenceShouldReturnRunningOnFirstThreeTicks(0)]
-      name: SequenceShouldReturnRunningOnFirstThreeTicks(0)
-      fullName: Tests.PrimitiveTests.SequenceTests.SequenceShouldReturnRunningOnFirstThreeTicks(0)
-      resultStatus: 0
-      duration: 0.0006295
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1012
-      parentUniqueId: Tests.dll/Tests/PrimitiveTests/SequenceTests/[Tests][Tests.PrimitiveTests.SequenceTests.SequenceShouldReturnRunningOnFirstThreeTicks][suite]
-    - id: 1010
-      uniqueId: Tests.dll/Tests/PrimitiveTests/SequenceTests/SequenceShouldReturnRunningOnFirstThreeTicks/[Tests][Tests.PrimitiveTests.SequenceTests.SequenceShouldReturnRunningOnFirstThreeTicks(1)]
-      name: SequenceShouldReturnRunningOnFirstThreeTicks(1)
-      fullName: Tests.PrimitiveTests.SequenceTests.SequenceShouldReturnRunningOnFirstThreeTicks(1)
-      resultStatus: 0
-      duration: 0.000128
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1012
-      parentUniqueId: Tests.dll/Tests/PrimitiveTests/SequenceTests/[Tests][Tests.PrimitiveTests.SequenceTests.SequenceShouldReturnRunningOnFirstThreeTicks][suite]
-    - id: 1011
-      uniqueId: Tests.dll/Tests/PrimitiveTests/SequenceTests/SequenceShouldReturnRunningOnFirstThreeTicks/[Tests][Tests.PrimitiveTests.SequenceTests.SequenceShouldReturnRunningOnFirstThreeTicks(2)]
-      name: SequenceShouldReturnRunningOnFirstThreeTicks(2)
-      fullName: Tests.PrimitiveTests.SequenceTests.SequenceShouldReturnRunningOnFirstThreeTicks(2)
-      resultStatus: 0
-      duration: 0.0001195
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1012
-      parentUniqueId: Tests.dll/Tests/PrimitiveTests/SequenceTests/[Tests][Tests.PrimitiveTests.SequenceTests.SequenceShouldReturnRunningOnFirstThreeTicks][suite]
-    - id: 1013
-      uniqueId: Tests.dll/Tests/PrimitiveTests/SequenceTests/[Tests][Tests.PrimitiveTests.SequenceTests.SequenceShouldReturnSuccessOnFourthTick]
-      name: SequenceShouldReturnSuccessOnFourthTick
-      fullName: Tests.PrimitiveTests.SequenceTests.SequenceShouldReturnSuccessOnFourthTick
-      resultStatus: 0
-      duration: 0.00034
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1008
-      parentUniqueId: Tests.dll/Tests/PrimitiveTests/[Tests][Tests.PrimitiveTests.SequenceTests][suite]
     m_ResultText: 
     m_ResultStacktrace: 
     m_TestListState:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 73d22609
       m_LastClickedID: 153539187
-      m_ExpandedIDs: 657c7ec3f1c563dfe557abf75e2f43318359db41ec10fb53ffffff7f
+      m_ExpandedIDs: 657c7ec3f1c563dfe557abf75e2f43318359db41ec10fb53b40ef25bffffff7f
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -914,10 +1204,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 723
+    x: 711
     y: 73
-    width: 537
-    height: 391
+    width: 549
+    height: 415
   m_ViewDataDictionary: {fileID: 0}
   m_SerializedViewNames: []
   m_SerializedViewValues: []
@@ -961,23 +1251,23 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
-      width: 537
-      height: 370
-    m_Scale: {x: 0.2796875, y: 0.2796875}
-    m_Translation: {x: 268.5, y: 185}
+      width: 549
+      height: 394
+    m_Scale: {x: 0.2859375, y: 0.2859375}
+    m_Translation: {x: 274.5, y: 197}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -960
-      y: -661.4525
-      width: 1920
-      height: 1322.905
+      x: -960.00006
+      y: -688.9618
+      width: 1920.0001
+      height: 1377.9236
     m_MinimalGUI: 1
-  m_defaultScale: 0.2796875
-  m_LastWindowPixelSize: {x: 537, y: 391}
+  m_defaultScale: 0.2859375
+  m_LastWindowPixelSize: {x: 549, y: 415}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000001000000000000
@@ -1005,8 +1295,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 73
-    width: 722
-    height: 391
+    width: 710
+    height: 361
   m_ViewDataDictionary: {fileID: 0}
   m_ShowContextualTools: 0
   m_WindowGUID: 3b16f3867197e6240983456bcfd00e05
@@ -1122,14 +1412,14 @@ MonoBehaviour:
     x: 1262
     y: 73
     width: 285
-    height: 391
+    height: 361
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: ca680000
+      m_SelectedIDs: 1e180000
       m_LastClickedID: 0
-      m_ExpandedIDs: 4afbffff
+      m_ExpandedIDs: 98c5ffffdac5ffff40c7ffff5cf7ffffa4f7ffff20f9ffff54fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1174,9 +1464,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 485
-    width: 248
-    height: 554
+    y: 455
+    width: 527
+    height: 584
   m_ViewDataDictionary: {fileID: 0}
   m_SearchFilter:
     m_NameFilter: 
@@ -1191,21 +1481,21 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/TeppichsTools/Runtime
+    - Assets/TeppichsBehaviorTree/Runtime/ModularBehaviourTree/Core/Primitives
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 0
   m_StartGridSize: 16
   m_LastFolders: []
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: D:\GitRepos\TeppichsTools\TeppichsTools
+  m_LastProjectPath: D:\GitRepos\TeppichsBehaviorTree\TeppichsBehaviorTree
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 16}
     m_SelectedIDs: a0820000
     m_LastClickedID: 33440
-    m_ExpandedIDs: 
+    m_ExpandedIDs: 00000000e04f0000e24f0000e44f0000e64f0000e84f0000ea4f0000ec4f0000ee4f0000f04f0000f24f0000f44f0000f64f0000f84f0000fa4f0000fc4f0000fe4f00000050000002500000045000000650000008500000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1233,7 +1523,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: ffffffff00000000b8670000ce670000b2680000ba680000bc680000be680000dc680000ffffff7f
+    m_ExpandedIDs: ffffffff00000000e04f0000e24f0000e44f0000e64f0000e84f0000ea4f0000ec4f0000ee4f0000f04f0000f24f0000f44f0000f64f0000f84f0000fa4f0000fc4f0000fe4f000000500000025000000450000006500000085000003250000026520000285200002a5200002c52000030520000ffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1309,10 +1599,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 249
-    y: 485
-    width: 1298
-    height: 554
+    x: 528
+    y: 455
+    width: 1019
+    height: 584
   m_ViewDataDictionary: {fileID: 0}
 --- !u!114 &24
 MonoBehaviour:
@@ -1345,83 +1635,7 @@ MonoBehaviour:
     m_CachedPref: 247
     m_ControlHash: 1412526313
     m_PrefName: Preview_InspectorPreview
-  m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 0
-  m_GlobalObjectId: 
-  m_InspectorMode: 0
-  m_LockTracker:
-    m_IsLocked: 0
-  m_PreviewWindow: {fileID: 0}
---- !u!114 &25
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 12019, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 275, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: Inspector
-    m_Image: {fileID: -2667387946076563598, guid: 0000000000000000d000000000000000, type: 0}
-    m_Tooltip: 
-  m_Pos:
-    serializedVersion: 2
-    x: 3235
-    y: 73
-    width: 604
-    height: 966
-  m_ViewDataDictionary: {fileID: 0}
-  m_ObjectsLockedBeforeSerialization: []
-  m_InstanceIDsLockedBeforeSerialization: 
-  m_PreviewResizer:
-    m_CachedPref: 192
-    m_ControlHash: 1412526313
-    m_PrefName: Preview_InspectorPreview
-  m_LastInspectedObjectInstanceID: 26856
-  m_LastVerticalScrollValue: 0
-  m_GlobalObjectId: 
-  m_InspectorMode: 0
-  m_LockTracker:
-    m_IsLocked: 0
-  m_PreviewWindow: {fileID: 0}
---- !u!114 &26
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 12019, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 275, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: Inspector
-    m_Image: {fileID: -2667387946076563598, guid: 0000000000000000d000000000000000, type: 0}
-    m_Tooltip: 
-  m_Pos:
-    serializedVersion: 2
-    x: 1314
-    y: 73
-    width: 605
-    height: 966
-  m_ViewDataDictionary: {fileID: 0}
-  m_ObjectsLockedBeforeSerialization: []
-  m_InstanceIDsLockedBeforeSerialization: 
-  m_PreviewResizer:
-    m_CachedPref: 192
-    m_ControlHash: 1412526313
-    m_PrefName: Preview_InspectorPreview
-  m_LastInspectedObjectInstanceID: 26856
+  m_LastInspectedObjectInstanceID: 21020
   m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0

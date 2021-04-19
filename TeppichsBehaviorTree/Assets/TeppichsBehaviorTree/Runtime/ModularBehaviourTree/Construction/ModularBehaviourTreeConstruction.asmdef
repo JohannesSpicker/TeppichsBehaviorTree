@@ -1,0 +1,16 @@
+{
+    "name": "ModularBehaviourTreeConstruction",
+    "rootNamespace": "",
+    "references": [
+        "GUID:ebc8aa3a2559e874cb0ee7c9f7a62cfa"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
