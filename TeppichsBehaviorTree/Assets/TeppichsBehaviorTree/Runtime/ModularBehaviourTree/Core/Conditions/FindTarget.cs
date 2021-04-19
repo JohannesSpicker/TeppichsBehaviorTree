@@ -14,12 +14,12 @@ namespace ModularBehaviourTree.Conditions
 
         private Transform GetFirstBestTarget(Blackboard blackboard)
         {
-            Vector3 position = blackboard.treeTicker.transform.position;
+            Vector3 position = blackboard.Position();
 
             Collider[] candidates = Physics.OverlapSphere(position, range);
 
             for (int i = 0; i < candidates.Length; i++)
-                if (candidates[i].transform != blackboard.treeTicker.transform)
+                if (candidates[i].transform != blackboard.transform)
                     return candidates[i].transform;
 
             return candidates[0]?.transform;

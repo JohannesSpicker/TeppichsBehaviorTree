@@ -15,7 +15,7 @@ namespace TreeTickerSpace
 
         private void Awake()
         {
-            blackboard = new Blackboard(this, GetComponent<NavMeshAgent>(), transform);
+            blackboard = new Blackboard(GetComponent<NavMeshAgent>());
 
             behaviourTree = nodeFactory.CreateNode();
         }

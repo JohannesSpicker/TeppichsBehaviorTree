@@ -11,11 +11,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tools", "Tools.csproj", "{0
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.TeppichsBehaviorTree", "Unity.TeppichsBehaviorTree.csproj", "{d27c597a-d251-f2d8-732a-4045f3bf707d}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeppichsBehaviorTree.Tests", "TeppichsBehaviorTree.Tests.csproj", "{865300ec-5806-f612-9d01-f53f4d16fb7d}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreeRunner", "TreeRunner.csproj", "{5053c20f-f76e-24e7-ace6-2eb67896165d}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.TeppichsBehaviorTree.Editor.Tests", "Unity.TeppichsBehaviorTree.Editor.Tests.csproj", "{4b8054dc-645b-96b7-0c11-788d33b72b40}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeppichsBehaviorTree.Tests", "TeppichsBehaviorTree.Tests.csproj", "{865300ec-5806-f612-9d01-f53f4d16fb7d}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.TeppichsBehaviorTree.Editor", "Unity.TeppichsBehaviorTree.Editor.csproj", "{324e94af-ac4b-746d-47c2-727550ddd1bf}"
 EndProject
@@ -34,12 +34,12 @@ Global
 		{04d5c2b1-1045-eceb-33c3-7b1c41f611d4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{d27c597a-d251-f2d8-732a-4045f3bf707d}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{d27c597a-d251-f2d8-732a-4045f3bf707d}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{865300ec-5806-f612-9d01-f53f4d16fb7d}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{865300ec-5806-f612-9d01-f53f4d16fb7d}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5053c20f-f76e-24e7-ace6-2eb67896165d}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{5053c20f-f76e-24e7-ace6-2eb67896165d}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4b8054dc-645b-96b7-0c11-788d33b72b40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{4b8054dc-645b-96b7-0c11-788d33b72b40}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{865300ec-5806-f612-9d01-f53f4d16fb7d}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{865300ec-5806-f612-9d01-f53f4d16fb7d}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{324e94af-ac4b-746d-47c2-727550ddd1bf}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{324e94af-ac4b-746d-47c2-727550ddd1bf}.Debug|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection

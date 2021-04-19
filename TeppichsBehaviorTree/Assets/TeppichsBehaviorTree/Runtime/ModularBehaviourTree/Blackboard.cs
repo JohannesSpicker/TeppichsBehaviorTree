@@ -6,22 +6,18 @@ namespace ModularBehaviourTree
 {
     public class Blackboard
     {
-        public readonly NavMeshAgent navMeshAgent;
         public readonly Navigation   navigation;
-        
-        public readonly MonoBehaviour treeTicker;
+        public readonly NavMeshAgent navMeshAgent;
+
+        public readonly Transform transform;
 
         public Transform target;
 
-        private Transform transform;
-
-        public Blackboard(MonoBehaviour treeTicker, NavMeshAgent navMeshAgent, Transform target)
+        public Blackboard(NavMeshAgent navMeshAgent)
         {
-            this.treeTicker   = treeTicker;
-            this.transform    = treeTicker.transform;
+            transform         = navMeshAgent.transform;
             this.navMeshAgent = navMeshAgent;
-            this.navigation   = new Navigation(navMeshAgent);
-            this.target       = target;
+            navigation        = new Navigation(navMeshAgent);
         }
 
         public Vector3 Position() => transform.position;

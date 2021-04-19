@@ -1,170 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SCOPE_TYPE" value="3" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="d39d143f-fbac-45bc-9772-3b1516fc8bf7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene/NavMesh.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene/NavMesh.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/AssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/AssemblyInfo.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/ModularBehaviourTree.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/ModularBehaviourTree/AssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/ModularBehaviourTree/AssemblyInfo.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/ModularBehaviourTree/Blackboard.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/ModularBehaviourTree/Blackboard.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/ModularBehaviourTree/Construction.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/ModularBehaviourTree/Construction/Factories.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/ModularBehaviourTree/Construction/Factories/Composites.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/ModularBehaviourTree/Construction/Factories/Composites/CompositeFactory.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/ModularBehaviourTree/Construction/Factories/Composites/CompositeFactory.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/ModularBehaviourTree/Construction/Factories/Composites/SelectorFactory.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/ModularBehaviourTree/Construction/Factories/Composites/SelectorFactory.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/ModularBehaviourTree/Construction/Factories/Composites/SequenceFactory.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/ModularBehaviourTree/Construction/Factories/Composites/SequenceFactory.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/ModularBehaviourTree/Construction/Factories/Conditions.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/ModularBehaviourTree/Construction/Factories/Conditions/FindTargetFactory.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/ModularBehaviourTree/Construction/Factories/Conditions/FindTargetFactory.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/ModularBehaviourTree/Construction/Factories/Conditions/IsInRangeFactory.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/ModularBehaviourTree/Construction/Factories/Conditions/IsInRangeFactory.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/ModularBehaviourTree/Construction/Factories/Decorators.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/ModularBehaviourTree/Construction/Factories/Decorators/DecoratorFactory.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/ModularBehaviourTree/Construction/Factories/Decorators/DecoratorFactory.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/ModularBehaviourTree/Construction/Factories/Decorators/InverterFactory.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/ModularBehaviourTree/Construction/Factories/Decorators/InverterFactory.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/ModularBehaviourTree/Construction/Factories/Decorators/RepeaterFactory.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/ModularBehaviourTree/Construction/Factories/Decorators/RepeaterFactory.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/ModularBehaviourTree/Construction/Factories/Decorators/StopMoveAfterTimeFactory.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/ModularBehaviourTree/Construction/Factories/Decorators/StopMoveAfterTimeFactory.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/ModularBehaviourTree/Construction/Factories/Leaves.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/ModularBehaviourTree/Construction/Factories/Leaves/IdleFactory.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/ModularBehaviourTree/Construction/Factories/Leaves/IdleFactory.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/ModularBehaviourTree/Construction/Factories/Leaves/MoveForwardFactory.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/ModularBehaviourTree/Construction/Factories/Leaves/MoveForwardFactory.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/ModularBehaviourTree/Construction/Factories/Leaves/MoveToTargetFactory.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/ModularBehaviourTree/Construction/Factories/Leaves/MoveToTargetFactory.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/ModularBehaviourTree/Construction/Factories/NodeFactory.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/ModularBehaviourTree/Construction/Factories/NodeFactory.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/ModularBehaviourTree/Construction/ModularBehaviourTreeConstruction.asmdef" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/ModularBehaviourTree/Construction/ModularBehaviourTreeConstruction.asmdef.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/ModularBehaviourTree/Core.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/ModularBehaviourTree/Core/Composites.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/ModularBehaviourTree/Core/Composites/Selector.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/ModularBehaviourTree/Core/Composites/Selector.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/ModularBehaviourTree/Core/Composites/Sequence.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/ModularBehaviourTree/Core/Composites/Sequence.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/ModularBehaviourTree/Core/Conditions.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/ModularBehaviourTree/Core/Conditions/FindTarget.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/ModularBehaviourTree/Core/Conditions/FindTarget.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/ModularBehaviourTree/Core/Conditions/IsInRange.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/ModularBehaviourTree/Core/Conditions/IsInRange.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/ModularBehaviourTree/Core/Decorators.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/ModularBehaviourTree/Core/Decorators/Inverter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/ModularBehaviourTree/Core/Decorators/Inverter.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/ModularBehaviourTree/Core/Decorators/Repeater.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/ModularBehaviourTree/Core/Decorators/Repeater.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/ModularBehaviourTree/Core/Decorators/StopMoveAfterTime.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/ModularBehaviourTree/Core/Decorators/StopMoveAfterTime.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/ModularBehaviourTree/Core/Leaves.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/ModularBehaviourTree/Core/Leaves/Idle.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/ModularBehaviourTree/Core/Leaves/Idle.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/ModularBehaviourTree/Core/Leaves/MoveForward.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/ModularBehaviourTree/Core/Leaves/MoveForward.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/ModularBehaviourTree/Core/Leaves/MoveToTarget.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/ModularBehaviourTree/Core/Leaves/MoveToTarget.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/ModularBehaviourTree/Core/Primitives.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/ModularBehaviourTree/Core/Primitives/Composite.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/ModularBehaviourTree/Core/Primitives/Composite.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/ModularBehaviourTree/Core/Primitives/Condition.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/ModularBehaviourTree/Core/Primitives/Condition.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/ModularBehaviourTree/Core/Primitives/Decorator.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/ModularBehaviourTree/Core/Primitives/Decorator.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/ModularBehaviourTree/Core/Primitives/Leaf.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/ModularBehaviourTree/Core/Primitives/Leaf.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/ModularBehaviourTree/Core/Primitives/Node.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/ModularBehaviourTree/Core/Primitives/Node.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/ModularBehaviourTree/ModularBehaviourTree.asmdef" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/ModularBehaviourTree/ModularBehaviourTree.asmdef.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/Pawns.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/Pawns/Navigation.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/Pawns/Navigation.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/Pawns/Pawns.asmdef" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/Pawns/Pawns.asmdef.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/Tools.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/Tools/RepeatTicker.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/Tools/RepeatTicker.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/Tools/Ticker.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/Tools/Ticker.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/Tools/Tools.asmdef" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/Tools/Tools.asmdef.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/TreeRunner.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/TreeRunner/TreeRunner.asmdef" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/TreeRunner/TreeRunner.asmdef.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/TreeRunner/TreeTicker.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/TreeRunner/TreeTicker.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Samples.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Samples/ScriptedTrees.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Samples/ScriptedTrees/Composites.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Samples/ScriptedTrees/Composites/Selector.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Samples/ScriptedTrees/Composites/Selector.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Samples/ScriptedTrees/Composites/Sequence.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Samples/ScriptedTrees/Composites/Sequence.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Samples/ScriptedTrees/Conditions.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Samples/ScriptedTrees/Conditions/FindTarget.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Samples/ScriptedTrees/Conditions/FindTarget.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Samples/ScriptedTrees/Conditions/IsInRange.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Samples/ScriptedTrees/Conditions/IsInRange.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Samples/ScriptedTrees/Decorators.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Samples/ScriptedTrees/Decorators/Inverter.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Samples/ScriptedTrees/Decorators/Inverter.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Samples/ScriptedTrees/Decorators/Repeater.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Samples/ScriptedTrees/Decorators/Repeater.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Samples/ScriptedTrees/Leaves.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Samples/ScriptedTrees/Leaves/Idle.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Samples/ScriptedTrees/Leaves/Idle.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Samples/ScriptedTrees/Leaves/MoveForward.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Samples/ScriptedTrees/Leaves/MoveForward.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Samples/ScriptedTrees/Leaves/MoveToTarget.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Samples/ScriptedTrees/Leaves/MoveToTarget.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Samples/ScriptedTrees/Trees.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Samples/ScriptedTrees/Trees/IdleTree.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Samples/ScriptedTrees/Trees/IdleTree.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Samples/ScriptedTrees/Trees/IdleTwice.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Samples/ScriptedTrees/Trees/IdleTwice.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Samples/ScriptedTrees/Trees/MoveForwardTree.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Samples/ScriptedTrees/Trees/MoveForwardTree.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Samples/ScriptedTrees/Trees/MoveToTargetTree.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Samples/ScriptedTrees/Trees/MoveToTargetTree.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Tests/Runtime/CompositeTests.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Tests/Runtime/CompositeTests/SelectorTests.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Tests/Runtime/CompositeTests/SelectorTests.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Tests/Runtime/CompositeTests/SequenceTests.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Tests/Runtime/CompositeTests/SequenceTests.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Tests/Runtime/MockPrimitives.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Tests/Runtime/MockPrimitives.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Tests/Runtime/PrimitiveTests.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Tests/Runtime/PrimitiveTests/DecoratorTests.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Tests/Runtime/PrimitiveTests/DecoratorTests.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Tests/Runtime/PrimitiveTests/LeafTests.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Tests/Runtime/PrimitiveTests/LeafTests.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ModularBehaviourTree.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ModularBehaviourTreeConstruction.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Pawns.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tools.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TreeRunner.csproj" afterDir="false" />
+    <list default="true" id="d39d143f-fbac-45bc-9772-3b1516fc8bf7" name="Default Changelist" comment="- took TreeTicker out of blackboard">
+      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Tests/Editor/CompositeTests.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Tests/Editor/CompositeTests/SelectorTests.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Tests/Editor/CompositeTests/SelectorTests.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Tests/Editor/CompositeTests/SequenceTests.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Tests/Editor/CompositeTests/SequenceTests.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Tests/Editor/MockPrimitives.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Tests/Editor/MockPrimitives.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Tests/Editor/PrimitiveTests.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Tests/Editor/PrimitiveTests/DecoratorTests.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Tests/Editor/PrimitiveTests/DecoratorTests.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Tests/Editor/PrimitiveTests/LeafTests.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Tests/Editor/PrimitiveTests/LeafTests.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Tests/Editor/TestSetup.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Tests/Editor/TestSetup.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TeppichsBehaviorTree.sln.DotSettings.user" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TeppichsBehaviorTree/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TeppichsBehaviorTree/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/SomeMono.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/SomeMono.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/Unity.TeppichsBehaviorTree.asmdef" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/Unity.TeppichsBehaviorTree.asmdef.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Tests/Runtime/Unity.TeppichsBehaviorTree.Tests.asmdef" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Tests/Runtime/Unity.TeppichsBehaviorTree.Tests.asmdef.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/ModularBehaviourTree/AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/ModularBehaviourTree/AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/ModularBehaviourTree/Blackboard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/ModularBehaviourTree/Blackboard.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/ModularBehaviourTree/Core/Conditions/FindTarget.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/ModularBehaviourTree/Core/Conditions/FindTarget.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/ModularBehaviourTree/Core/Conditions/IsInRange.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/ModularBehaviourTree/Core/Conditions/IsInRange.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/TreeRunner/TreeTicker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/TreeRunner/TreeTicker.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Tests/Editor/Unity.TeppichsBehaviorTree.Editor.Tests.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Tests/Editor/Unity.TeppichsBehaviorTree.Editor.Tests.asmdef" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Tests/Runtime/CompositeTests.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Tests/Runtime/CompositeTests/SelectorTests.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Tests/Runtime/CompositeTests/SelectorTests.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Tests/Runtime/CompositeTests/SequenceTests.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Tests/Runtime/CompositeTests/SequenceTests.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Tests/Runtime/MockPrimitives.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Tests/Runtime/MockPrimitives.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Tests/Runtime/PrimitiveTests.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Tests/Runtime/PrimitiveTests/DecoratorTests.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Tests/Runtime/PrimitiveTests/DecoratorTests.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Tests/Runtime/PrimitiveTests/LeafTests.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Tests/Runtime/PrimitiveTests/LeafTests.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ArtifactDB" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ArtifactDB" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/10/10d07fc7b349726cd6ccf1a5fb322842" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/70/70d4b70289c02cf684371c120824e52b" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/e5/e562e642a752e1437af61a89ef069635" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/ea/eaffce56e54e9dc62616209bb2384a98" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/f5/f5f1695fdc7397c6fad8383315eb8689" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/Bee/1900b0aEDbg-inputdata.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/1900b0aEDbg-inputdata.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/Bee/1900b0aEDbg.dag" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/1900b0aEDbg.dag" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/Bee/1900b0aEDbg.dag.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/1900b0aEDbg.dag.json" afterDir="false" />
@@ -173,29 +49,15 @@
       <change beforePath="$PROJECT_DIR$/Library/Bee/1900b0aEDbg.dag_fsmtime" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/1900b0aEDbg.dag_fsmtime" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/Bee/TundraBuildState.state" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/TundraBuildState.state" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/Bee/TundraBuildState.state.map" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/TundraBuildState.state.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.TeppichsBehaviorTree.rsp" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.TeppichsBehaviorTree.rsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/Bee/profiler.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/profiler.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/Bee/tundra.digestcache" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/tundra.digestcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/Bee/tundra.log.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/tundra.log.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/CurrentLayout-default.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/Library/CurrentLayout-default.dwlt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/EditorInstance.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/EditorInstance.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/InspectorExpandedItems.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Library/InspectorExpandedItems.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/PackageManager/ProjectCache" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PackageManager/ProjectCache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/PackageManager/ProjectCache.md5" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PackageManager/ProjectCache.md5" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ProtocolInstance.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ProtocolInstance.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/SceneVisibilityState.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Library/SceneVisibilityState.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/Search/transactions.db" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Search/transactions.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/ShaderCache/EditorEncounteredVariants" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ShaderCache/EditorEncounteredVariants" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/SourceAssetDB" beforeDir="false" afterPath="$PROJECT_DIR$/Library/SourceAssetDB" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe1.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe1.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe2.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe2.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TeppichsBehaviorTree.sln" beforeDir="false" afterPath="$PROJECT_DIR$/TeppichsBehaviorTree.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Unity.TeppichsBehaviorTree.Tests.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Unity.TeppichsBehaviorTree.Tests.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Unity.TeppichsBehaviorTree.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Unity.TeppichsBehaviorTree.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/Unity.TeppichsBehaviorTree.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Unity.TeppichsBehaviorTree.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unity.TeppichsBehaviorTree.Editor.Tests.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Unity.TeppichsBehaviorTree.Editor.Tests.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -213,14 +75,27 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.teppich.teppichstools@0.0.4/Runtime/Logging/EditorDebug.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Tests/Editor/MockPrimitives.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/SomeMono.cs" />
       <option value="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/package.json" />
-      <option value="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/AssemblyInfo.cs" />
-      <option value="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/ModularBehaviourTree/AssemblyInfo.cs" />
       <option value="$PROJECT_DIR$/Library/PackageCache/com.teppich.teppichstools@0.0.4/Runtime/Logging/EditorDebug.cs" />
+      <option value="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/ModularBehaviourTree/Core/Conditions/IsInRange.cs" />
+      <option value="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/ModularBehaviourTree/Core/Conditions/FindTarget.cs" />
+      <option value="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/ModularBehaviourTree/Blackboard.cs" />
+      <option value="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/TreeRunner/TreeTicker.cs" />
+      <option value="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Tests/Runtime/PrimitiveTests/DecoratorTests.cs" />
+      <option value="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Tests/Runtime/PrimitiveTests/LeafTests.cs" />
+      <option value="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Tests/Runtime/CompositeTests/SelectorTests.cs" />
+      <option value="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Tests/Runtime/CompositeTests/SequenceTests.cs" />
+      <option value="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Tests/Runtime/TestSetup.cs" />
+      <option value="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/ModularBehaviourTree/AssemblyInfo.cs" />
+      <option value="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/AssemblyInfo.cs" />
+      <option value="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Tests/Editor/TestSetup.cs" />
+      <option value="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Tests/Editor/PrimitiveTests/LeafTests.cs" />
+      <option value="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Tests/Editor/PrimitiveTests/DecoratorTests.cs" />
     </changedPaths>
   </component>
   <component name="MacroExpansionManager">
@@ -279,7 +154,8 @@
       <workItem from="1618597057176" duration="675000" />
       <workItem from="1618667755990" duration="69000" />
       <workItem from="1618692077430" duration="683000" />
-      <workItem from="1618844795776" duration="1134000" />
+      <workItem from="1618844795776" duration="5766000" />
+      <workItem from="1618857288212" duration="1463000" />
     </task>
     <task id="LOCAL-00001" summary="- removed unused namspace">
       <created>1618523055092</created>
@@ -316,11 +192,18 @@
       <option name="project" value="LOCAL" />
       <updated>1618586211897</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="- moved files">
+      <created>1618846555665</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1618846555665</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
-  <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
@@ -341,6 +224,7 @@
     <MESSAGE value="- added dependency to TeppichsTools 0.0.3" />
     <MESSAGE value="- jumping version number because i forgot to change package.json" />
     <MESSAGE value="- increment version number to test pipeline" />
-    <option name="LAST_COMMIT_MESSAGE" value="- increment version number to test pipeline" />
+    <MESSAGE value="- moved files" />
+    <option name="LAST_COMMIT_MESSAGE" value="- moved files" />
   </component>
 </project>

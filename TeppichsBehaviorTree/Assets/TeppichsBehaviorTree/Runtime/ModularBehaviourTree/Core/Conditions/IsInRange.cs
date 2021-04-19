@@ -12,7 +12,7 @@ namespace ModularBehaviourTree.Conditions
         protected override void Terminate(Blackboard  blackboard) { }
 
         protected override bool Check(Blackboard blackboard) => blackboard.target != null
-                                                          && Vector3.Distance(blackboard.treeTicker.transform.position,
+                                                          && Vector3.Distance(blackboard.Position(),
                                                                               blackboard.target.position) < range;
     }
 }
