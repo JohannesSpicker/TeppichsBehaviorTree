@@ -25,18 +25,40 @@ namespace TeppichsBehaviorTree.Editor.Tutorial
 
         public void SaveGraph(string fileName)
         {
-            if (!Edges.Any())
+            var dialogueContainer = ScriptableObject.CreateInstance<DialogueContainer>();
+
+            if (!SaveNodes(dialogueContainer))
                 return;
 
-            var dialogueContainer = ScriptableObject.CreateInstance<DialogueContainer>();
-            var connectedPorts    = Edges.Where(x => x.input.node != null).ToArray();
+            SaveExposedProperties(dialogueContainer);
+
+            if (!AssetDatabase.IsValidFolder("Assets/DialogueSaves"))
+                AssetDatabase.CreateFolder("Assets", "DialogueSaves");
+
+            if (!AssetDatabase.IsValidFolder("Assets/DialogueSaves/Resources"))
+                AssetDatabase.CreateFolder("Assets/DialogueSaves", "Resources");
+
+            AssetDatabase.CreateAsset(dialogueContainer, $"Assets/DialogueSaves/Resources/{fileName}.asset");
+        }
+
+        private void SaveExposedProperties(DialogueContainer dialogueContainer)
+        {
+            dialogueContainer.exposedProperties.AddRange(_targetGraphView.exposedProperties);
+        }
+
+        private bool SaveNodes(DialogueContainer dialogueContainer)
+        {
+            if (!Edges.Any())
+                return false;
+
+            var connectedPorts = Edges.Where(x => x.input.node != null).ToArray();
 
             for (int i = 0; i < connectedPorts.Length; i++)
             {
                 var outputNode = connectedPorts[i].output.node as DialogueNode;
                 var inputNode  = connectedPorts[i].input.node as DialogueNode;
 
-                dialogueContainer.NodeLinks.Add(new NodeLinkData()
+                dialogueContainer.nodeLinks.Add(new NodeLinkData()
                 {
                     BaseNodeGuid   = outputNode.guid,
                     PortName       = connectedPorts[i].output.portName,
@@ -46,7 +68,7 @@ namespace TeppichsBehaviorTree.Editor.Tutorial
 
             foreach (var dialogueNode in Nodes.Where(node => !node.EntryPoint))
             {
-                dialogueContainer.DialogueNodeData.Add(new DialogueNodeData()
+                dialogueContainer.dialogueNodeData.Add(new DialogueNodeData()
                 {
                     guid         = dialogueNode.guid,
                     dialogueText = dialogueNode.DialogueText,
@@ -54,13 +76,7 @@ namespace TeppichsBehaviorTree.Editor.Tutorial
                 });
             }
 
-            if (!AssetDatabase.IsValidFolder("Assets/DialogueSaves"))
-                AssetDatabase.CreateFolder("Assets", "DialogueSaves");
-
-            if (!AssetDatabase.IsValidFolder("Assets/DialogueSaves/Resources"))
-                AssetDatabase.CreateFolder("Assets/DialogueSaves", "Resources");
-
-            AssetDatabase.CreateAsset(dialogueContainer, $"Assets/DialogueSaves/Resources/{fileName}.asset");
+            return true;
         }
 
         public void LoadGraph(string fileName)
@@ -77,13 +93,22 @@ namespace TeppichsBehaviorTree.Editor.Tutorial
             ClearGraph();
             CreateNodes();
             ConnectNodes();
+            CreateExposedProperties();
+        }
+
+        private void CreateExposedProperties()
+        {
+            _targetGraphView.ClearBlackBoardAndExposedProperties();
+            
+            foreach (var exposedProperty in _containerCache.exposedProperties)
+                _targetGraphView.AddPropertyToBlackBoard(exposedProperty);
         }
 
         private void ConnectNodes()
         {
             for (int i = 0; i < Nodes.Count; i++)
             {
-                var connections = _containerCache.NodeLinks.Where(x => x.BaseNodeGuid == Nodes[i].guid).ToList();
+                var connections = _containerCache.nodeLinks.Where(x => x.BaseNodeGuid == Nodes[i].guid).ToList();
 
                 for (int j = 0; j < connections.Count; j++)
                 {
@@ -92,7 +117,7 @@ namespace TeppichsBehaviorTree.Editor.Tutorial
                     LinkNodes(Nodes[i].outputContainer[j].Q<Port>(), (Port) targetNode.inputContainer[0]);
 
                     targetNode.SetPosition(new
-                                               Rect(_containerCache.DialogueNodeData.First(x => x.guid == targetNodeGuid).position,
+                                               Rect(_containerCache.dialogueNodeData.First(x => x.guid == targetNodeGuid).position,
                                                     _targetGraphView.defaultNodeSize));
                 }
             }
@@ -100,12 +125,8 @@ namespace TeppichsBehaviorTree.Editor.Tutorial
 
         private void LinkNodes(Port input, Port output)
         {
-            var tempEdge = new Edge()
-            {
-                input = input,
-                output = output
-            };
-            
+            var tempEdge = new Edge() {input = input, output = output};
+
             tempEdge?.input.Connect(tempEdge);
             tempEdge?.output.Connect(tempEdge);
             _targetGraphView.Add(tempEdge);
@@ -113,20 +134,20 @@ namespace TeppichsBehaviorTree.Editor.Tutorial
 
         private void CreateNodes()
         {
-            foreach (var nodeData in _containerCache.DialogueNodeData)
+            foreach (var nodeData in _containerCache.dialogueNodeData)
             {
-                var tempNode = _targetGraphView.CreateDialogueNode(nodeData.dialogueText);
+                var tempNode = _targetGraphView.CreateDialogueNode(nodeData.dialogueText, Vector2.zero);
                 tempNode.guid = nodeData.guid;
                 _targetGraphView.AddElement(tempNode);
 
-                var nodePorts = _containerCache.NodeLinks.Where(x => x.BaseNodeGuid == nodeData.guid).ToList();
+                var nodePorts = _containerCache.nodeLinks.Where(x => x.BaseNodeGuid == nodeData.guid).ToList();
                 nodePorts.ForEach(x => _targetGraphView.AddChoicePort(tempNode, x.PortName));
             }
         }
 
         private void ClearGraph()
         {
-            Nodes.Find(x => x.EntryPoint).guid = _containerCache.NodeLinks[0].BaseNodeGuid;
+            Nodes.Find(x => x.EntryPoint).guid = _containerCache.nodeLinks[0].BaseNodeGuid;
 
             foreach (var node in Nodes)
             {

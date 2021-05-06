@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Security;
+using TeppichsBehaviorTree.Runtime.DialogueGraphRuntime;
+using UnityEditor;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -10,9 +12,13 @@ namespace TeppichsBehaviorTree.Editor.Tutorial
 {
     public class DialogueGraphView : GraphView
     {
-        public readonly Vector2 defaultNodeSize = new Vector2(150, 200);
+        public readonly Vector2          defaultNodeSize = new Vector2(150, 200);
 
-        public DialogueGraphView()
+        public  Blackboard            blackboard;
+        public  List<ExposedProperty> exposedProperties = new List<ExposedProperty>();
+        private NodeSearchWindow      searchWindow;
+
+        public DialogueGraphView(EditorWindow editorWindow)
         {
             styleSheets.Add(Resources.Load<StyleSheet>("DialogueGraph"));
             SetupZoom(ContentZoomer.DefaultMinScale, ContentZoomer.DefaultMaxScale);
@@ -26,6 +32,16 @@ namespace TeppichsBehaviorTree.Editor.Tutorial
             grid.StretchToParentSize();
 
             AddElement(GenerateEntryPoint());
+            AddSearchWindow(editorWindow);
+        }
+
+        private void AddSearchWindow(EditorWindow editorWindow)
+        {
+            searchWindow = ScriptableObject.CreateInstance<NodeSearchWindow>();
+            searchWindow.Init(this, editorWindow);
+
+            nodeCreationRequest = context =>
+                SearchWindow.Open(new SearchWindowContext(context.screenMousePosition), searchWindow);
         }
 
         private DialogueNode GenerateEntryPoint()
@@ -57,7 +73,7 @@ namespace TeppichsBehaviorTree.Editor.Tutorial
                                         typeof(float)); //type float is arbitrary, can be used to pass data
         }
 
-        public DialogueNode CreateDialogueNode(string nodeName)
+        public DialogueNode CreateDialogueNode(string nodeName , Vector2 mousePosition)
         {
             var dialogueNode = new DialogueNode()
             {
@@ -69,7 +85,7 @@ namespace TeppichsBehaviorTree.Editor.Tutorial
             dialogueNode.inputContainer.Add(inputPort);
 
             dialogueNode.styleSheets.Add(Resources.Load<StyleSheet>("Node"));
-            
+
             var button = new Button(() => { AddChoicePort(dialogueNode); });
             dialogueNode.titleContainer.Add(button);
             button.text = "New Choice";
@@ -87,7 +103,7 @@ namespace TeppichsBehaviorTree.Editor.Tutorial
 
             dialogueNode.RefreshPorts();
             dialogueNode.RefreshExpandedState();
-            dialogueNode.SetPosition(new Rect(Vector2.zero, defaultNodeSize));
+            dialogueNode.SetPosition(new Rect(mousePosition, defaultNodeSize));
 
             return dialogueNode;
         }
@@ -138,7 +154,11 @@ namespace TeppichsBehaviorTree.Editor.Tutorial
             dialogueNode.RefreshExpandedState();
         }
 
-        public void CreateNode(string nodeName) { AddElement(CreateDialogueNode(nodeName)); }
+        public void CreateNode(string nodeName, Vector2 mousePosition)
+        {
+            AddElement(CreateDialogueNode(nodeName, mousePosition)); 
+            
+        }
 
         public override List<Port> GetCompatiblePorts(Port startPort, NodeAdapter nodeAdapter)
         {
@@ -151,6 +171,44 @@ namespace TeppichsBehaviorTree.Editor.Tutorial
             });
 
             return compatiblePorts;
+        }
+
+        public void ClearBlackBoardAndExposedProperties()
+        {
+            exposedProperties.Clear();
+            blackboard.Clear();
+        }
+        
+        public void AddPropertyToBlackBoard(ExposedProperty exposedProperty)
+        {
+            var localPropertyName = exposedProperty.propertyName;
+            var localPropertyValue = exposedProperty.propertyValue;
+
+            while (exposedProperties.Any(x=>x.propertyName == localPropertyName))
+                localPropertyName = $"{localPropertyName}(1)";
+            
+            var property = new ExposedProperty();
+            property.propertyName  = localPropertyName;
+            property.propertyValue = localPropertyValue;
+            
+            exposedProperties.Add(property);
+
+            var container       = new VisualElement();
+            var blackboardField = new BlackboardField() {text = property.propertyName, typeText = "string property"};
+            
+            container.Add(blackboardField);
+
+            var propertyValueTextField = new TextField("Value:") {value = localPropertyValue};
+            propertyValueTextField.RegisterValueChangedCallback(evt =>
+            {
+                var changingPropertyIndex = exposedProperties.FindIndex(x => x.propertyName == property.propertyName);
+                exposedProperties[changingPropertyIndex].propertyValue = evt.newValue;
+            });
+
+            var blackBoardValueRow = new BlackboardRow(blackboardField, propertyValueTextField);
+            container.Add(blackBoardValueRow);
+            
+            blackboardField.Add(container);
         }
     }
 }

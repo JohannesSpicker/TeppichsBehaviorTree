@@ -311,6 +311,7 @@
 "Assets/TeppichsBehaviorTree/Runtime/AssemblyInfo.cs"
 "Assets/TeppichsBehaviorTree/Runtime/DialogueGraphRuntime/DialogueContainer.cs"
 "Assets/TeppichsBehaviorTree/Runtime/DialogueGraphRuntime/DialogueNodeData.cs"
+"Assets/TeppichsBehaviorTree/Runtime/DialogueGraphRuntime/ExposedProperty.cs"
 "Assets/TeppichsBehaviorTree/Runtime/DialogueGraphRuntime/NodeLinkData.cs"
 -langversion:8.0
 
