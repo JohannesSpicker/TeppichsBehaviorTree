@@ -42,6 +42,9 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\TeppichsBehaviorTree\Runtime\AssemblyInfo.cs" />
+     <Compile Include="Assets\TeppichsBehaviorTree\Runtime\DialogueGraphRuntime\DialogueNodeData.cs" />
+     <Compile Include="Assets\TeppichsBehaviorTree\Runtime\DialogueGraphRuntime\NodeLinkData.cs" />
+     <Compile Include="Assets\TeppichsBehaviorTree\Runtime\DialogueGraphRuntime\DialogueContainer.cs" />
      <None Include="Assets\TeppichsBehaviorTree\Runtime\TeppichsBehaviorTree.asmdef" />
      <Reference Include="UnityEngine">
      <HintPath>C:/Program Files/Engines/Unity Versions/2021.1.0f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>

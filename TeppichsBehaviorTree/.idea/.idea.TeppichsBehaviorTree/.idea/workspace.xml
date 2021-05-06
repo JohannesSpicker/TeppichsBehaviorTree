@@ -4,43 +4,39 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d39d143f-fbac-45bc-9772-3b1516fc8bf7" name="Default Changelist" comment="- took TreeTicker out of blackboard">
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Tests/Editor/CompositeTests.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Tests/Editor/CompositeTests/SelectorTests.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Tests/Editor/CompositeTests/SelectorTests.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Tests/Editor/CompositeTests/SequenceTests.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Tests/Editor/CompositeTests/SequenceTests.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Tests/Editor/MockPrimitives.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Tests/Editor/MockPrimitives.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Tests/Editor/PrimitiveTests.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Tests/Editor/PrimitiveTests/DecoratorTests.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Tests/Editor/PrimitiveTests/DecoratorTests.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Tests/Editor/PrimitiveTests/LeafTests.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Tests/Editor/PrimitiveTests/LeafTests.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Tests/Editor/TestSetup.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Tests/Editor/TestSetup.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TeppichsBehaviorTree.sln.DotSettings.user" afterDir="false" />
+    <list default="true" id="d39d143f-fbac-45bc-9772-3b1516fc8bf7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/DialogueSaves.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DialogueSaves/Resources.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DialogueSaves/Resources/Bleb.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DialogueSaves/Resources/Bleb.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DialogueSaves/Resources/Blob.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DialogueSaves/Resources/Blob.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DialogueSaves/Resources/Blub.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DialogueSaves/Resources/Blub.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DialogueSaves/Resources/MyNarr.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DialogueSaves/Resources/MyNarr.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Editor/Resources.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Editor/Resources/DialogueGraph.uss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Editor/Resources/DialogueGraph.uss.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Editor/TreeVisualization.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Editor/Tutorial.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Editor/Tutorial/DialogueGraph.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Editor/Tutorial/DialogueGraph.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Editor/Tutorial/DialogueGraphView.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Editor/Tutorial/DialogueGraphView.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Editor/Tutorial/DialogueNode.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Editor/Tutorial/DialogueNode.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Editor/Tutorial/GraphSaveUtility.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Editor/Tutorial/GraphSaveUtility.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/DialogueGraphRuntime.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/DialogueGraphRuntime/DialogueContainer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/DialogueGraphRuntime/DialogueContainer.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/DialogueGraphRuntime/DialogueNodeData.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/DialogueGraphRuntime/DialogueNodeData.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/DialogueGraphRuntime/NodeLinkData.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/DialogueGraphRuntime/NodeLinkData.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TeppichsBehaviorTree/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TeppichsBehaviorTree/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/ModularBehaviourTree/AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/ModularBehaviourTree/AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/ModularBehaviourTree/Blackboard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/ModularBehaviourTree/Blackboard.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/ModularBehaviourTree/Core/Conditions/FindTarget.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/ModularBehaviourTree/Core/Conditions/FindTarget.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/ModularBehaviourTree/Core/Conditions/IsInRange.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/ModularBehaviourTree/Core/Conditions/IsInRange.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/TreeRunner/TreeTicker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/TreeRunner/TreeTicker.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Tests/Editor/Unity.TeppichsBehaviorTree.Editor.Tests.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Tests/Editor/Unity.TeppichsBehaviorTree.Editor.Tests.asmdef" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Tests/Runtime/CompositeTests.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Tests/Runtime/CompositeTests/SelectorTests.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Tests/Runtime/CompositeTests/SelectorTests.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Tests/Runtime/CompositeTests/SequenceTests.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Tests/Runtime/CompositeTests/SequenceTests.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Tests/Runtime/MockPrimitives.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Tests/Runtime/MockPrimitives.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Tests/Runtime/PrimitiveTests.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Tests/Runtime/PrimitiveTests/DecoratorTests.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Tests/Runtime/PrimitiveTests/DecoratorTests.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Tests/Runtime/PrimitiveTests/LeafTests.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Tests/Runtime/PrimitiveTests/LeafTests.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/ArtifactDB" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ArtifactDB" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Editor/Unity.TeppichsBehaviorTree.Editor.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Editor/Unity.TeppichsBehaviorTree.Editor.asmdef" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/Bee/1900b0aEDbg-inputdata.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/1900b0aEDbg-inputdata.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/Bee/1900b0aEDbg.dag" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/1900b0aEDbg.dag" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/Bee/1900b0aEDbg.dag.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/1900b0aEDbg.dag.json" afterDir="false" />
@@ -49,15 +45,19 @@
       <change beforePath="$PROJECT_DIR$/Library/Bee/1900b0aEDbg.dag_fsmtime" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/1900b0aEDbg.dag_fsmtime" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/Bee/TundraBuildState.state" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/TundraBuildState.state" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/Bee/TundraBuildState.state.map" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/TundraBuildState.state.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.TeppichsBehaviorTree.rsp" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.TeppichsBehaviorTree.rsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/Bee/profiler.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/profiler.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/Bee/tundra.digestcache" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/tundra.digestcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/Bee/tundra.log.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/tundra.log.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/InspectorExpandedItems.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Library/InspectorExpandedItems.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ProtocolInstance.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ProtocolInstance.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/SceneVisibilityState.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Library/SceneVisibilityState.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/Search/transactions.db" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Search/transactions.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/SourceAssetDB" beforeDir="false" afterPath="$PROJECT_DIR$/Library/SourceAssetDB" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ShaderCache/EditorEncounteredVariants" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ShaderCache/EditorEncounteredVariants" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TeppichsBehaviorTree.sln" beforeDir="false" afterPath="$PROJECT_DIR$/TeppichsBehaviorTree.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TeppichsBehaviorTree.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/TeppichsBehaviorTree.sln.DotSettings.user" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Unity.TeppichsBehaviorTree.Editor.Tests.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Unity.TeppichsBehaviorTree.Editor.Tests.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unity.TeppichsBehaviorTree.Editor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Unity.TeppichsBehaviorTree.Editor.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unity.TeppichsBehaviorTree.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Unity.TeppichsBehaviorTree.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,11 +71,29 @@
         <option name="title" value="All" />
       </GitPushTagMode>
     </option>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/.." value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6CD98968-4D0C-46E5-8E0C-E6F2DFD9AC5C/ab/c0d2f0ef/Quaternion.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/77325B85-0A65-433B-8310-3EFC76A2D8F2/3e/d2efed85/MouseManipulator.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6CD98968-4D0C-46E5-8E0C-E6F2DFD9AC5C/72/76990c63/Transform.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/64EA4CB7-50BE-42E5-957D-69B7D4422C50/40/a8b9567d/RectangleSelector.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/64EA4CB7-50BE-42E5-957D-69B7D4422C50/a1/60c90109/Blackboard.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/IL/64EA4CB7-50BE-42E5-957D-69B7D4422C50/4f/52476c0e/0200002C.il" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/99258562-0D64-4271-98DD-F3A0E1467733/ec/eeec802c/Guid.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/64EA4CB7-50BE-42E5-957D-69B7D4422C50/65/9cac4895/Node.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/64EA4CB7-50BE-42E5-957D-69B7D4422C50/85/ae9f88ba/Edge.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.teppich.teppichstools@0.0.4/Runtime/Logging/EditorDebug.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/77325B85-0A65-433B-8310-3EFC76A2D8F2/af/15422dc1/UQueryExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Tests/Editor/MockPrimitives.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/492B4E7A-A2B2-4EC0-ABEA-C998D966F035/6b/42ae96b5/EdgeGUI.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Editor/TreeVisualization.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/77325B85-0A65-433B-8310-3EFC76A2D8F2/7e/a6e38a5c/Manipulator.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
@@ -96,6 +114,16 @@
       <option value="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Tests/Editor/TestSetup.cs" />
       <option value="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Tests/Editor/PrimitiveTests/LeafTests.cs" />
       <option value="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Tests/Editor/PrimitiveTests/DecoratorTests.cs" />
+      <option value="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Editor/TreeVisualization.cs" />
+      <option value="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Editor/Tutorial/DialogueNode.cs" />
+      <option value="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Editor/Resources/DialogueGraph.uss" />
+      <option value="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/DialogueGraphRuntime/DialogueContainer.cs" />
+      <option value="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/DialogueGraphRuntime/NodeLinkData.cs" />
+      <option value="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/DialogueGraphRuntime/DialogueNodeData.cs" />
+      <option value="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Editor/Tutorial/GraphSaveUtility.cs" />
+      <option value="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Editor/Resources/Node.uss" />
+      <option value="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Editor/Tutorial/DialogueGraphView.cs" />
+      <option value="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Editor/Tutorial/DialogueGraph.cs" />
     </changedPaths>
   </component>
   <component name="MacroExpansionManager">
@@ -156,6 +184,7 @@
       <workItem from="1618692077430" duration="683000" />
       <workItem from="1618844795776" duration="5766000" />
       <workItem from="1618857288212" duration="1463000" />
+      <workItem from="1620310268223" duration="10002000" />
     </task>
     <task id="LOCAL-00001" summary="- removed unused namspace">
       <created>1618523055092</created>
@@ -199,7 +228,14 @@
       <option name="project" value="LOCAL" />
       <updated>1618846555665</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="leftover changes that can't be deleted">
+      <created>1620306389021</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1620306389021</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
@@ -225,6 +261,7 @@
     <MESSAGE value="- jumping version number because i forgot to change package.json" />
     <MESSAGE value="- increment version number to test pipeline" />
     <MESSAGE value="- moved files" />
-    <option name="LAST_COMMIT_MESSAGE" value="- moved files" />
+    <MESSAGE value="leftover changes that can't be deleted" />
+    <option name="LAST_COMMIT_MESSAGE" value="leftover changes that can't be deleted" />
   </component>
 </project>

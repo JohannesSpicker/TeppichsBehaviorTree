@@ -1,3 +1,16 @@
 {
-	"name": "Unity.TeppichsBehaviorTree.Editor"
+    "name": "Unity.TeppichsBehaviorTree.Editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:8b48682bd9db70548b815786f0ec86cd"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
 }
