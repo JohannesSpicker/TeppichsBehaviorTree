@@ -42,11 +42,11 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\TeppichsBehaviorTree\Editor\TreeVisualization.cs" />
-     <Compile Include="Assets\TeppichsBehaviorTree\Editor\Tutorial\DialogueGraph.cs" />
+     <Compile Include="Assets\TeppichsBehaviorTree\Editor\Tutorial\NodeSearchWindow.cs" />
      <Compile Include="Assets\TeppichsBehaviorTree\Editor\Tutorial\DialogueGraphView.cs" />
+     <Compile Include="Assets\TeppichsBehaviorTree\Editor\Tutorial\DialogueGraph.cs" />
      <Compile Include="Assets\TeppichsBehaviorTree\Editor\Tutorial\DialogueNode.cs" />
      <Compile Include="Assets\TeppichsBehaviorTree\Editor\Tutorial\GraphSaveUtility.cs" />
-     <Compile Include="Assets\TeppichsBehaviorTree\Editor\Tutorial\NodeSearchWindow.cs" />
      <None Include="Assets\TeppichsBehaviorTree\Editor\Resources\DialogueGraph.uss" />
      <None Include="Assets\TeppichsBehaviorTree\Editor\Resources\Node.uss" />
      <None Include="Assets\TeppichsBehaviorTree\Editor\Unity.TeppichsBehaviorTree.Editor.asmdef" />

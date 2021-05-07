@@ -4,34 +4,7 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d39d143f-fbac-45bc-9772-3b1516fc8bf7" name="Default Changelist" comment="dialogue graph view&#10;&#10;this followed tutorial 1 + 2 at https://www.youtube.com/watch?v=7KHGH0fPL84">
-      <change afterPath="$PROJECT_DIR$/Assets/DialogueSaves/Resources/New Narrative.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/DialogueSaves/Resources/New Narrative.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Editor/Tutorial/NodeSearchWindow.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Editor/Tutorial/NodeSearchWindow.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/DialogueGraphRuntime/ExposedProperty.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/DialogueGraphRuntime/ExposedProperty.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.TeppichsBehaviorTree/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TeppichsBehaviorTree/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Editor/Tutorial/DialogueGraph.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Editor/Tutorial/DialogueGraph.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Editor/Tutorial/DialogueGraphView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Editor/Tutorial/DialogueGraphView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Editor/Tutorial/GraphSaveUtility.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Editor/Tutorial/GraphSaveUtility.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/DialogueGraphRuntime/DialogueContainer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/DialogueGraphRuntime/DialogueContainer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Bee/1900b0aEDbg-inputdata.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/1900b0aEDbg-inputdata.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Bee/1900b0aEDbg.dag" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/1900b0aEDbg.dag" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Bee/1900b0aEDbg.dag.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/1900b0aEDbg.dag.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Bee/1900b0aEDbg.dag_derived" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/1900b0aEDbg.dag_derived" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Bee/1900b0aEDbg.dag_fsmtime" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/1900b0aEDbg.dag_fsmtime" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Bee/TundraBuildState.state" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/TundraBuildState.state" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Bee/TundraBuildState.state.map" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/TundraBuildState.state.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.TeppichsBehaviorTree.rsp" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.TeppichsBehaviorTree.rsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Bee/profiler.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/profiler.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Bee/tundra.digestcache" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/tundra.digestcache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Bee/tundra.log.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/tundra.log.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/ProtocolInstance.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ProtocolInstance.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Search/transactions.db" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Search/transactions.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Unity.TeppichsBehaviorTree.Editor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Unity.TeppichsBehaviorTree.Editor.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Unity.TeppichsBehaviorTree.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Unity.TeppichsBehaviorTree.csproj" afterDir="false" />
-    </list>
+    <list default="true" id="d39d143f-fbac-45bc-9772-3b1516fc8bf7" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -159,7 +132,7 @@
       <workItem from="1618692077430" duration="683000" />
       <workItem from="1618844795776" duration="5766000" />
       <workItem from="1618857288212" duration="1463000" />
-      <workItem from="1620310268223" duration="18390000" />
+      <workItem from="1620310268223" duration="19055000" />
     </task>
     <task id="LOCAL-00001" summary="- removed unused namspace">
       <created>1618523055092</created>
@@ -217,7 +190,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620331140172</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="tutorial 3 finished&#10;&#10;- adding blackBoard properties does not work">
+      <created>1620341922911</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1620341922911</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
@@ -245,6 +225,7 @@
     <MESSAGE value="- moved files" />
     <MESSAGE value="leftover changes that can't be deleted" />
     <MESSAGE value="dialogue graph view&#10;&#10;this followed tutorial 1 + 2 at https://www.youtube.com/watch?v=7KHGH0fPL84" />
-    <option name="LAST_COMMIT_MESSAGE" value="dialogue graph view&#10;&#10;this followed tutorial 1 + 2 at https://www.youtube.com/watch?v=7KHGH0fPL84" />
+    <MESSAGE value="tutorial 3 finished&#10;&#10;- adding blackBoard properties does not work" />
+    <option name="LAST_COMMIT_MESSAGE" value="tutorial 3 finished&#10;&#10;- adding blackBoard properties does not work" />
   </component>
 </project>
