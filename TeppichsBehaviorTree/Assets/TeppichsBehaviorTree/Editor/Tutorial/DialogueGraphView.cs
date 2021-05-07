@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net.Security;
 using TeppichsBehaviorTree.Runtime.DialogueGraphRuntime;
 using UnityEditor;
 using UnityEditor.Experimental.GraphView;
@@ -12,7 +11,7 @@ namespace TeppichsBehaviorTree.Editor.Tutorial
 {
     public class DialogueGraphView : GraphView
     {
-        public readonly Vector2          defaultNodeSize = new Vector2(150, 200);
+        public readonly Vector2 defaultNodeSize = new Vector2(150, 200);
 
         public  Blackboard            blackboard;
         public  List<ExposedProperty> exposedProperties = new List<ExposedProperty>();
@@ -27,7 +26,7 @@ namespace TeppichsBehaviorTree.Editor.Tutorial
             this.AddManipulator(new SelectionDragger());
             this.AddManipulator(new RectangleSelector());
 
-            var grid = new GridBackground();
+            GridBackground grid = new GridBackground();
             Insert(0, grid);
             grid.StretchToParentSize();
 
@@ -46,12 +45,12 @@ namespace TeppichsBehaviorTree.Editor.Tutorial
 
         private DialogueNode GenerateEntryPoint()
         {
-            var node = new DialogueNode()
+            DialogueNode node = new DialogueNode
             {
                 title = "START", guid = Guid.NewGuid().ToString(), DialogueText = "ENTRYPOINT", EntryPoint = true
             };
 
-            var generatedPort = GeneratePort(node, Direction.Output, Port.Capacity.Single);
+            Port generatedPort = GeneratePort(node, Direction.Output);
             generatedPort.portName = "Next";
             node.outputContainer.Add(generatedPort);
 
@@ -67,30 +66,28 @@ namespace TeppichsBehaviorTree.Editor.Tutorial
         }
 
         private Port GeneratePort(DialogueNode  node, Direction portDirection,
-                                  Port.Capacity capacity = Port.Capacity.Single)
-        {
-            return node.InstantiatePort(Orientation.Horizontal, portDirection, capacity,
-                                        typeof(float)); //type float is arbitrary, can be used to pass data
-        }
+                                  Port.Capacity capacity = Port.Capacity.Single) =>
+            node.InstantiatePort(Orientation.Horizontal, portDirection, capacity,
+                                 typeof(float)); //type float is arbitrary, can be used to pass data
 
-        public DialogueNode CreateDialogueNode(string nodeName , Vector2 mousePosition)
+        public DialogueNode CreateDialogueNode(string nodeName, Vector2 mousePosition)
         {
-            var dialogueNode = new DialogueNode()
+            DialogueNode dialogueNode = new DialogueNode
             {
                 title = nodeName, DialogueText = nodeName, guid = Guid.NewGuid().ToString()
             };
 
-            var inputPort = GeneratePort(dialogueNode, Direction.Input, Port.Capacity.Multi);
+            Port inputPort = GeneratePort(dialogueNode, Direction.Input, Port.Capacity.Multi);
             inputPort.portName = "Input";
             dialogueNode.inputContainer.Add(inputPort);
 
             dialogueNode.styleSheets.Add(Resources.Load<StyleSheet>("Node"));
 
-            var button = new Button(() => { AddChoicePort(dialogueNode); });
+            Button button = new Button(() => { AddChoicePort(dialogueNode); });
             dialogueNode.titleContainer.Add(button);
             button.text = "New Choice";
 
-            var textField = new TextField(string.Empty);
+            TextField textField = new TextField(string.Empty);
 
             textField.RegisterValueChangedCallback(evt =>
             {
@@ -110,23 +107,23 @@ namespace TeppichsBehaviorTree.Editor.Tutorial
 
         public void AddChoicePort(DialogueNode dialogueNode, string overriddenPortName = "")
         {
-            var generatedPort = GeneratePort(dialogueNode, Direction.Output);
+            Port generatedPort = GeneratePort(dialogueNode, Direction.Output);
 
-            var oldLabel = generatedPort.contentContainer.Q<Label>("type");
+            Label oldLabel = generatedPort.contentContainer.Q<Label>("type");
             generatedPort.contentContainer.Remove(oldLabel);
 
-            var outputPortCount = dialogueNode.outputContainer.Query("connector").ToList().Count;
+            int outputPortCount = dialogueNode.outputContainer.Query("connector").ToList().Count;
             generatedPort.portName = $"Choice {outputPortCount}";
 
-            var choicePortName = string.IsNullOrEmpty(overriddenPortName)
+            string choicePortName = string.IsNullOrEmpty(overriddenPortName)
                 ? $"Choice {outputPortCount + 1}"
                 : overriddenPortName;
 
-            var textField = new TextField() {name = string.Empty, value = choicePortName};
+            TextField textField = new TextField {name = string.Empty, value = choicePortName};
             textField.RegisterValueChangedCallback(evt => generatedPort.portName = evt.newValue);
             generatedPort.contentContainer.Add(new Label("  "));
             generatedPort.contentContainer.Add(textField);
-            var deleteButton = new Button(() => RemovePort(dialogueNode, generatedPort)) {text = "X"};
+            Button deleteButton = new Button(() => RemovePort(dialogueNode, generatedPort)) {text = "X"};
             generatedPort.contentContainer.Add(deleteButton);
 
             generatedPort.portName = choicePortName;
@@ -138,14 +135,14 @@ namespace TeppichsBehaviorTree.Editor.Tutorial
 
         private void RemovePort(DialogueNode dialogueNode, Port generatedPort)
         {
-            var targetEdge = edges.ToList()
-                                  .Where(x => x.output.portName == generatedPort.portName
-                                              && x.output.node  == generatedPort.node);
+            IEnumerable<Edge> targetEdge = edges.ToList()
+                                                .Where(x => x.output.portName == generatedPort.portName
+                                                            && x.output.node  == generatedPort.node);
 
             if (!targetEdge.Any())
                 return;
 
-            var edge = targetEdge.First();
+            Edge edge = targetEdge.First();
             edge.input.Disconnect(edge);
             RemoveElement(targetEdge.First());
 
@@ -154,17 +151,14 @@ namespace TeppichsBehaviorTree.Editor.Tutorial
             dialogueNode.RefreshExpandedState();
         }
 
-        public void CreateNode(string nodeName, Vector2 mousePosition)
-        {
-            AddElement(CreateDialogueNode(nodeName, mousePosition)); 
-            
-        }
+        public void CreateNode(string nodeName, Vector2 mousePosition) =>
+            AddElement(CreateDialogueNode(nodeName, mousePosition));
 
         public override List<Port> GetCompatiblePorts(Port startPort, NodeAdapter nodeAdapter)
         {
-            var compatiblePorts = new List<Port>();
+            List<Port> compatiblePorts = new List<Port>();
 
-            ports.ForEach((port) =>
+            ports.ForEach(port =>
             {
                 if (startPort != port && startPort.node != port.node)
                     compatiblePorts.Add(port);
@@ -178,36 +172,39 @@ namespace TeppichsBehaviorTree.Editor.Tutorial
             exposedProperties.Clear();
             blackboard.Clear();
         }
-        
+
         public void AddPropertyToBlackBoard(ExposedProperty exposedProperty)
         {
-            var localPropertyName = exposedProperty.propertyName;
-            var localPropertyValue = exposedProperty.propertyValue;
+            string localPropertyName  = exposedProperty.propertyName;
+            string localPropertyValue = exposedProperty.propertyValue;
 
-            while (exposedProperties.Any(x=>x.propertyName == localPropertyName))
+            while (exposedProperties.Any(x => x.propertyName == localPropertyName))
                 localPropertyName = $"{localPropertyName}(1)";
-            
-            var property = new ExposedProperty();
+
+            ExposedProperty property = new ExposedProperty();
             property.propertyName  = localPropertyName;
             property.propertyValue = localPropertyValue;
-            
+
             exposedProperties.Add(property);
 
-            var container       = new VisualElement();
-            var blackboardField = new BlackboardField() {text = property.propertyName, typeText = "string property"};
-            
+            VisualElement container = new VisualElement();
+
+            BlackboardField blackboardField =
+                new BlackboardField {text = property.propertyName, typeText = "string property"};
+
             container.Add(blackboardField);
 
-            var propertyValueTextField = new TextField("Value:") {value = localPropertyValue};
+            TextField propertyValueTextField = new TextField("Value:") {value = localPropertyValue};
+
             propertyValueTextField.RegisterValueChangedCallback(evt =>
             {
-                var changingPropertyIndex = exposedProperties.FindIndex(x => x.propertyName == property.propertyName);
+                int changingPropertyIndex = exposedProperties.FindIndex(x => x.propertyName == property.propertyName);
                 exposedProperties[changingPropertyIndex].propertyValue = evt.newValue;
             });
 
-            var blackBoardValueRow = new BlackboardRow(blackboardField, propertyValueTextField);
+            BlackboardRow blackBoardValueRow = new BlackboardRow(blackboardField, propertyValueTextField);
             container.Add(blackBoardValueRow);
-            
+
             blackboardField.Add(container);
         }
     }

@@ -5,8 +5,8 @@ namespace TeppichsBehaviorTree.Runtime.DialogueGraphRuntime
     [Serializable]
     public class NodeLinkData
     {
-        public string BaseNodeGuid;
-        public string PortName;
-        public string TargetNodeGuid;
+        public string baseNodeGuid;
+        public string portName;
+        public string targetNodeGuid;
     }
 }

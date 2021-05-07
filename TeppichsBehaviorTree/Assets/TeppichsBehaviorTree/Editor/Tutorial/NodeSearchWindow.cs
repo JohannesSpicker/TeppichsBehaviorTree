@@ -1,8 +1,6 @@
 ﻿using System.Collections.Generic;
 using UnityEditor;
 using UnityEditor.Experimental.GraphView;
-using UnityEditor.Graphs;
-using UnityEditor.PackageManager.UI;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -14,23 +12,16 @@ namespace TeppichsBehaviorTree.Editor.Tutorial
         private EditorWindow      editorWindow;
         private Texture2D         indentationIcon;
 
-        public void Init(DialogueGraphView graphView, EditorWindow window)
-        {
-            dialogueGraphView = graphView;
-            editorWindow      = window;
-
-            indentationIcon = new Texture2D(1, 1);
-            indentationIcon.SetPixel(0, 0, new Color(0, 0, 0, 0));
-            indentationIcon.Apply();
-        }
-
         public List<SearchTreeEntry> CreateSearchTree(SearchWindowContext context)
         {
-            var tree = new List<SearchTreeEntry>
+            List<SearchTreeEntry> tree = new List<SearchTreeEntry>
             {
-                new SearchTreeGroupEntry(new GUIContent("Create Elements"), 0),
-                new SearchTreeGroupEntry(new GUIContent("Dialogue"),        1),
-                new SearchTreeEntry(new GUIContent("Dialogue Node", indentationIcon)) {userData = new DialogueNode(), level = 2}
+                new SearchTreeGroupEntry(new GUIContent("Create Elements")),
+                new SearchTreeGroupEntry(new GUIContent("Dialogue"), 1),
+                new SearchTreeEntry(new GUIContent("Dialogue Node", indentationIcon))
+                {
+                    userData = new DialogueNode(), level = 2
+                }
             };
 
             return tree;
@@ -38,12 +29,12 @@ namespace TeppichsBehaviorTree.Editor.Tutorial
 
         public bool OnSelectEntry(SearchTreeEntry searchTreeEntry, SearchWindowContext context)
         {
-            var worldMousePosition =
+            Vector2 worldMousePosition =
                 editorWindow.rootVisualElement.ChangeCoordinatesTo(editorWindow.rootVisualElement.parent,
                                                                    context.screenMousePosition
                                                                    - editorWindow.position.position);
 
-            var localMousePosition = dialogueGraphView.contentViewContainer.WorldToLocal(worldMousePosition);
+            Vector2 localMousePosition = dialogueGraphView.contentViewContainer.WorldToLocal(worldMousePosition);
 
             switch (searchTreeEntry.userData)
             {
@@ -53,6 +44,16 @@ namespace TeppichsBehaviorTree.Editor.Tutorial
                     return true;
                 default: return false;
             }
+        }
+
+        public void Init(DialogueGraphView graphView, EditorWindow window)
+        {
+            dialogueGraphView = graphView;
+            editorWindow      = window;
+
+            indentationIcon = new Texture2D(1, 1);
+            indentationIcon.SetPixel(0, 0, new Color(0, 0, 0, 0));
+            indentationIcon.Apply();
         }
     }
 }

@@ -3,29 +3,25 @@ using System.Linq;
 using TeppichsBehaviorTree.Runtime.DialogueGraphRuntime;
 using UnityEditor;
 using UnityEditor.Experimental.GraphView;
-using UnityEditor.Graphs;
 using UnityEngine;
 using UnityEngine.UIElements;
-using Edge = UnityEditor.Experimental.GraphView.Edge;
 
 namespace TeppichsBehaviorTree.Editor.Tutorial
 {
     public class GraphSaveUtility
     {
-        private DialogueGraphView _targetGraphView;
         private DialogueContainer _containerCache;
+        private DialogueGraphView _targetGraphView;
 
         private List<Edge>         Edges => _targetGraphView.edges.ToList();
         private List<DialogueNode> Nodes => _targetGraphView.nodes.ToList().Cast<DialogueNode>().ToList();
 
-        public static GraphSaveUtility GetInstance(DialogueGraphView targetGraphView)
-        {
-            return new GraphSaveUtility() {_targetGraphView = targetGraphView};
-        }
+        public static GraphSaveUtility GetInstance(DialogueGraphView targetGraphView) =>
+            new GraphSaveUtility {_targetGraphView = targetGraphView};
 
         public void SaveGraph(string fileName)
         {
-            var dialogueContainer = ScriptableObject.CreateInstance<DialogueContainer>();
+            DialogueContainer dialogueContainer = ScriptableObject.CreateInstance<DialogueContainer>();
 
             if (!SaveNodes(dialogueContainer))
                 return;
@@ -41,40 +37,36 @@ namespace TeppichsBehaviorTree.Editor.Tutorial
             AssetDatabase.CreateAsset(dialogueContainer, $"Assets/DialogueSaves/Resources/{fileName}.asset");
         }
 
-        private void SaveExposedProperties(DialogueContainer dialogueContainer)
-        {
+        private void SaveExposedProperties(DialogueContainer dialogueContainer) =>
             dialogueContainer.exposedProperties.AddRange(_targetGraphView.exposedProperties);
-        }
 
         private bool SaveNodes(DialogueContainer dialogueContainer)
         {
             if (!Edges.Any())
                 return false;
 
-            var connectedPorts = Edges.Where(x => x.input.node != null).ToArray();
+            Edge[] connectedPorts = Edges.Where(x => x.input.node != null).ToArray();
 
             for (int i = 0; i < connectedPorts.Length; i++)
             {
-                var outputNode = connectedPorts[i].output.node as DialogueNode;
-                var inputNode  = connectedPorts[i].input.node as DialogueNode;
+                DialogueNode outputNode = connectedPorts[i].output.node as DialogueNode;
+                DialogueNode inputNode  = connectedPorts[i].input.node as DialogueNode;
 
-                dialogueContainer.nodeLinks.Add(new NodeLinkData()
+                dialogueContainer.nodeLinks.Add(new NodeLinkData
                 {
-                    BaseNodeGuid   = outputNode.guid,
-                    PortName       = connectedPorts[i].output.portName,
-                    TargetNodeGuid = inputNode.guid
+                    baseNodeGuid   = outputNode.guid,
+                    portName       = connectedPorts[i].output.portName,
+                    targetNodeGuid = inputNode.guid
                 });
             }
 
-            foreach (var dialogueNode in Nodes.Where(node => !node.EntryPoint))
-            {
-                dialogueContainer.dialogueNodeData.Add(new DialogueNodeData()
+            foreach (DialogueNode dialogueNode in Nodes.Where(node => !node.EntryPoint))
+                dialogueContainer.dialogueNodeData.Add(new DialogueNodeData
                 {
                     guid         = dialogueNode.guid,
                     dialogueText = dialogueNode.DialogueText,
                     position     = dialogueNode.GetPosition().position
                 });
-            }
 
             return true;
         }
@@ -99,8 +91,8 @@ namespace TeppichsBehaviorTree.Editor.Tutorial
         private void CreateExposedProperties()
         {
             _targetGraphView.ClearBlackBoardAndExposedProperties();
-            
-            foreach (var exposedProperty in _containerCache.exposedProperties)
+
+            foreach (ExposedProperty exposedProperty in _containerCache.exposedProperties)
                 _targetGraphView.AddPropertyToBlackBoard(exposedProperty);
         }
 
@@ -108,12 +100,13 @@ namespace TeppichsBehaviorTree.Editor.Tutorial
         {
             for (int i = 0; i < Nodes.Count; i++)
             {
-                var connections = _containerCache.nodeLinks.Where(x => x.BaseNodeGuid == Nodes[i].guid).ToList();
+                List<NodeLinkData> connections =
+                    _containerCache.nodeLinks.Where(x => x.baseNodeGuid == Nodes[i].guid).ToList();
 
                 for (int j = 0; j < connections.Count; j++)
                 {
-                    var targetNodeGuid = connections[j].TargetNodeGuid;
-                    var targetNode     = Nodes.First(x => x.guid == targetNodeGuid);
+                    string       targetNodeGuid = connections[j].targetNodeGuid;
+                    DialogueNode targetNode     = Nodes.First(x => x.guid == targetNodeGuid);
                     LinkNodes(Nodes[i].outputContainer[j].Q<Port>(), (Port) targetNode.inputContainer[0]);
 
                     targetNode.SetPosition(new
@@ -125,7 +118,7 @@ namespace TeppichsBehaviorTree.Editor.Tutorial
 
         private void LinkNodes(Port input, Port output)
         {
-            var tempEdge = new Edge() {input = input, output = output};
+            Edge tempEdge = new Edge {input = input, output = output};
 
             tempEdge?.input.Connect(tempEdge);
             tempEdge?.output.Connect(tempEdge);
@@ -134,22 +127,24 @@ namespace TeppichsBehaviorTree.Editor.Tutorial
 
         private void CreateNodes()
         {
-            foreach (var nodeData in _containerCache.dialogueNodeData)
+            foreach (DialogueNodeData nodeData in _containerCache.dialogueNodeData)
             {
-                var tempNode = _targetGraphView.CreateDialogueNode(nodeData.dialogueText, Vector2.zero);
+                DialogueNode tempNode = _targetGraphView.CreateDialogueNode(nodeData.dialogueText, Vector2.zero);
                 tempNode.guid = nodeData.guid;
                 _targetGraphView.AddElement(tempNode);
 
-                var nodePorts = _containerCache.nodeLinks.Where(x => x.BaseNodeGuid == nodeData.guid).ToList();
-                nodePorts.ForEach(x => _targetGraphView.AddChoicePort(tempNode, x.PortName));
+                List<NodeLinkData> nodePorts =
+                    _containerCache.nodeLinks.Where(x => x.baseNodeGuid == nodeData.guid).ToList();
+
+                nodePorts.ForEach(x => _targetGraphView.AddChoicePort(tempNode, x.portName));
             }
         }
 
         private void ClearGraph()
         {
-            Nodes.Find(x => x.EntryPoint).guid = _containerCache.nodeLinks[0].BaseNodeGuid;
+            Nodes.Find(x => x.EntryPoint).guid = _containerCache.nodeLinks[0].baseNodeGuid;
 
-            foreach (var node in Nodes)
+            foreach (DialogueNode node in Nodes)
             {
                 if (node.EntryPoint)
                     continue;
