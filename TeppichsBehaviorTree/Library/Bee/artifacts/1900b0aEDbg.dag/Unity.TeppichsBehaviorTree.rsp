@@ -309,10 +309,6 @@
 -r:"Library/Bee/artifacts/1900b0aEDbg.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aEDbg.dag/UnityEngine.UI.ref.dll"
 "Assets/TeppichsBehaviorTree/Runtime/AssemblyInfo.cs"
-"Assets/TeppichsBehaviorTree/Runtime/DialogueGraphRuntime/DialogueContainer.cs"
-"Assets/TeppichsBehaviorTree/Runtime/DialogueGraphRuntime/DialogueNodeData.cs"
-"Assets/TeppichsBehaviorTree/Runtime/DialogueGraphRuntime/ExposedProperty.cs"
-"Assets/TeppichsBehaviorTree/Runtime/DialogueGraphRuntime/NodeLinkData.cs"
 -langversion:8.0
 
 /deterministic

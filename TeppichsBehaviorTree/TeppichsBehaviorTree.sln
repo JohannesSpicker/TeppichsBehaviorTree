@@ -7,15 +7,19 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pawns", "Pawns.csproj", "{3
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModularBehaviourTreeConstruction", "ModularBehaviourTreeConstruction.csproj", "{ea534b25-29bc-5cde-1ab5-9187f04f1a4e}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.TeppichsBehaviorTree.Editor", "Unity.TeppichsBehaviorTree.Editor.csproj", "{324e94af-ac4b-746d-47c2-727550ddd1bf}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tools", "Tools.csproj", "{04d5c2b1-1045-eceb-33c3-7b1c41f611d4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DialogueGraphTutorialRuntime", "DialogueGraphTutorialRuntime.csproj", "{0c8573a3-62be-acef-8749-d0e2301418ca}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.TeppichsBehaviorTree", "Unity.TeppichsBehaviorTree.csproj", "{d27c597a-d251-f2d8-732a-4045f3bf707d}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreeRunner", "TreeRunner.csproj", "{5053c20f-f76e-24e7-ace6-2eb67896165d}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.TeppichsBehaviorTree.Editor", "Unity.TeppichsBehaviorTree.Editor.csproj", "{324e94af-ac4b-746d-47c2-727550ddd1bf}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.TeppichsBehaviorTree.Editor.Tests", "Unity.TeppichsBehaviorTree.Editor.Tests.csproj", "{4b8054dc-645b-96b7-0c11-788d33b72b40}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DialogueGraphTutorial", "DialogueGraphTutorial.csproj", "{d93ce330-c865-5902-2026-dbeb7bde37bb}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeppichsBehaviorTree.Tests", "TeppichsBehaviorTree.Tests.csproj", "{865300ec-5806-f612-9d01-f53f4d16fb7d}"
 EndProject
@@ -30,16 +34,20 @@ Global
 		{329a11e1-987c-a575-6002-dce975bda045}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ea534b25-29bc-5cde-1ab5-9187f04f1a4e}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{ea534b25-29bc-5cde-1ab5-9187f04f1a4e}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{324e94af-ac4b-746d-47c2-727550ddd1bf}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{324e94af-ac4b-746d-47c2-727550ddd1bf}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{04d5c2b1-1045-eceb-33c3-7b1c41f611d4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{04d5c2b1-1045-eceb-33c3-7b1c41f611d4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0c8573a3-62be-acef-8749-d0e2301418ca}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0c8573a3-62be-acef-8749-d0e2301418ca}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{d27c597a-d251-f2d8-732a-4045f3bf707d}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{d27c597a-d251-f2d8-732a-4045f3bf707d}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5053c20f-f76e-24e7-ace6-2eb67896165d}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{5053c20f-f76e-24e7-ace6-2eb67896165d}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{324e94af-ac4b-746d-47c2-727550ddd1bf}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{324e94af-ac4b-746d-47c2-727550ddd1bf}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4b8054dc-645b-96b7-0c11-788d33b72b40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{4b8054dc-645b-96b7-0c11-788d33b72b40}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{d93ce330-c865-5902-2026-dbeb7bde37bb}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{d93ce330-c865-5902-2026-dbeb7bde37bb}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{865300ec-5806-f612-9d01-f53f4d16fb7d}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{865300ec-5806-f612-9d01-f53f4d16fb7d}.Debug|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
