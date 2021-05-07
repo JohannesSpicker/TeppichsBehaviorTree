@@ -21,7 +21,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.TeppichsBehaviorTree.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DialogueGraphTutorial", "DialogueGraphTutorial.csproj", "{d93ce330-c865-5902-2026-dbeb7bde37bb}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreeBuilder.Editor", "TreeBuilder.Editor.csproj", "{30150e9c-2ab4-bd44-1497-86614ea637d2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreeBuilderTests", "TreeBuilderTests.csproj", "{54f54938-6866-1217-0a83-7ad382f8799d}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeppichsBehaviorTree.Tests", "TeppichsBehaviorTree.Tests.csproj", "{865300ec-5806-f612-9d01-f53f4d16fb7d}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreeBuilder", "TreeBuilder.csproj", "{c3cbdfb8-9c33-01b2-455c-8da7f1a67760}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -48,8 +54,14 @@ Global
 		{4b8054dc-645b-96b7-0c11-788d33b72b40}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{d93ce330-c865-5902-2026-dbeb7bde37bb}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{d93ce330-c865-5902-2026-dbeb7bde37bb}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30150e9c-2ab4-bd44-1497-86614ea637d2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30150e9c-2ab4-bd44-1497-86614ea637d2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54f54938-6866-1217-0a83-7ad382f8799d}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54f54938-6866-1217-0a83-7ad382f8799d}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{865300ec-5806-f612-9d01-f53f4d16fb7d}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{865300ec-5806-f612-9d01-f53f4d16fb7d}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{c3cbdfb8-9c33-01b2-455c-8da7f1a67760}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{c3cbdfb8-9c33-01b2-455c-8da7f1a67760}.Debug|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

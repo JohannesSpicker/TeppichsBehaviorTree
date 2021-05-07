@@ -12,11 +12,11 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{324e94af-ac4b-746d-47c2-727550ddd1bf}</ProjectGuid>
+    <ProjectGuid>{30150e9c-2ab4-bd44-1497-86614ea637d2}</ProjectGuid>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <AssemblyName>Unity.TeppichsBehaviorTree.Editor</AssemblyName>
+    <AssemblyName>TreeBuilder.Editor</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <BaseDirectory>.</BaseDirectory>
@@ -41,12 +41,12 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\TeppichsBehaviorTree\Editor\TreeVisualization.cs" />
-     <None Include="Assets\TeppichsBehaviorTree\Editor\Resources\DialogueGraph.uss" />
-     <None Include="Assets\TeppichsBehaviorTree\Editor\Resources\Node.uss" />
-     <None Include="Assets\TeppichsBehaviorTree\Editor\Unity.TeppichsBehaviorTree.Editor.asmdef" />
-     <None Include="Assets\TeppichsBehaviorTree\Editor\Resources\TreeBuilderGraph.uss" />
-     <None Include="Assets\TeppichsBehaviorTree\Editor\Resources\TreeBuilderNode.uss" />
+     <Compile Include="Assets\TeppichsBehaviorTree\Editor\TreeBuilderEditor\TreeBuilderWindow.cs" />
+     <Compile Include="Assets\TeppichsBehaviorTree\Editor\TreeBuilderEditor\TreeBuilderGraphView.cs" />
+     <Compile Include="Assets\TeppichsBehaviorTree\Editor\TreeBuilderEditor\TreeBuilderNode.cs" />
+     <Compile Include="Assets\TeppichsBehaviorTree\Editor\TreeBuilderEditor\TreeBuilderSearchWindow.cs" />
+     <Compile Include="Assets\TeppichsBehaviorTree\Editor\TreeBuilderEditor\TreeBuilderNodeFactory.cs" />
+     <None Include="Assets\TeppichsBehaviorTree\Editor\TreeBuilderEditor\TreeBuilder.Editor.asmdef" />
      <Reference Include="UnityEngine">
      <HintPath>C:/Program Files/Engines/Unity Versions/2021.1.0f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
      </Reference>
@@ -658,10 +658,6 @@
      </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Unity.TeppichsBehaviorTree.csproj">
-      <Project>{d27c597a-d251-f2d8-732a-4045f3bf707d}</Project>
-      <Name>Unity.TeppichsBehaviorTree</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

@@ -4,8 +4,21 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d39d143f-fbac-45bc-9772-3b1516fc8bf7" name="Default Changelist" comment="code cleanup">
-      <change beforePath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Editor/Tutorial.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Editor/Tutorial.meta" afterDir="false" />
+    <list default="true" id="d39d143f-fbac-45bc-9772-3b1516fc8bf7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Editor/Resources/TreeBuilderGraph.uss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Editor/Resources/TreeBuilderGraph.uss.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Editor/Resources/TreeBuilderNode.uss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Editor/Resources/TreeBuilderNode.uss.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Editor/TreeBuilderEditor/TreeBuilderNodeFactory.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Editor/TreeBuilderEditor/TreeBuilderNodeFactory.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/DialogueGraphRuntime.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/TreeBuilder.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/TreeBuilder/TreeBuilder.asmdef" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/TreeBuilder/TreeBuilder.asmdef.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TreeBuilder.Editor.csproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TreeBuilder.csproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UserSettings/Search.index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.TeppichsBehaviorTree/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TeppichsBehaviorTree/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/Bee/1900b0aEDbg-inputdata.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/1900b0aEDbg-inputdata.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/Bee/1900b0aEDbg.dag" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/1900b0aEDbg.dag" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/Bee/1900b0aEDbg.dag.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/1900b0aEDbg.dag.json" afterDir="false" />
@@ -18,6 +31,7 @@
       <change beforePath="$PROJECT_DIR$/Library/Bee/tundra.digestcache" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/tundra.digestcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/Bee/tundra.log.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/tundra.log.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ProtocolInstance.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ProtocolInstance.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/SceneVisibilityState.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Library/SceneVisibilityState.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/Search/transactions.db" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Search/transactions.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TeppichsBehaviorTree.sln" beforeDir="false" afterPath="$PROJECT_DIR$/TeppichsBehaviorTree.sln" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Unity.TeppichsBehaviorTree.Editor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Unity.TeppichsBehaviorTree.Editor.csproj" afterDir="false" />
@@ -44,33 +58,30 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6CD98968-4D0C-46E5-8E0C-E6F2DFD9AC5C/ab/c0d2f0ef/Quaternion.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6CD98968-4D0C-46E5-8E0C-E6F2DFD9AC5C/72/76990c63/Transform.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/GitRepos/TeppichsBehaviorTree/TeppichsBehaviorTree/Assets/TeppichsBehaviorTree/Editor/Tutorial/GraphSaveUtility.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/64EA4CB7-50BE-42E5-957D-69B7D4422C50/a1/60c90109/Blackboard.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5F37459E-F130-4442-BA19-EE268C49D074/92/9fb267b7/Single.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/99258562-0D64-4271-98DD-F3A0E1467733/ec/eeec802c/Guid.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/64EA4CB7-50BE-42E5-957D-69B7D4422C50/85/ae9f88ba/Edge.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/GitRepos/TeppichsBehaviorTree/TeppichsBehaviorTree/Assets/TeppichsBehaviorTree/Editor/Tutorial/DialogueNode.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/GitRepos/TeppichsBehaviorTree/TeppichsBehaviorTree/Assets/TeppichsBehaviorTree/Editor/Tutorial/DialogueGraphView.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/GitRepos/TeppichsBehaviorTree/TeppichsBehaviorTree/Assets/TeppichsBehaviorTree/Editor/Tutorial/NodeSearchWindow.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/GitRepos/TeppichsBehaviorTree/TeppichsBehaviorTree/Assets/TeppichsBehaviorTree/Editor/Tutorial/NodeSearchWindow.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/64EA4CB7-50BE-42E5-957D-69B7D4422C50/c9/0f439421/MiniMap.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Tests/Editor/TreeBuilderTests/SomeTreeBuilderTests.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/492B4E7A-A2B2-4EC0-ABEA-C998D966F035/6b/42ae96b5/EdgeGUI.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/77325B85-0A65-433B-8310-3EFC76A2D8F2/7e/a6e38a5c/Manipulator.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Editor/Tutorial/GraphSaveUtility.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/77325B85-0A65-433B-8310-3EFC76A2D8F2/3e/d2efed85/MouseManipulator.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/GitRepos/TeppichsBehaviorTree/TeppichsBehaviorTree/Assets/TeppichsBehaviorTree/Editor/Tutorial/DialogueGraphView.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/64EA4CB7-50BE-42E5-957D-69B7D4422C50/40/a8b9567d/RectangleSelector.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Editor/Tutorial/NodeSearchWindow.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/DialogueGraphRuntime/DialogueNodeData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/77325B85-0A65-433B-8310-3EFC76A2D8F2/a7/f553cef2/VisualElementExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/IL/64EA4CB7-50BE-42E5-957D-69B7D4422C50/4f/52476c0e/0200002C.il" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/64EA4CB7-50BE-42E5-957D-69B7D4422C50/65/9cac4895/Node.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/GitRepos/TeppichsBehaviorTree/TeppichsBehaviorTree/Assets/TeppichsBehaviorTree/Editor/Tutorial/DialogueNode.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.teppich.teppichstools@0.0.4/Runtime/Logging/EditorDebug.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/77325B85-0A65-433B-8310-3EFC76A2D8F2/af/15422dc1/UQueryExtensions.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/GitRepos/TeppichsBehaviorTree/TeppichsBehaviorTree/Assets/TeppichsBehaviorTree/Editor/Tutorial/DialogueGraphView.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/GitRepos/TeppichsBehaviorTree/TeppichsBehaviorTree/Assets/TeppichsBehaviorTree/Editor/Tutorial/GraphSaveUtility.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Editor/Tutorial/DialogueNode.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Tests/Editor/MockPrimitives.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Editor/Tutorial/DialogueGraphView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Editor/TreeVisualization.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Editor/Tutorial/DialogueGraph.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.test-framework@1.1.22/UnityEngine.TestRunner/NUnitExtensions/ConstructDelegator.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
@@ -92,17 +103,28 @@
       <option value="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Tests/Editor/PrimitiveTests/LeafTests.cs" />
       <option value="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Tests/Editor/PrimitiveTests/DecoratorTests.cs" />
       <option value="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Editor/TreeVisualization.cs" />
-      <option value="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Editor/Tutorial/DialogueNode.cs" />
       <option value="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Editor/Resources/DialogueGraph.uss" />
       <option value="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/DialogueGraphRuntime/DialogueNodeData.cs" />
       <option value="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Editor/Resources/Node.uss" />
-      <option value="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Editor/Tutorial/NodeSearchWindow.cs" />
       <option value="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/DialogueGraphRuntime/DialogueContainer.cs" />
       <option value="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Editor/Tutorial/GraphSaveUtility.cs" />
-      <option value="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Editor/Tutorial/DialogueGraph.cs" />
       <option value="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/DialogueGraphRuntime/ExposedProperty.cs" />
-      <option value="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Editor/Tutorial/DialogueGraphView.cs" />
       <option value="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/DialogueGraphRuntime/NodeLinkData.cs" />
+      <option value="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Editor/Tutorial/DialogueGraph.cs" />
+      <option value="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Editor/TreeRunnerEditor/TreeBuilderWindow.cs" />
+      <option value="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Editor/Resources/TreeBuilderGraph.uss" />
+      <option value="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Editor/Resources/TreeBuilderNode.uss" />
+      <option value="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Editor/TreeRunnerEditor/TreeBuilderNode.cs" />
+      <option value="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Editor/Tutorial/DialogueGraphView.cs" />
+      <option value="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Editor/Tutorial/NodeSearchWindow.cs" />
+      <option value="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Editor/TreeRunnerEditor/TreeBuilderSearchWindow.cs" />
+      <option value="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Editor/TreeRunnerEditor/TreeBuilderGraphView.cs" />
+      <option value="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Editor/TreeBuilderEditor/TreeBuilderNode.cs" />
+      <option value="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Editor/TreeBuilderEditor/TreeBuilderSearchWindow.cs" />
+      <option value="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Editor/Tutorial/DialogueNode.cs" />
+      <option value="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Editor/Tutorial/TreeBuilderNodeFactory.cs" />
+      <option value="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Tests/Editor/TreeBuilderTests/SomeTreeBuilderTests.cs" />
+      <option value="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Editor/TreeBuilderEditor/TreeBuilderNodeFactory.cs" />
     </changedPaths>
   </component>
   <component name="MacroExpansionManager">
@@ -164,7 +186,8 @@
       <workItem from="1618844795776" duration="5766000" />
       <workItem from="1618857288212" duration="1463000" />
       <workItem from="1620310268223" duration="19055000" />
-      <workItem from="1620410073357" duration="307000" />
+      <workItem from="1620410073357" duration="11991000" />
+      <workItem from="1620423997245" duration="1129000" />
     </task>
     <task id="LOCAL-00001" summary="- removed unused namspace">
       <created>1618523055092</created>
@@ -243,7 +266,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620410317655</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="added assembly defs for DialogueGraphTutorial">
+      <created>1620410492163</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1620410492163</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
@@ -274,6 +304,7 @@
     <MESSAGE value="tutorial 3 finished&#10;&#10;- adding blackBoard properties does not work" />
     <MESSAGE value="- unity auto changes" />
     <MESSAGE value="code cleanup" />
-    <option name="LAST_COMMIT_MESSAGE" value="code cleanup" />
+    <MESSAGE value="added assembly defs for DialogueGraphTutorial" />
+    <option name="LAST_COMMIT_MESSAGE" value="added assembly defs for DialogueGraphTutorial" />
   </component>
 </project>
