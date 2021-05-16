@@ -1,10 +1,12 @@
 {
-    "name": "TreeBuilder",
+    "name": "DialogueGraphTutorial",
     "rootNamespace": "",
     "references": [
-        "GUID:421fd12279173a649a2ff04b70fb29de"
+        "GUID:d74043985d0dcac4d9e132024f2d73ad"
     ],
-    "includePlatforms": [],
+    "includePlatforms": [
+        "Editor"
+    ],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": false,

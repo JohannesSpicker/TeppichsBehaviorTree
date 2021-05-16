@@ -1,0 +1,26 @@
+{
+    "name": "TeppichsBehaviorTree.Tests",
+    "rootNamespace": "",
+    "references": [
+        "GUID:27619889b8ba8c24980f49ee34dbb44a",
+        "GUID:0acc523941302664db1f4e527237feb3",
+        "GUID:883d298fff41c734080734ab5416b4d1",
+        "GUID:11ca49ad77b4fa5488e3d95a49bad0ac",
+        "GUID:0e0e5dad75b3de144b44444cfe64ad4b",
+        "GUID:ebc8aa3a2559e874cb0ee7c9f7a62cfa",
+        "GUID:132ffe1410a13a64fbe878117d378fc8"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "nunit.framework.dll"
+    ],
+    "autoReferenced": false,
+    "defineConstraints": [
+        "UNITY_INCLUDE_TESTS"
+    ],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

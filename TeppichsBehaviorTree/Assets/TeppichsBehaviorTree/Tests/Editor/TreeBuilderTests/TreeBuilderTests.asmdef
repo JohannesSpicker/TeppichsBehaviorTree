@@ -1,10 +1,13 @@
 {
-    "name": "TreeBuilder",
+    "name": "TreeBuilderTests",
     "rootNamespace": "",
     "references": [
-        "GUID:421fd12279173a649a2ff04b70fb29de"
+        "GUID:82352bbda447d8e48b5dbdded6398909",
+        "GUID:b309fcd3f30c1c844bf01fd42b17e413"
     ],
-    "includePlatforms": [],
+    "includePlatforms": [
+        "Editor"
+    ],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": false,
