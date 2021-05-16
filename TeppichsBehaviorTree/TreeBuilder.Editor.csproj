@@ -41,11 +41,11 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\TeppichsBehaviorTree\Editor\TreeBuilderEditor\TreeBuilderWindow.cs" />
      <Compile Include="Assets\TeppichsBehaviorTree\Editor\TreeBuilderEditor\TreeBuilderGraphView.cs" />
+     <Compile Include="Assets\TeppichsBehaviorTree\Editor\TreeBuilderEditor\TreeBuilderNodeFactory.cs" />
+     <Compile Include="Assets\TeppichsBehaviorTree\Editor\TreeBuilderEditor\TreeBuilderWindow.cs" />
      <Compile Include="Assets\TeppichsBehaviorTree\Editor\TreeBuilderEditor\TreeBuilderNode.cs" />
      <Compile Include="Assets\TeppichsBehaviorTree\Editor\TreeBuilderEditor\TreeBuilderSearchWindow.cs" />
-     <Compile Include="Assets\TeppichsBehaviorTree\Editor\TreeBuilderEditor\TreeBuilderNodeFactory.cs" />
      <None Include="Assets\TeppichsBehaviorTree\Editor\TreeBuilderEditor\TreeBuilder.Editor.asmdef" />
      <Reference Include="UnityEngine">
      <HintPath>C:/Program Files/Engines/Unity Versions/2021.1.0f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
@@ -658,6 +658,10 @@
      </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="TreeBuilder.csproj">
+      <Project>{c3cbdfb8-9c33-01b2-455c-8da7f1a67760}</Project>
+      <Name>TreeBuilder</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

@@ -42,16 +42,16 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\TeppichsBehaviorTree\Runtime\ModularBehaviourTree\Construction\Factories\Conditions\FindTargetFactory.cs" />
-     <Compile Include="Assets\TeppichsBehaviorTree\Runtime\ModularBehaviourTree\Construction\Factories\Composites\SequenceFactory.cs" />
-     <Compile Include="Assets\TeppichsBehaviorTree\Runtime\ModularBehaviourTree\Construction\Factories\Decorators\InverterFactory.cs" />
      <Compile Include="Assets\TeppichsBehaviorTree\Runtime\ModularBehaviourTree\Construction\Factories\Composites\SelectorFactory.cs" />
      <Compile Include="Assets\TeppichsBehaviorTree\Runtime\ModularBehaviourTree\Construction\Factories\Decorators\StopMoveAfterTimeFactory.cs" />
-     <Compile Include="Assets\TeppichsBehaviorTree\Runtime\ModularBehaviourTree\Construction\Factories\Decorators\DecoratorFactory.cs" />
      <Compile Include="Assets\TeppichsBehaviorTree\Runtime\ModularBehaviourTree\Construction\Factories\Conditions\IsInRangeFactory.cs" />
      <Compile Include="Assets\TeppichsBehaviorTree\Runtime\ModularBehaviourTree\Construction\Factories\NodeFactory.cs" />
-     <Compile Include="Assets\TeppichsBehaviorTree\Runtime\ModularBehaviourTree\Construction\Factories\Leaves\IdleFactory.cs" />
      <Compile Include="Assets\TeppichsBehaviorTree\Runtime\ModularBehaviourTree\Construction\Factories\Decorators\RepeaterFactory.cs" />
      <Compile Include="Assets\TeppichsBehaviorTree\Runtime\ModularBehaviourTree\Construction\Factories\Composites\CompositeFactory.cs" />
+     <Compile Include="Assets\TeppichsBehaviorTree\Runtime\ModularBehaviourTree\Construction\Factories\Composites\SequenceFactory.cs" />
+     <Compile Include="Assets\TeppichsBehaviorTree\Runtime\ModularBehaviourTree\Construction\Factories\Decorators\InverterFactory.cs" />
+     <Compile Include="Assets\TeppichsBehaviorTree\Runtime\ModularBehaviourTree\Construction\Factories\Decorators\DecoratorFactory.cs" />
+     <Compile Include="Assets\TeppichsBehaviorTree\Runtime\ModularBehaviourTree\Construction\Factories\Leaves\IdleFactory.cs" />
      <Compile Include="Assets\TeppichsBehaviorTree\Runtime\ModularBehaviourTree\Construction\Factories\Leaves\MoveForwardFactory.cs" />
      <Compile Include="Assets\TeppichsBehaviorTree\Runtime\ModularBehaviourTree\Construction\Factories\Leaves\MoveToTargetFactory.cs" />
      <None Include="Assets\TeppichsBehaviorTree\Runtime\ModularBehaviourTree\Construction\ModularBehaviourTreeConstruction.asmdef" />

@@ -42,8 +42,8 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\TeppichsBehaviorTree\Tests\Editor\TestSetup.cs" />
-     <Compile Include="Assets\TeppichsBehaviorTree\Tests\Editor\PrimitiveTests\DecoratorTests.cs" />
      <Compile Include="Assets\TeppichsBehaviorTree\Tests\Editor\CompositeTests\SequenceTests.cs" />
+     <Compile Include="Assets\TeppichsBehaviorTree\Tests\Editor\PrimitiveTests\DecoratorTests.cs" />
      <Compile Include="Assets\TeppichsBehaviorTree\Tests\Editor\CompositeTests\SelectorTests.cs" />
      <Compile Include="Assets\TeppichsBehaviorTree\Tests\Editor\MockPrimitives.cs" />
      <Compile Include="Assets\TeppichsBehaviorTree\Tests\Editor\PrimitiveTests\LeafTests.cs" />

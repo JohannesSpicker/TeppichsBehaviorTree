@@ -42,22 +42,22 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\TeppichsBehaviorTree\Runtime\ModularBehaviourTree\Core\Primitives\Node.cs" />
-     <Compile Include="Assets\TeppichsBehaviorTree\Runtime\ModularBehaviourTree\Core\Leaves\MoveToTarget.cs" />
      <Compile Include="Assets\TeppichsBehaviorTree\Runtime\ModularBehaviourTree\Core\Primitives\Decorator.cs" />
-     <Compile Include="Assets\TeppichsBehaviorTree\Runtime\ModularBehaviourTree\Core\Decorators\Inverter.cs" />
      <Compile Include="Assets\TeppichsBehaviorTree\Runtime\ModularBehaviourTree\Core\Leaves\MoveForward.cs" />
      <Compile Include="Assets\TeppichsBehaviorTree\Runtime\ModularBehaviourTree\Core\Leaves\Idle.cs" />
-     <Compile Include="Assets\TeppichsBehaviorTree\Runtime\ModularBehaviourTree\Core\Conditions\IsInRange.cs" />
      <Compile Include="Assets\TeppichsBehaviorTree\Runtime\ModularBehaviourTree\Core\Decorators\StopMoveAfterTime.cs" />
      <Compile Include="Assets\TeppichsBehaviorTree\Runtime\ModularBehaviourTree\Blackboard.cs" />
-     <Compile Include="Assets\TeppichsBehaviorTree\Runtime\ModularBehaviourTree\Core\Conditions\FindTarget.cs" />
      <Compile Include="Assets\TeppichsBehaviorTree\Runtime\ModularBehaviourTree\Core\Decorators\Repeater.cs" />
-     <Compile Include="Assets\TeppichsBehaviorTree\Runtime\ModularBehaviourTree\Core\Composites\Selector.cs" />
-     <Compile Include="Assets\TeppichsBehaviorTree\Runtime\ModularBehaviourTree\AssemblyInfo.cs" />
      <Compile Include="Assets\TeppichsBehaviorTree\Runtime\ModularBehaviourTree\Core\Primitives\Leaf.cs" />
      <Compile Include="Assets\TeppichsBehaviorTree\Runtime\ModularBehaviourTree\Core\Composites\Sequence.cs" />
-     <Compile Include="Assets\TeppichsBehaviorTree\Runtime\ModularBehaviourTree\Core\Primitives\Condition.cs" />
      <Compile Include="Assets\TeppichsBehaviorTree\Runtime\ModularBehaviourTree\Core\Primitives\Composite.cs" />
+     <Compile Include="Assets\TeppichsBehaviorTree\Runtime\ModularBehaviourTree\Core\Leaves\MoveToTarget.cs" />
+     <Compile Include="Assets\TeppichsBehaviorTree\Runtime\ModularBehaviourTree\Core\Decorators\Inverter.cs" />
+     <Compile Include="Assets\TeppichsBehaviorTree\Runtime\ModularBehaviourTree\Core\Conditions\IsInRange.cs" />
+     <Compile Include="Assets\TeppichsBehaviorTree\Runtime\ModularBehaviourTree\Core\Conditions\FindTarget.cs" />
+     <Compile Include="Assets\TeppichsBehaviorTree\Runtime\ModularBehaviourTree\Core\Composites\Selector.cs" />
+     <Compile Include="Assets\TeppichsBehaviorTree\Runtime\ModularBehaviourTree\AssemblyInfo.cs" />
+     <Compile Include="Assets\TeppichsBehaviorTree\Runtime\ModularBehaviourTree\Core\Primitives\Condition.cs" />
      <None Include="Assets\TeppichsBehaviorTree\Runtime\ModularBehaviourTree\ModularBehaviourTree.asmdef" />
      <Reference Include="UnityEngine">
      <HintPath>C:/Program Files/Engines/Unity Versions/2021.1.0f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
