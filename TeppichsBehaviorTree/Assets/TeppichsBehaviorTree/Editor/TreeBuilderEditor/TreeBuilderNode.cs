@@ -4,6 +4,9 @@ using UnityEditor.Experimental.GraphView;
 
 namespace TeppichsBehaviorTree.Editor.TreeRunnerEditor
 {
+    /// <summary>
+    /// Visual node seen in the graphView
+    /// </summary>
     public class TreeBuilderNode : Node
     {
         public Type type;

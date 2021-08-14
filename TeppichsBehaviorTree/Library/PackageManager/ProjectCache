@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637567795906825250
-    m_Hash: 3541619999
+      ticks: 637567888142166491
+    m_Hash: 3126461824
   m_LockFileStatus:
     m_FilePath: D:/GitRepos/TeppichsBehaviorTree/TeppichsBehaviorTree/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637567795914223181
-    m_Hash: 532508347
+      ticks: 637567888150585238
+    m_Hash: 3551857377
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
@@ -22,12 +22,12 @@ m_LocalPackages:
 m_ProjectPath: D:/GitRepos/TeppichsBehaviorTree/TeppichsBehaviorTree/Packages
 m_EditorVersion: 2021.1.0f1 (61a549675243)
 m_ResolvedPackages:
-- packageId: com.teppich.teppichstools@0.0.11
+- packageId: com.teppich.teppichstools@0.0.14
   testable: 0
   isDirectDependency: 1
-  version: 0.0.11
+  version: 0.0.14
   source: 1
-  resolvedPath: D:\GitRepos\TeppichsBehaviorTree\TeppichsBehaviorTree\Library\PackageCache\com.teppich.teppichstools@0.0.11
+  resolvedPath: D:\GitRepos\TeppichsBehaviorTree\TeppichsBehaviorTree\Library\PackageCache\com.teppich.teppichstools@0.0.14
   assetPath: Packages/com.teppich.teppichstools
   name: com.teppich.teppichstools
   displayName: Teppichs Tools
@@ -51,6 +51,9 @@ m_ResolvedPackages:
     - 0.0.8
     - 0.0.9
     - 0.0.11
+    - 0.0.12
+    - 0.0.13
+    - 0.0.14
     compatible:
     - 0.0.1
     - 0.0.3
@@ -61,6 +64,9 @@ m_ResolvedPackages:
     - 0.0.8
     - 0.0.9
     - 0.0.11
+    - 0.0.12
+    - 0.0.13
+    - 0.0.14
     verified: 
   dependencies: []
   resolvedDependencies: []
@@ -80,7 +86,7 @@ m_ResolvedPackages:
   entitlements:
     isAllowed: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 637566333607330000
+  datePublishedTicks: 637567866560290000
   documentationUrl: 
   hasRepository: 0
   repository:

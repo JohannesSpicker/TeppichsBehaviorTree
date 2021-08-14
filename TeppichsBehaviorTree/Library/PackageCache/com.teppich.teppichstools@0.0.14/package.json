@@ -1,0 +1,21 @@
+{
+  "name": "com.teppich.teppichstools",
+  "version": "0.0.14",
+  "displayName": "Teppichs Tools",
+  "description": "General purpose C#/Unity tools",
+  "unity": "2019.1",
+  "unityRelease": "0b5",
+  "dependencies": {},
+  "keywords": [
+    "tool",
+    "utility"
+  ],
+  "author": {
+    "name": "Johannes Spicker",
+    "email": "johannesspicker@me.com",
+    "url": "https://github.com/JohannesSpicker"
+  },
+  "publishConfig": {
+    "registry": "https://package.openupm.com"
+  }
+}

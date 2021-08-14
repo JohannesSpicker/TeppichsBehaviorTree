@@ -9,5 +9,7 @@ namespace TeppichsBehaviorTree.TreeBuilder
     {
         public List<LinkData>        links             = new List<LinkData>();
         public List<NodeData>        nodeData          = new List<NodeData>();
+
+        // public NodeData EntryPoint => nodeData[0];
     }
 }

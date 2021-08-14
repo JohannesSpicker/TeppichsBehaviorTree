@@ -10,7 +10,7 @@ namespace ModularBehaviourTree
     ///     A commonly used example of a decorator is the Inverter, which will simply invert the result of the child. A child
     ///     fails and it will return success to its parent, or a child succeeds and it will return failure to the parent.
     /// </summary>
-    internal abstract class Decorator : Node
+    public abstract class Decorator : Node
     {
         protected Node node;
         protected Decorator(Node                      node) { this.node = node; }

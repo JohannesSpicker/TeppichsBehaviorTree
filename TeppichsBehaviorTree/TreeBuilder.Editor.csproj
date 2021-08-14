@@ -644,6 +644,9 @@
      <Reference Include="System.Xml.XPath.XDocument">
      <HintPath>C:/Program Files/Engines/Unity Versions/2021.1.0f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Xml.XPath.XDocument.dll</HintPath>
      </Reference>
+     <Reference Include="TeppichsTools">
+     <HintPath>D:/GitRepos/TeppichsBehaviorTree/TeppichsBehaviorTree/Library/ScriptAssemblies/TeppichsTools.dll</HintPath>
+     </Reference>
      <Reference Include="UnityEditor.UI">
      <HintPath>D:/GitRepos/TeppichsBehaviorTree/TeppichsBehaviorTree/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
      </Reference>
@@ -661,6 +664,10 @@
     <ProjectReference Include="TreeBuilder.csproj">
       <Project>{c3cbdfb8-9c33-01b2-455c-8da7f1a67760}</Project>
       <Name>TreeBuilder</Name>
+    </ProjectReference>
+    <ProjectReference Include="ModularBehaviourTree.csproj">
+      <Project>{e92c3b7b-9bda-3389-a73c-d3959364926a}</Project>
+      <Name>ModularBehaviourTree</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

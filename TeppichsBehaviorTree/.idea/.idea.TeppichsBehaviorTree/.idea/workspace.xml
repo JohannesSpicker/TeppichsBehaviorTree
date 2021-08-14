@@ -6,34 +6,120 @@
   <component name="ChangeListManager">
     <list default="true" id="d39d143f-fbac-45bc-9772-3b1516fc8bf7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TeppichsBehaviorTree/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TeppichsBehaviorTree/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Editor/TreeBuilderEditor/TreeBuilder.Editor.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Editor/TreeBuilderEditor/TreeBuilder.Editor.asmdef" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Editor/TreeBuilderEditor/TreeBuilderNode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Editor/TreeBuilderEditor/TreeBuilderNode.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Editor/TreeBuilderEditor/TreeBuilderNodeFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Editor/TreeBuilderEditor/TreeBuilderNodeFactory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/TreeBuilder/TreeBuilder.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/TreeBuilder/TreeBuilder.asmdef" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/ModularBehaviourTree/Core/Primitives/Composite.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/ModularBehaviourTree/Core/Primitives/Composite.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/ModularBehaviourTree/Core/Primitives/Decorator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/ModularBehaviourTree/Core/Primitives/Decorator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/TreeBuilder/TreeContainer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/TreeBuilder/TreeContainer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Tests/Editor/TreeBuilderTests/SomeTreeBuilderTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Tests/Editor/TreeBuilderTests/SomeTreeBuilderTests.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ArtifactDB" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ArtifactDB" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/Bee/1900b0aEDbg-inputdata.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/1900b0aEDbg-inputdata.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/Bee/1900b0aEDbg.dag" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/1900b0aEDbg.dag" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/Bee/1900b0aEDbg.dag.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/1900b0aEDbg.dag.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Bee/1900b0aEDbg.dag.outputdata" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/1900b0aEDbg.dag.outputdata" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/Bee/1900b0aEDbg.dag_derived" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/1900b0aEDbg.dag_derived" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Bee/1900b0aEDbg.dag_fsmtime" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/1900b0aEDbg.dag_fsmtime" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/Bee/TundraBuildState.state" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/TundraBuildState.state" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/Bee/TundraBuildState.state.map" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/TundraBuildState.state.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Bee/artifacts/1900b0aEDbg.dag/ModularBehaviourTree.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/artifacts/1900b0aEDbg.dag/ModularBehaviourTree.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Bee/artifacts/1900b0aEDbg.dag/ModularBehaviourTree.ref.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/artifacts/1900b0aEDbg.dag/ModularBehaviourTree.ref.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Bee/artifacts/1900b0aEDbg.dag/TeppichsTools.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/artifacts/1900b0aEDbg.dag/TeppichsTools.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Bee/artifacts/1900b0aEDbg.dag/TeppichsTools.ref.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/artifacts/1900b0aEDbg.dag/TeppichsTools.ref.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Bee/artifacts/1900b0aEDbg.dag/TeppichsTools.rsp" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/artifacts/1900b0aEDbg.dag/TeppichsTools.rsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Bee/artifacts/1900b0aEDbg.dag/TeppichsToolsEditor.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/artifacts/1900b0aEDbg.dag/TeppichsToolsEditor.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Bee/artifacts/1900b0aEDbg.dag/TeppichsToolsEditor.rsp" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/artifacts/1900b0aEDbg.dag/TeppichsToolsEditor.rsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Bee/artifacts/1900b0aEDbg.dag/TreeBuilder.Editor.rsp" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/artifacts/1900b0aEDbg.dag/TreeBuilder.Editor.rsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Bee/artifacts/1900b0aEDbg.dag/TreeBuilder.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/artifacts/1900b0aEDbg.dag/TreeBuilder.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Bee/artifacts/1900b0aEDbg.dag/TreeBuilderTests.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/artifacts/1900b0aEDbg.dag/TreeBuilderTests.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Bee/artifacts/1900b0aEDbg.dag/TreeBuilderTests.ref.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/artifacts/1900b0aEDbg.dag/TreeBuilderTests.ref.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/Bee/profiler.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/profiler.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/Bee/tundra.digestcache" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/tundra.digestcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/Bee/tundra.log.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/tundra.log.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/CurrentLayout-default.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/Library/CurrentLayout-default.dwlt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/EditorInstance.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/EditorInstance.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/SceneVisibilityState.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Library/SceneVisibilityState.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/EditorInstance.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PackageCache/com.teppich.teppichstools@0.0.11/Editor.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PackageCache/com.teppich.teppichstools@0.0.11/Editor/CollectionVisualizer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PackageCache/com.teppich.teppichstools@0.0.11/Editor/CollectionVisualizer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PackageCache/com.teppich.teppichstools@0.0.11/Editor/TeppichsTools.Editor.asmdef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PackageCache/com.teppich.teppichstools@0.0.11/Editor/TeppichsTools.Editor.asmdef.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PackageCache/com.teppich.teppichstools@0.0.11/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PackageCache/com.teppich.teppichstools@0.0.11/README.md.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PackageCache/com.teppich.teppichstools@0.0.11/Runtime.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PackageCache/com.teppich.teppichstools@0.0.11/Runtime/Behavior.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PackageCache/com.teppich.teppichstools@0.0.11/Runtime/Behavior/Collector.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PackageCache/com.teppich.teppichstools@0.0.11/Runtime/Behavior/Collector.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PackageCache/com.teppich.teppichstools@0.0.11/Runtime/Behavior/DontDestroyOnLoad.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PackageCache/com.teppich.teppichstools@0.0.11/Runtime/Behavior/DontDestroyOnLoad.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PackageCache/com.teppich.teppichstools@0.0.11/Runtime/Behavior/Observable.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PackageCache/com.teppich.teppichstools@0.0.11/Runtime/Behavior/Observable.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PackageCache/com.teppich.teppichstools@0.0.11/Runtime/Behavior/Observer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PackageCache/com.teppich.teppichstools@0.0.11/Runtime/Behavior/Observer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PackageCache/com.teppich.teppichstools@0.0.11/Runtime/Creation.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PackageCache/com.teppich.teppichstools@0.0.11/Runtime/Creation/MonoSingleton.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PackageCache/com.teppich.teppichstools@0.0.11/Runtime/Creation/MonoSingleton.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PackageCache/com.teppich.teppichstools@0.0.11/Runtime/Creation/Pools.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PackageCache/com.teppich.teppichstools@0.0.11/Runtime/Creation/Pools/IObjectPool.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PackageCache/com.teppich.teppichstools@0.0.11/Runtime/Creation/Pools/IObjectPool.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PackageCache/com.teppich.teppichstools@0.0.11/Runtime/Creation/Pools/ObjectPool.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PackageCache/com.teppich.teppichstools@0.0.11/Runtime/Creation/Pools/ObjectPool.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PackageCache/com.teppich.teppichstools@0.0.11/Runtime/Creation/Pools/PrefabObjectPool.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PackageCache/com.teppich.teppichstools@0.0.11/Runtime/Creation/Pools/PrefabObjectPool.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PackageCache/com.teppich.teppichstools@0.0.11/Runtime/Creation/Singleton.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PackageCache/com.teppich.teppichstools@0.0.11/Runtime/Creation/Singleton.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PackageCache/com.teppich.teppichstools@0.0.11/Runtime/Data.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PackageCache/com.teppich.teppichstools@0.0.11/Runtime/Data/Library.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PackageCache/com.teppich.teppichstools@0.0.11/Runtime/Data/Library.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PackageCache/com.teppich.teppichstools@0.0.11/Runtime/Logging.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PackageCache/com.teppich.teppichstools@0.0.11/Runtime/Logging/EditorDebug.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PackageCache/com.teppich.teppichstools@0.0.11/Runtime/Logging/EditorDebug.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PackageCache/com.teppich.teppichstools@0.0.11/Runtime/TeppichsTools.asmdef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PackageCache/com.teppich.teppichstools@0.0.11/Runtime/TeppichsTools.asmdef.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PackageCache/com.teppich.teppichstools@0.0.11/Runtime/Time.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PackageCache/com.teppich.teppichstools@0.0.11/Runtime/Time/RepeatTicker.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PackageCache/com.teppich.teppichstools@0.0.11/Runtime/Time/RepeatTicker.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PackageCache/com.teppich.teppichstools@0.0.11/Runtime/Time/Ticker.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PackageCache/com.teppich.teppichstools@0.0.11/Runtime/Time/Ticker.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PackageCache/com.teppich.teppichstools@0.0.11/Samples.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PackageCache/com.teppich.teppichstools@0.0.11/Samples/Aggregates.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PackageCache/com.teppich.teppichstools@0.0.11/Samples/Aggregates/SampleScene.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PackageCache/com.teppich.teppichstools@0.0.11/Samples/Aggregates/SampleScene.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PackageCache/com.teppich.teppichstools@0.0.11/Samples/Aggregates/Thing.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PackageCache/com.teppich.teppichstools@0.0.11/Samples/Aggregates/Thing.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PackageCache/com.teppich.teppichstools@0.0.11/Samples/Aggregates/ThingCollectionVisualizer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PackageCache/com.teppich.teppichstools@0.0.11/Samples/Aggregates/ThingCollectionVisualizer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PackageCache/com.teppich.teppichstools@0.0.11/Samples/Aggregates/ThingCollector.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PackageCache/com.teppich.teppichstools@0.0.11/Samples/Aggregates/ThingCollector.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PackageCache/com.teppich.teppichstools@0.0.11/Tests.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PackageCache/com.teppich.teppichstools@0.0.11/Tests/Editor.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PackageCache/com.teppich.teppichstools@0.0.11/Tests/Editor/LibraryTests.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PackageCache/com.teppich.teppichstools@0.0.11/Tests/Editor/LibraryTests.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PackageCache/com.teppich.teppichstools@0.0.11/Tests/Editor/TeppichsTools.Editor.Tests.asmdef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PackageCache/com.teppich.teppichstools@0.0.11/Tests/Editor/TeppichsTools.Editor.Tests.asmdef.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PackageCache/com.teppich.teppichstools@0.0.11/Tests/Runtime.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PackageCache/com.teppich.teppichstools@0.0.11/Tests/Runtime/TeppichsTools.Tests.asmdef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PackageCache/com.teppich.teppichstools@0.0.11/Tests/Runtime/TeppichsTools.Tests.asmdef.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PackageCache/com.teppich.teppichstools@0.0.11/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PackageCache/com.teppich.teppichstools@0.0.11/package.json.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PackageManager/ProjectCache" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PackageManager/ProjectCache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PackageManager/ProjectCache.md5" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PackageManager/ProjectCache.md5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ProtocolInstance.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/ModularBehaviourTree.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/ModularBehaviourTree.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/TeppichsTools.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/TeppichsTools.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/TeppichsToolsEditor.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/TeppichsToolsEditor.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/TreeBuilder.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/TreeBuilder.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/Search/transactions.db" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Search/transactions.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/ShaderCache/EditorEncounteredVariants" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ShaderCache/EditorEncounteredVariants" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/SourceAssetDB" beforeDir="false" afterPath="$PROJECT_DIR$/Library/SourceAssetDB" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModularBehaviourTree.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/ModularBehaviourTree.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModularBehaviourTreeConstruction.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/ModularBehaviourTreeConstruction.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/expandedItems" beforeDir="false" afterPath="$PROJECT_DIR$/Library/expandedItems" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker0-prev.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker0-prev.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TeppichsBehaviorTree.sln" beforeDir="false" afterPath="$PROJECT_DIR$/TeppichsBehaviorTree.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Temp/workerlic" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/TreeBuilder.Editor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/TreeBuilder.Editor.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TreeBuilder.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/TreeBuilder.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Unity.TeppichsBehaviorTree.Editor.Tests.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Unity.TeppichsBehaviorTree.Editor.Tests.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/DialogueGraphTutorial.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/DialogueGraphTutorial.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/ModularBehaviourTree.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/ModularBehaviourTree.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/Pawns.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Pawns.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/TreeBuilder.Editor.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/TreeBuilder.Editor.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/TreeBuilder.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/TreeBuilder.csprojAssemblyReference.cache" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,15 +214,17 @@
       <option value="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Editor/TreeRunnerEditor/TreeBuilderGraphView.cs" />
       <option value="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Editor/Tutorial/DialogueNode.cs" />
       <option value="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Editor/Tutorial/TreeBuilderNodeFactory.cs" />
-      <option value="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Tests/Editor/TreeBuilderTests/SomeTreeBuilderTests.cs" />
       <option value="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Editor/TreeBuilderEditor/TreeBuilderSearchWindow.cs" />
       <option value="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/TreeBuilder/LinkData.cs" />
       <option value="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Editor/TreeBuilderEditor/TreeBuilderWindow.cs" />
-      <option value="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/TreeBuilder/TreeContainer.cs" />
       <option value="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/TreeBuilder/NodeData.cs" />
-      <option value="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Editor/TreeBuilderEditor/TreeBuilderNode.cs" />
-      <option value="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Editor/TreeBuilderEditor/TreeBuilderNodeFactory.cs" />
       <option value="$PROJECT_DIR$/Library/PackageCache/com.teppich.teppichstools@0.0.8/Runtime/Data/Library.cs" />
+      <option value="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Editor/TreeBuilderEditor/TreeBuilderNode.cs" />
+      <option value="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Tests/Editor/TreeBuilderTests/SomeTreeBuilderTests.cs" />
+      <option value="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/TreeBuilder/TreeContainer.cs" />
+      <option value="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/ModularBehaviourTree/Core/Primitives/Decorator.cs" />
+      <option value="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Runtime/ModularBehaviourTree/Core/Primitives/Composite.cs" />
+      <option value="$PROJECT_DIR$/Assets/TeppichsBehaviorTree/Editor/TreeBuilderEditor/TreeBuilderNodeFactory.cs" />
     </changedPaths>
   </component>
   <component name="MacroExpansionManager">
@@ -202,7 +290,8 @@
       <workItem from="1620423997245" duration="1562000" />
       <workItem from="1620483201335" duration="4185000" />
       <workItem from="1620565262273" duration="8661000" />
-      <workItem from="1621182474944" duration="326000" />
+      <workItem from="1621182474944" duration="9258000" />
+      <workItem from="1622542830777" duration="102000" />
     </task>
     <task id="LOCAL-00001" summary="- removed unused namspace">
       <created>1618523055092</created>

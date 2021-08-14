@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Reflection;
+using ModularBehaviourTree;
 using TeppichsBehaviorTree.Editor.TreeRunnerEditor;
 using TeppichsBehaviorTree.TreeBuilder;
 using TeppichsTools.Data;
@@ -11,9 +12,9 @@ namespace TeppichsBehaviorTree.Editor.Tutorial
     {
         public static void SomeFunc()
         {
-            ConstructorInfo[] ctors = typeof(MyClass).GetConstructors();
+            ConstructorInfo[] constructors = typeof(MyClass).GetConstructors();
 
-            ConstructorInfo ctor = ctors[0];
+            ConstructorInfo ctor = constructors[0];
 
             foreach (ParameterInfo param in ctor.GetParameters())
             {
@@ -23,8 +24,19 @@ namespace TeppichsBehaviorTree.Editor.Tutorial
             }
         }
 
-        public TreeBuilderNode CreateNode(Type type)
+        public TreeBuilderNode CreateNode(ModularBehaviourTree.Node baseNode)
         {
+            var node = new TreeBuilderNode {type = baseNode.GetType(), guid = Guid.NewGuid().ToString()};
+
+            if (baseNode is Leaf) { }
+            else if (baseNode is Decorator) { }
+            else if (baseNode is Composite) { }
+            else if (baseNode is Condition) { }
+
+            var type = GetType(); //delete this line
+
+            Debug.LogError("TreeBuilderNodeFactory \t Can't create node because of invalid Node type.");
+
             ConstructorInfo constructor = type.GetConstructors()[0];
 
             //make fields for parameters of constructor
@@ -33,14 +45,14 @@ namespace TeppichsBehaviorTree.Editor.Tutorial
 
             //add output ports and/or ability to add more output ports (for composites)
 
-            return new TreeBuilderNode {type = type, guid = Guid.NewGuid().ToString()};
+            return node;
         }
 
         public TreeBuilderNode LoadNode(NodeData nodeData)
         {
             TreeBuilderNode node = new TreeBuilderNode
             {
-                type = nodeData.type, guid = nodeData.guid, library = new Library() nodeData.library
+                type = nodeData.type, guid = nodeData.guid, library = new Library(nodeData.library)
             };
 
             return new TreeBuilderNode();

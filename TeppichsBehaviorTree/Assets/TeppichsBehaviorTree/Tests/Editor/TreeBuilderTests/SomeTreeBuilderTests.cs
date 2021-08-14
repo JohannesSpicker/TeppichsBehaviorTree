@@ -1,7 +1,4 @@
 using NUnit.Framework;
-using UnityEngine;
-using System;
-using System.Reflection;
 using TeppichsBehaviorTree.Editor.Tutorial;
 
 namespace Tests.TreeBuilderTests
@@ -9,16 +6,16 @@ namespace Tests.TreeBuilderTests
     public class SomeTreeBuilderTests
     {
         [Test]
-        public void SomeFalseTest() => Assert.True(false);
-
-        [Test]
-        public void SomeTrueTest() => Assert.True(true);
-
-        [Test]
-        public void TestingReflection()
+        public void ReflectionThrowsNoError()
         {
             TreeBuilderNodeFactory.SomeFunc();
             Assert.True(true);
+        }
+
+        [Test]
+        public void ShouldCreateSaveLoadEmptyGraphWithoutError()
+        {
+            Assert.True(false);
         }
     }
 }
