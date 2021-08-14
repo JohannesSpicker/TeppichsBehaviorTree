@@ -4,9 +4,9 @@ namespace TeppichsBehaviorTree.Editor.Tutorial
 {
     public class DialogueNode : Node
     {
-        public string DialogueText;
+        public string dialogueText;
 
-        public bool   EntryPoint = false;
+        public bool   entryPoint = false;
         public string guid;
     }
 }

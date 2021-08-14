@@ -60,11 +60,11 @@ namespace TeppichsBehaviorTree.Editor.Tutorial
                 });
             }
 
-            foreach (DialogueNode dialogueNode in Nodes.Where(node => !node.EntryPoint))
+            foreach (DialogueNode dialogueNode in Nodes.Where(node => !node.entryPoint))
                 dialogueContainer.dialogueNodeData.Add(new DialogueNodeData
                 {
                     guid         = dialogueNode.guid,
-                    dialogueText = dialogueNode.DialogueText,
+                    dialogueText = dialogueNode.dialogueText,
                     position     = dialogueNode.GetPosition().position
                 });
 
@@ -142,11 +142,11 @@ namespace TeppichsBehaviorTree.Editor.Tutorial
 
         private void ClearGraph()
         {
-            Nodes.Find(x => x.EntryPoint).guid = _containerCache.nodeLinks[0].baseNodeGuid;
+            Nodes.Find(x => x.entryPoint).guid = _containerCache.nodeLinks[0].baseNodeGuid;
 
             foreach (DialogueNode node in Nodes)
             {
-                if (node.EntryPoint)
+                if (node.entryPoint)
                     continue;
 
                 //remove edges connected to this node

@@ -47,7 +47,7 @@ namespace TeppichsBehaviorTree.Editor.Tutorial
         {
             DialogueNode node = new DialogueNode
             {
-                title = "START", guid = Guid.NewGuid().ToString(), DialogueText = "ENTRYPOINT", EntryPoint = true
+                title = "START", guid = Guid.NewGuid().ToString(), dialogueText = "ENTRYPOINT", entryPoint = true
             };
 
             Port generatedPort = GeneratePort(node, Direction.Output);
@@ -74,7 +74,7 @@ namespace TeppichsBehaviorTree.Editor.Tutorial
         {
             DialogueNode dialogueNode = new DialogueNode
             {
-                title = nodeName, DialogueText = nodeName, guid = Guid.NewGuid().ToString()
+                title = nodeName, dialogueText = nodeName, guid = Guid.NewGuid().ToString()
             };
 
             Port inputPort = GeneratePort(dialogueNode, Direction.Input, Port.Capacity.Multi);
@@ -91,7 +91,7 @@ namespace TeppichsBehaviorTree.Editor.Tutorial
 
             textField.RegisterValueChangedCallback(evt =>
             {
-                dialogueNode.DialogueText = evt.newValue;
+                dialogueNode.dialogueText = evt.newValue;
                 dialogueNode.title        = evt.newValue;
             });
 
