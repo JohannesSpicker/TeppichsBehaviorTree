@@ -1,4 +1,4 @@
-﻿using Tools;
+﻿using TeppichsTools.Time;
 using UnityEngine;
 
 namespace ModularBehaviourTree.Core.Decorators

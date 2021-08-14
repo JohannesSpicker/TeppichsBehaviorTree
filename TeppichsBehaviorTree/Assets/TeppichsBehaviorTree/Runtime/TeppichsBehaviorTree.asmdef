@@ -1,7 +1,9 @@
 {
     "name": "Unity.TeppichsBehaviorTree",
     "rootNamespace": "",
-    "references": [],
+    "references": [
+        "GUID:421fd12279173a649a2ff04b70fb29de"
+    ],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
