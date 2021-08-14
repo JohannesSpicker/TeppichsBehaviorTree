@@ -13,8 +13,10 @@ namespace Tests.TreeBuilderTests
         }
 
         [Test]
-        public void ShouldCreateSaveLoadEmptyGraphWithoutError()
+        public void ShouldSaveLoadGraphWithOneNode()
         {
+            
+            
             Assert.True(false);
         }
     }
