@@ -658,10 +658,6 @@
       <Project>{e92c3b7b-9bda-3389-a73c-d3959364926a}</Project>
       <Name>ModularBehaviourTree</Name>
     </ProjectReference>
-    <ProjectReference Include="ModularBehaviourTreeConstruction.csproj">
-      <Project>{ea534b25-29bc-5cde-1ab5-9187f04f1a4e}</Project>
-      <Name>ModularBehaviourTreeConstruction</Name>
-    </ProjectReference>
     <ProjectReference Include="Pawns.csproj">
       <Project>{329a11e1-987c-a575-6002-dce975bda045}</Project>
       <Name>Pawns</Name>

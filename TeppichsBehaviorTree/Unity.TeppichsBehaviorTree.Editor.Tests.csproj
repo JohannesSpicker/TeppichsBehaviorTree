@@ -659,10 +659,6 @@
       <Project>{e92c3b7b-9bda-3389-a73c-d3959364926a}</Project>
       <Name>ModularBehaviourTree</Name>
     </ProjectReference>
-    <ProjectReference Include="ModularBehaviourTreeConstruction.csproj">
-      <Project>{ea534b25-29bc-5cde-1ab5-9187f04f1a4e}</Project>
-      <Name>ModularBehaviourTreeConstruction</Name>
-    </ProjectReference>
     <ProjectReference Include="Unity.TeppichsBehaviorTree.csproj">
       <Project>{d27c597a-d251-f2d8-732a-4045f3bf707d}</Project>
       <Name>Unity.TeppichsBehaviorTree</Name>
