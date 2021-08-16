@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEditor;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
@@ -54,7 +55,7 @@ namespace TeppichsBehaviorTree.Editor.TreeRunnerEditor
                 new SearchTreeGroupEntry(new GUIContent("Behavior Tree"), 1),
                 new SearchTreeEntry(new GUIContent("Node", indentationIcon))
                 {
-                    userData = new TreeBuilderNode(), level = 2
+                    userData = new TreeBuilderNode(false, Guid.NewGuid().ToString(), null, "Title"), level = 2
                 }
             };
 

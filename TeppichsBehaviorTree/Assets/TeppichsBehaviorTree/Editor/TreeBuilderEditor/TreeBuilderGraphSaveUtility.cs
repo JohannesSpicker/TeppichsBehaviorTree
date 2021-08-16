@@ -7,15 +7,14 @@ using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-
 namespace TeppichsBehaviorTree.Editor.TreeRunnerEditor
 {
     public class TreeBuilderGraphSaveUtility
     {
-        private TreeContainer    _containerCache;
+        private TreeContainer        _containerCache;
         private TreeBuilderGraphView _targetGraphView;
 
-        private List<Edge>         Edges => _targetGraphView.edges.ToList();
+        private List<Edge>            Edges => _targetGraphView.edges.ToList();
         private List<TreeBuilderNode> Nodes => _targetGraphView.nodes.ToList().Cast<TreeBuilderNode>().ToList();
 
         public static TreeBuilderGraphSaveUtility GetInstance(TreeBuilderGraphView targetGraphView) =>
@@ -31,12 +30,12 @@ namespace TeppichsBehaviorTree.Editor.TreeRunnerEditor
             SaveExposedProperties(dialogueContainer);
 
             if (!AssetDatabase.IsValidFolder(StringCollection.savePath))
-                AssetDatabase.CreateFolder("Assets", "DialogueSaves");
+                AssetDatabase.CreateFolder("Assets", StringCollection.folderName);
 
             if (!AssetDatabase.IsValidFolder(StringCollection.resourcePath))
-                AssetDatabase.CreateFolder("StringCollection.savePath", "Resources");
+                AssetDatabase.CreateFolder(StringCollection.savePath, "Resources");
 
-            AssetDatabase.CreateAsset(dialogueContainer, StringCollection.savePath + $"/{fileName}.asset");
+            AssetDatabase.CreateAsset(dialogueContainer, StringCollection.resourcePath + $"/{fileName}.asset");
         }
 
         private void SaveExposedProperties(TreeContainer dialogueContainer) =>
@@ -54,12 +53,8 @@ namespace TeppichsBehaviorTree.Editor.TreeRunnerEditor
                 TreeBuilderNode outputNode = connectedPorts[i].output.node as TreeBuilderNode;
                 TreeBuilderNode inputNode  = connectedPorts[i].input.node as TreeBuilderNode;
 
-                treeContainer.links.Add(new NodeLinkData
-                {
-                    baseNodeGuid   = outputNode.guid,
-                    portName       = connectedPorts[i].output.portName,
-                    targetNodeGuid = inputNode.guid
-                });
+                treeContainer.links.Add(new LinkData(outputNode.guid, connectedPorts[i].output.portName,
+                                                     inputNode.guid));
             }
 
             foreach (TreeBuilderNode dialogueNode in Nodes.Where(node => !node.entryPoint))
@@ -97,8 +92,7 @@ namespace TeppichsBehaviorTree.Editor.TreeRunnerEditor
         {
             for (int i = 0; i < Nodes.Count; i++)
             {
-                List<LinkData> connections =
-                    _containerCache.links.Where(x => x.baseNodeGuid == Nodes[i].guid).ToList();
+                List<LinkData> connections = _containerCache.links.Where(x => x.baseNodeGuid == Nodes[i].guid).ToList();
 
                 for (int j = 0; j < connections.Count; j++)
                 {
@@ -126,12 +120,11 @@ namespace TeppichsBehaviorTree.Editor.TreeRunnerEditor
         {
             foreach (NodeData nodeData in _containerCache.nodeData)
             {
-                TreeBuilderNode tempNode = _targetGraphView.CreateDialogueNode(nodeData.dialogueText, Vector2.zero);
+                TreeBuilderNode tempNode = _targetGraphView.CreateTreeBuilderNode("nodeTitle", Vector2.zero);
                 tempNode.guid = nodeData.guid;
                 _targetGraphView.AddElement(tempNode);
 
-                List<LinkData> nodePorts =
-                    _containerCache.links.Where(x => x.baseNodeGuid == nodeData.guid).ToList();
+                List<LinkData> nodePorts = _containerCache.links.Where(x => x.baseNodeGuid == nodeData.guid).ToList();
 
                 nodePorts.ForEach(x => _targetGraphView.AddChoicePort(tempNode, x.portName));
             }
@@ -153,5 +146,5 @@ namespace TeppichsBehaviorTree.Editor.TreeRunnerEditor
                 _targetGraphView.RemoveElement(node);
             }
         }
-     }
+    }
 }

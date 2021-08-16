@@ -26,7 +26,8 @@ namespace TeppichsBehaviorTree.Editor.Tutorial
 
         public TreeBuilderNode CreateNode(ModularBehaviourTree.Node baseNode)
         {
-            var node = new TreeBuilderNode {type = baseNode.GetType(), guid = Guid.NewGuid().ToString()};
+            //var node = new TreeBuilderNode 
+            //    {type = baseNode.GetType(), guid = Guid.NewGuid().ToString()};
 
             if (baseNode is Leaf) { }
             else if (baseNode is Decorator) { }
@@ -45,17 +46,18 @@ namespace TeppichsBehaviorTree.Editor.Tutorial
 
             //add output ports and/or ability to add more output ports (for composites)
 
-            return node;
+            //return node;
+            return null;
         }
 
         public TreeBuilderNode LoadNode(NodeData nodeData)
         {
-            TreeBuilderNode node = new TreeBuilderNode
-            {
-                type = nodeData.type, guid = nodeData.guid, library = new Library(nodeData.library)
-            };
+           //TreeBuilderNode node = new TreeBuilderNode
+           //{
+           //    type = nodeData.type, guid = nodeData.guid, library = new Library(nodeData.library)
+           //};
 
-            return new TreeBuilderNode();
+            return null;
         }
 
         private class MyClass
