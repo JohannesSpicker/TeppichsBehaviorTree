@@ -8,7 +8,7 @@ using UnityEngine.UIElements;
 
 namespace TeppichsBehaviorTree.Editor.Tutorial
 {
-    public class DialogueGraph : EditorWindow
+    public class DialogueGraphWindow : EditorWindow
     {
         private DialogueGraphView dialogueGraphView;
 
@@ -70,7 +70,7 @@ namespace TeppichsBehaviorTree.Editor.Tutorial
         [MenuItem("Graph/Dialogue Graph")]
         public static void OpenDialogueGraphWindow()
         {
-            DialogueGraph window = GetWindow<DialogueGraph>();
+            DialogueGraphWindow window = GetWindow<DialogueGraphWindow>();
             window.titleContent = new GUIContent("Dialogue Graph");
         }
 

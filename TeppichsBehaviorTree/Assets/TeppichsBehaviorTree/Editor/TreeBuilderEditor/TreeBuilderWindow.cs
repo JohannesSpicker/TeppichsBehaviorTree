@@ -46,8 +46,8 @@ namespace TeppichsBehaviorTree.Editor.TreeRunnerEditor
             fileNameTextField.RegisterValueChangedCallback(evt => fileName = evt.newValue);
             toolbar.Add(fileNameTextField);
 
-            //toolbar.Add(new Button(() => RequestDataOperation(true)) {text  = "Save Data"});
-            //toolbar.Add(new Button(() => RequestDataOperation(false)) {text = "Load Data"});
+            toolbar.Add(new Button(() => RequestDataOperation(true)) {text  = "Save Data"});
+            toolbar.Add(new Button(() => RequestDataOperation(false)) {text = "Load Data"});
 
             rootVisualElement.Add(toolbar);
         }
@@ -61,6 +61,23 @@ namespace TeppichsBehaviorTree.Editor.TreeRunnerEditor
 
             miniMap.SetPosition(new Rect(coords.x, coords.y, 200, 140));
             graphView.Add(miniMap);
+        }
+        
+        public void RequestDataOperation(bool save)
+        {
+            if (string.IsNullOrEmpty(fileName))
+            {
+                EditorUtility.DisplayDialog("Invalid file name!", "Please enter a valid file name.", "OK");
+
+                return;
+            }
+
+            TreeBuilderGraphSaveUtility saveUtility = TreeBuilderGraphSaveUtility.GetInstance(graphView);
+
+            if (save)
+                saveUtility.SaveGraph(fileName);
+            else
+                saveUtility.LoadGraph(fileName);
         }
     }
 }

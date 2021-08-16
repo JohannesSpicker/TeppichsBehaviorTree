@@ -1,4 +1,5 @@
 ﻿using System;
+using TeppichsBehaviorTree.TreeBuilder;
 using TeppichsTools.Data;
 using UnityEditor.Experimental.GraphView;
 
@@ -15,5 +16,7 @@ namespace TeppichsBehaviorTree.Editor.TreeRunnerEditor
         public string guid;
         
         public Library library = new Library();
+
+        public NodeData ToNodeData() => new NodeData(type, guid, GetPosition().position, library);
     }
 }
