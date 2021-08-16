@@ -1,4 +1,6 @@
+using System.Linq;
 using TeppichsBehaviorTree.Editor.TreeRunnerEditor;
+using TeppichsBehaviorTree.TreeBuilder;
 using UnityEditor;
 using UnityEditor.UIElements;
 using UnityEngine;
@@ -18,10 +20,44 @@ namespace TeppichsBehaviorTree.Editor.TreeRunnerEditor
             GenerateGraphView();
             GenerateToolbar();
             GenerateMiniMap();
+            GenerateBlackBoard();
         }
 
         private void OnDisable() => rootVisualElement.Remove(graphView);
 
+        
+        private void GenerateBlackBoard()
+        {
+            Blackboard blackBoard = new Blackboard(graphView);
+            blackBoard.Add(new BlackboardSection {title = "Exposed Properties"});
+
+            blackBoard.addItemRequested = _blackBoard =>
+            {
+                graphView.AddPropertyToBlackBoard(new ExposedProperty());
+            };
+
+            blackBoard.editTextRequested = (blackboard, element, newValue) =>
+            {
+                string oldPropertyName = ((BlackboardField) element).text;
+
+                if (graphView.exposedProperties.Any(x => x.propertyName == newValue))
+                    EditorUtility.DisplayDialog("Error",
+                                                "This property name already exists, please choose another one!", "OK");
+
+                int propertyIndex =
+                    graphView.exposedProperties.FindIndex(x => x.propertyName == oldPropertyName);
+
+                graphView.exposedProperties[propertyIndex].propertyName = newValue;
+
+                ((BlackboardField) element).text = newValue;
+            };
+
+            blackBoard.SetPosition(new Rect(10, 30, 200, 140));
+
+            graphView.Add(blackBoard);
+            graphView.blackboard = blackBoard;
+        }
+        
         [MenuItem("Behavior Tree/TreeBuilder")]
         public static void Open()
         {

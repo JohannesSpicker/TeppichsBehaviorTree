@@ -12,10 +12,10 @@ namespace TeppichsBehaviorTree.Editor.TreeRunnerEditor
         private EditorWindow         editorWindow;
         private TreeBuilderGraphView graphView;
 
-        public void Initialize(TreeBuilderGraphView graph, EditorWindow window)
+        public void Initialize(TreeBuilderGraphView graphView, EditorWindow editorWindow)
         {
-            graphView    = graph;
-            editorWindow = window;
+            this.graphView    = graphView;
+            this.editorWindow = editorWindow;
 
             indentationIcon = new Texture2D(1, 1);
             indentationIcon.SetPixel(0, 0, new Color(0, 0, 0, 0));
