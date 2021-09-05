@@ -63,3 +63,6 @@ TeppichsBehaviorTree/Temp
 TeppichsBehaviorTree/Logs
 TeppichsBehaviorTree/Library
 TeppichsBehaviorTree/obj/Debug
+*.csproj
+TeppichsBehaviorTree/.idea
+*.sln
