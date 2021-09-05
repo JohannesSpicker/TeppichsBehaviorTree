@@ -1,4 +1,7 @@
-﻿namespace ModularBehaviourTree.Composites
+﻿using System;
+using TeppichsTools.Data;
+
+namespace ModularBehaviourTree.Composites
 {
     internal class Selector : Composite
     {
@@ -16,5 +19,13 @@
 
             return NodeState.Failure;
         }
+
+        internal override Memento BuildMemento() => new SelectorMemento();
+    }
+
+    [Serializable]
+    internal class SelectorMemento : Memento
+    {
+        public override Node BuildNode(Library library, Node[] children) => new Selector(children);
     }
 }

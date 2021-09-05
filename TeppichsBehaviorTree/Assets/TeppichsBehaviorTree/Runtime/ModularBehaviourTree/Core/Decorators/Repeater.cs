@@ -1,4 +1,7 @@
-﻿namespace ModularBehaviourTree.Core.Decorators
+﻿using System;
+using TeppichsTools.Data;
+
+namespace ModularBehaviourTree.Core.Decorators
 {
     internal class Repeater : Decorator
     {
@@ -21,6 +24,14 @@
             return NodeState.Success;
         }
 
-        protected override void Terminate(Blackboard blackboard) { }
+        protected override void    Terminate(Blackboard blackboard) { }
+        internal override  Memento BuildMemento()                   => new RepeaterMemento();
+    }
+
+    [Serializable]
+    internal class RepeaterMemento : Memento
+    {
+        public override Node BuildNode(Library library, Node[] children) =>
+            new Repeater(children[0], library.Read<uint>("repetitions"));
     }
 }

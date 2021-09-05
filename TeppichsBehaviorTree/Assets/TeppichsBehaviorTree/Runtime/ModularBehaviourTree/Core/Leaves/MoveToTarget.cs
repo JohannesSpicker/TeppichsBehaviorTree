@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System;
+using TeppichsTools.Data;
+using UnityEngine;
 
 namespace ModularBehaviourTree.Leaves
 {
@@ -28,6 +30,15 @@ namespace ModularBehaviourTree.Leaves
         protected override void Terminate(Blackboard blackboard) =>
             blackboard.navMeshAgent.SetDestination(blackboard.navMeshAgent.transform.position);
 
+        internal override Memento BuildMemento() => new MoveToTargetMemento();
+
         private bool HasTarget(Blackboard blackboard) => blackboard.target;
+    }
+
+    [Serializable]
+    internal class MoveToTargetMemento : Memento
+    {
+        public override Node BuildNode(Library library, Node[] children) =>
+            new MoveToTarget(library.Read<float>("range"));
     }
 }

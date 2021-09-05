@@ -1,6 +1,4 @@
-﻿using UnityEngine;
-
-namespace ModularBehaviourTree
+﻿namespace ModularBehaviourTree
 {
     //[CreateAssetMenu(fileName = "FILENAME", menuName = "MENUNAME", order = 0)]
     /// <summary>
@@ -13,7 +11,7 @@ namespace ModularBehaviourTree
     public abstract class Decorator : Node
     {
         protected Node node;
-        protected Decorator(Node                      node) { this.node = node; }
+        protected Decorator(Node                         node) { this.node = node; }
         protected override NodeState Continue(Blackboard blackboard) => node.Tick(blackboard);
     }
 }

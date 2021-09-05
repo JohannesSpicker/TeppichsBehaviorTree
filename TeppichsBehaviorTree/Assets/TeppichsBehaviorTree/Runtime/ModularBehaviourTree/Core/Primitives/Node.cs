@@ -1,6 +1,8 @@
-﻿namespace ModularBehaviourTree
+﻿using System;
+using TeppichsTools.Data;
+
+namespace ModularBehaviourTree
 {
-    
     //[CreateAssetMenu(fileName = "FILENAME", menuName = "MENUNAME", order = 0)]
     /// <summary>
     ///     A behaviour tree is made up of several types of nodes, however some core functionality is common to any type of
@@ -66,5 +68,13 @@
         ///     Called once immediately after Tick returns not Running.
         /// </summary>
         protected abstract void Terminate(Blackboard blackboard);
+
+        internal abstract Memento BuildMemento();
+    }
+
+    [Serializable]
+    internal abstract class Memento
+    {
+        public abstract Node BuildNode(Library library, Node[] children);
     }
 }

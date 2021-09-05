@@ -1,4 +1,6 @@
-﻿using TeppichsTools.Time;
+﻿using System;
+using TeppichsTools.Data;
+using TeppichsTools.Time;
 using UnityEngine;
 
 namespace ModularBehaviourTree.Leaves
@@ -7,8 +9,11 @@ namespace ModularBehaviourTree.Leaves
     {
         private Ticker ticker;
 
-        public Idle(float                               duration) { ticker = new Ticker(duration); }
-        protected override void      Initialise(Blackboard blackboard) => ticker.Reset();
+        public Idle(float duration) { InitializeTicker(duration); }
+
+        private void InitializeTicker(float duration) => ticker = new Ticker(duration);
+
+        protected override void Initialise(Blackboard blackboard) => ticker.Reset();
 
         protected override NodeState Continue(Blackboard blackboard)
         {
@@ -17,6 +22,14 @@ namespace ModularBehaviourTree.Leaves
 
             return NodeState.Running;
         }
-        protected override void      Terminate(Blackboard  blackboard) {}
+
+        protected override void    Terminate(Blackboard blackboard) { }
+        internal override  Memento BuildMemento()                   => new IdleMemento();
+    }
+
+    [Serializable]
+    internal class IdleMemento : Memento
+    {
+        public override Node BuildNode(Library library, Node[] children) => new Idle(library.Read<float>("duration"));
     }
 }

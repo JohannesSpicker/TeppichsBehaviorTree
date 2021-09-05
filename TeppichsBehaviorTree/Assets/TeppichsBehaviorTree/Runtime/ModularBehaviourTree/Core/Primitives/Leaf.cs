@@ -1,6 +1,4 @@
 ﻿namespace ModularBehaviourTree
 {
-    public abstract class Leaf : Node
-    {
-    }
+    public abstract class Leaf : Node { }
 }

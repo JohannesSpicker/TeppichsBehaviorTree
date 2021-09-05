@@ -19,15 +19,17 @@ namespace Tests
             protected override NodeState Continue(Blackboard blackboard) =>
                 0 < tickCounter++ ? NodeState.Success : NodeState.Running;
 
-            protected override void Terminate(Blackboard blackboard) { }
+            protected override void    Terminate(Blackboard blackboard) { }
+            internal override  Memento BuildMemento()                   => throw new System.NotImplementedException();
         }
     }
 
     internal class MockDecorator : Decorator
     {
-        public MockDecorator(Node                  node) : base(node) { }
-        protected override void Initialise(Blackboard blackboard) { }
-        protected override void Terminate(Blackboard  blackboard) { }
+        public MockDecorator(Node                        node) : base(node) { }
+        protected override void    Initialise(Blackboard blackboard) { }
+        protected override void    Terminate(Blackboard  blackboard) { }
+        internal override  Memento BuildMemento()                    => throw new System.NotImplementedException();
     }
 
     internal class MockCondition : Condition
@@ -36,13 +38,15 @@ namespace Tests
         protected override bool      Check(Blackboard      blackboard) => true;
         protected override NodeState Continue(Blackboard   blackboard) => NodeState.Success;
         protected override void      Terminate(Blackboard  blackboard) { }
+        internal override  Memento   BuildMemento()                    => throw new System.NotImplementedException();
     }
 
     internal class MockComposite : Composite
     {
-        public MockComposite(Node[]                     nodes) : base(nodes) { }
+        public MockComposite(Node[]                        nodes) : base(nodes) { }
         protected override void      Initialise(Blackboard blackboard) { }
         protected override NodeState Continue(Blackboard   blackboard) => NodeState.Success;
         protected override void      Terminate(Blackboard  blackboard) { }
+        internal override  Memento   BuildMemento()                    => throw new System.NotImplementedException();
     }
 }

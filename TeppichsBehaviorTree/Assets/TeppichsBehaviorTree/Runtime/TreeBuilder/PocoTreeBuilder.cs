@@ -1,4 +1,6 @@
-﻿using ModularBehaviourTree;
+﻿using System;
+using Codice.CM.SEIDInfo;
+using ModularBehaviourTree;
 using TreeEditor;
 
 namespace TeppichsBehaviorTree.TreeBuilder
@@ -7,8 +9,13 @@ namespace TeppichsBehaviorTree.TreeBuilder
     {
         public static Node BuildTree(TreeContainer data)
         {
-
+            
             return null;
+        }
+
+        public static Node UnpackNode(SavedNode data)
+        {
+                return null;
         }
     }
 }

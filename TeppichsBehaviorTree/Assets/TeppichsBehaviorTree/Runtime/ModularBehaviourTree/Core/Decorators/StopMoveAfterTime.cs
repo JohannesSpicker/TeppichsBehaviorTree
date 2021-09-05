@@ -1,4 +1,6 @@
-﻿using TeppichsTools.Time;
+﻿using System;
+using TeppichsTools.Data;
+using TeppichsTools.Time;
 using UnityEngine;
 
 namespace ModularBehaviourTree.Core.Decorators
@@ -21,5 +23,14 @@ namespace ModularBehaviourTree.Core.Decorators
 
         protected override void Terminate(Blackboard blackboard) =>
             blackboard.navMeshAgent.SetDestination(blackboard.navMeshAgent.transform.position);
+
+        internal override Memento BuildMemento() => new StopMoveAfterTimeMemento();
+    }
+
+    [Serializable]
+    internal class StopMoveAfterTimeMemento : Memento
+    {
+        public override Node BuildNode(Library library, Node[] children) =>
+            new StopMoveAfterTime(children[0], library.Read<float>("duration"));
     }
 }

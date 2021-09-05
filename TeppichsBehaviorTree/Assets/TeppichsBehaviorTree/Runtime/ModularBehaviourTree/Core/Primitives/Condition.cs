@@ -15,6 +15,7 @@
     {
         protected abstract bool Check(Blackboard blackboard);
 
-        protected override NodeState Continue(Blackboard blackboard) => Check(blackboard) ? NodeState.Success : NodeState.Failure;
+        protected override NodeState Continue(Blackboard blackboard) =>
+            Check(blackboard) ? NodeState.Success : NodeState.Failure;
     }
 }

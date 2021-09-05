@@ -12,6 +12,6 @@ namespace TeppichsBehaviorTree.TreeBuilder
 
         public List<ExposedProperty> exposedProperties = new List<ExposedProperty>();
 
-        // public NodeData EntryPoint => nodeData[0];
+        public NodeData EntryPoint => nodeData[0];
     }
 }
