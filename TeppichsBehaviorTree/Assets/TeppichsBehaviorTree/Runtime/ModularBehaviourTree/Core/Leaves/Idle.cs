@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using TeppichsTools.Data;
 using TeppichsTools.Time;
 using UnityEngine;
@@ -30,6 +31,6 @@ namespace ModularBehaviourTree.Leaves
     [Serializable]
     internal class IdleMemento : Memento
     {
-        public override Node BuildNode(Library library, Node[] children) => new Idle(library.Read<float>("duration"));
+        public override Node BuildNode(Library library, List<Node> children) => new Idle(library.Read<float>("duration"));
     }
 }

@@ -1,49 +1,60 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
+using ModularBehaviourTree;
 using TeppichsTools.Data;
 using UnityEngine;
 
 namespace TeppichsBehaviorTree.TreeBuilder
 {
+    /// <summary>
+    ///     Base NodeData
+    ///     Memento holds the type.
+    ///     Used and wrapped in TreeBuilderGraph.
+    /// </summary>
     [Serializable]
     public class NodeData
     {
-        //runtime
-        public        Type     type;
-        
-        //graphView
-        public        string   guid;
-        public        Vector2  position;
+        public string  guid;
+        public Vector2 position;
 
         public Library library;
 
-        public NodeData(Type type, string guid, Vector2 position, Library library)
+        public Memento memento;
+
+        public NodeData(Memento memento, string guid, Vector2 position, Library library)
         {
-            this.type     = type;
+            this.memento  = memento;
             this.guid     = guid;
             this.position = position;
             this.library  = new Library(library);
         }
     }
 
+    /// <summary>
+    ///     Used for saving.
+    ///     Used for loading into runtime.
+    /// </summary>
     [Serializable]
-    public class SavedNode
+    public class NodeDataWithChildren : NodeData
     {
-        public Type    type;
-        public string  guid;
-        public Vector2 position;
-        
-        public Library library;
+        public List<NodeDataWithChildren> children;
 
-        public List<SavedNode> children;
-        public SavedNode(Type type, string guid, Vector2 position, Library library, List<SavedNode> children)
+        public NodeDataWithChildren(Memento                    memento, string guid, Vector2 position, Library library,
+                                    List<NodeDataWithChildren> children) : base(memento, guid, position, library)
         {
-            this.type     = type;
-            this.guid     = guid;
-            this.position = position;
-            this.library  = new Library(library);
-            this.children = children.ToList();
+            this.children = children;
+        }
+
+        public Node BuildNode() => memento.BuildNode(library, BuildChildren());
+
+        private List<Node> BuildChildren()
+        {
+            List<Node> nodes = new List<Node>();
+
+            foreach (NodeDataWithChildren child in children)
+                nodes.Add(child.BuildNode());
+
+            return nodes;
         }
     }
 }

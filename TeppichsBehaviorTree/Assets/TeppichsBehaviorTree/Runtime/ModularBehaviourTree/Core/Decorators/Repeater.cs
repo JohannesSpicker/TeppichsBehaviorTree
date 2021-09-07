@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using TeppichsTools.Data;
 
 namespace ModularBehaviourTree.Core.Decorators
@@ -31,7 +32,7 @@ namespace ModularBehaviourTree.Core.Decorators
     [Serializable]
     internal class RepeaterMemento : Memento
     {
-        public override Node BuildNode(Library library, Node[] children) =>
+        public override Node BuildNode(Library library, List<Node> children) =>
             new Repeater(children[0], library.Read<uint>("repetitions"));
     }
 }

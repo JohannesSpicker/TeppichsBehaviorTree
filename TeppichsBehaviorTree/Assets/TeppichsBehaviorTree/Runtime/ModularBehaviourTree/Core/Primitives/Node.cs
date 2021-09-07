@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using TeppichsTools.Data;
 
 namespace ModularBehaviourTree
@@ -73,8 +74,14 @@ namespace ModularBehaviourTree
     }
 
     [Serializable]
-    internal abstract class Memento
+    public abstract class Memento
     {
-        public abstract Node BuildNode(Library library, Node[] children);
+        public abstract Node BuildNode(Library library, List<Node> children);
+    }
+
+    [Serializable]
+    public class MockMemento: Memento
+    {
+        public override Node BuildNode(Library library, List<Node> children) => throw new NotImplementedException();
     }
 }

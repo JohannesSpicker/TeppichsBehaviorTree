@@ -1,15 +1,16 @@
 ﻿using System;
+using System.Collections.Generic;
 using TeppichsTools.Data;
 
 namespace ModularBehaviourTree.Composites
 {
     internal class Selector : Composite
     {
-        internal Selector(Node[] nodes) : base(nodes) { }
+        internal Selector(List<Node> nodes) : base(nodes) { }
 
         protected override NodeState Continue(Blackboard blackboard)
         {
-            for (; cursor < nodes.Length; cursor++)
+            for (; cursor < nodes.Count; cursor++)
             {
                 NodeState childState = nodes[cursor].Tick(blackboard);
 
@@ -26,6 +27,6 @@ namespace ModularBehaviourTree.Composites
     [Serializable]
     internal class SelectorMemento : Memento
     {
-        public override Node BuildNode(Library library, Node[] children) => new Selector(children);
+        public override Node BuildNode(Library library, List<Node> children) => new Selector(children);
     }
 }

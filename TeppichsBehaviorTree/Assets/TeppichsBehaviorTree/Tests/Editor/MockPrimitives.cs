@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using ModularBehaviourTree;
 using NUnit.Framework;
 
@@ -43,7 +44,7 @@ namespace Tests
 
     internal class MockComposite : Composite
     {
-        public MockComposite(Node[]                        nodes) : base(nodes) { }
+        public MockComposite(List<Node>                        nodes) : base(nodes) { }
         protected override void      Initialise(Blackboard blackboard) { }
         protected override NodeState Continue(Blackboard   blackboard) => NodeState.Success;
         protected override void      Terminate(Blackboard  blackboard) { }

@@ -27,7 +27,7 @@ namespace TeppichsBehaviorTree.Editor.Tutorial
         public TreeBuilderNode CreateNode(ModularBehaviourTree.Node baseNode)
         {
             //var node = new TreeBuilderNode 
-            //    {type = baseNode.GetType(), guid = Guid.NewGuid().ToString()};
+            //    {type = baseNode.GetType(), Guid = Guid.NewGuid().ToString()};
 
             if (baseNode is Leaf) { }
             else if (baseNode is Decorator) { }
@@ -54,7 +54,7 @@ namespace TeppichsBehaviorTree.Editor.Tutorial
         {
            //TreeBuilderNode node = new TreeBuilderNode
            //{
-           //    type = nodeData.type, guid = nodeData.guid, library = new Library(nodeData.library)
+           //    type = nodeData.type, Guid = nodeData.Guid, library = new Library(nodeData.library)
            //};
 
             return null;

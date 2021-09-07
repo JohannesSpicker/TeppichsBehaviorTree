@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using TeppichsTools.Data;
 using UnityEngine;
 
@@ -38,7 +39,7 @@ namespace ModularBehaviourTree.Leaves
     [Serializable]
     internal class MoveToTargetMemento : Memento
     {
-        public override Node BuildNode(Library library, Node[] children) =>
+        public override Node BuildNode(Library library, List<Node> children) =>
             new MoveToTarget(library.Read<float>("range"));
     }
 }

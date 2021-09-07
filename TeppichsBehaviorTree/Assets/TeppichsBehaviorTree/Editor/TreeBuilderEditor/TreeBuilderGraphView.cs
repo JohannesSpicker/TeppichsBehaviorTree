@@ -1,11 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using ModularBehaviourTree;
 using TeppichsBehaviorTree.TreeBuilder;
+using TeppichsTools.Data;
 using UnityEditor;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.UIElements;
+using Blackboard = UnityEditor.Experimental.GraphView.Blackboard;
 
 namespace TeppichsBehaviorTree.Editor.TreeRunnerEditor
 {
@@ -36,7 +39,9 @@ namespace TeppichsBehaviorTree.Editor.TreeRunnerEditor
 
         private TreeBuilderNode GenerateEntryPoint()
         {
-            TreeBuilderNode node = new TreeBuilderNode(true, Guid.NewGuid().ToString(), null, "START");
+            TreeBuilderNode node =
+                new TreeBuilderNode(true,
+                                    new NodeData(new MockMemento(), Guid.NewGuid().ToString(), Vector2.up, new Library()));
 
             Port generatedPort = GeneratePort(node, Direction.Output);
             generatedPort.portName = "Next";
@@ -70,7 +75,9 @@ namespace TeppichsBehaviorTree.Editor.TreeRunnerEditor
 
         public TreeBuilderNode CreateTreeBuilderNode(string nodeName, Vector2 localMousePosition)
         {
-            TreeBuilderNode dialogueNode = new TreeBuilderNode(false, Guid.NewGuid().ToString(), null, nodeName);
+            TreeBuilderNode dialogueNode =
+                new TreeBuilderNode(false,
+                                    new NodeData(new MockMemento(), Guid.NewGuid().ToString(), Vector2.up, new Library()));
 
             Port inputPort = GeneratePort(dialogueNode, Direction.Input, Port.Capacity.Multi);
             inputPort.portName = "Input";

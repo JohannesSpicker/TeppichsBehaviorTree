@@ -1,4 +1,5 @@
-﻿using ModularBehaviourTree;
+﻿using System.Collections.Generic;
+using ModularBehaviourTree;
 using ModularBehaviourTree.Composites;
 using ModularBehaviourTree.Core.Decorators;
 using UnityEngine;
@@ -31,7 +32,7 @@ namespace Tests
 
         internal static void Setup(out Blackboard blackboard, out Selector selector)
         {
-            selector = new Selector(new Node[3]
+            selector = new Selector(new List<Node>
             {
                 new MockPrimitives.MockLeaf(), new MockPrimitives.MockLeaf(),
                 new MockPrimitives.MockLeaf()
@@ -42,7 +43,7 @@ namespace Tests
 
         internal static void Setup(out Blackboard blackboard, out Sequence sequence)
         {
-            sequence = new Sequence(new Node[3]
+            sequence = new Sequence(new List<Node>
             {
                 new MockPrimitives.MockLeaf(), new MockPrimitives.MockLeaf(),
                 new MockPrimitives.MockLeaf()

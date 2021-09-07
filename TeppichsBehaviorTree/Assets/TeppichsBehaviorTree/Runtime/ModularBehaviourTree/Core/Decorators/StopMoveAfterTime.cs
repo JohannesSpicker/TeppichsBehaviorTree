@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using TeppichsTools.Data;
 using TeppichsTools.Time;
 using UnityEngine;
@@ -30,7 +31,7 @@ namespace ModularBehaviourTree.Core.Decorators
     [Serializable]
     internal class StopMoveAfterTimeMemento : Memento
     {
-        public override Node BuildNode(Library library, Node[] children) =>
+        public override Node BuildNode(Library library, List<Node> children) =>
             new StopMoveAfterTime(children[0], library.Read<float>("duration"));
     }
 }

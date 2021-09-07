@@ -1,5 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using ModularBehaviourTree;
+using TeppichsBehaviorTree.TreeBuilder;
+using TeppichsTools.Data;
 using UnityEditor;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
@@ -11,16 +14,6 @@ namespace TeppichsBehaviorTree.Editor.TreeRunnerEditor
     {
         private EditorWindow         editorWindow;
         private TreeBuilderGraphView graphView;
-
-        public void Initialize(TreeBuilderGraphView graphView, EditorWindow editorWindow)
-        {
-            this.graphView    = graphView;
-            this.editorWindow = editorWindow;
-
-            indentationIcon = new Texture2D(1, 1);
-            indentationIcon.SetPixel(0, 0, new Color(0, 0, 0, 0));
-            indentationIcon.Apply();
-        }
 
         private Texture2D indentationIcon;
 
@@ -55,11 +48,25 @@ namespace TeppichsBehaviorTree.Editor.TreeRunnerEditor
                 new SearchTreeGroupEntry(new GUIContent("Behavior Tree"), 1),
                 new SearchTreeEntry(new GUIContent("Node", indentationIcon))
                 {
-                    userData = new TreeBuilderNode(false, Guid.NewGuid().ToString(), null, "Title"), level = 2
+                    userData =
+                        new TreeBuilderNode(false,
+                                            new NodeData(new MockMemento(), Guid.NewGuid().ToString(), Vector2.down,
+                                                         new Library())),
+                    level = 2
                 }
             };
 
             return tree;
+        }
+
+        public void Initialize(TreeBuilderGraphView graphView, EditorWindow editorWindow)
+        {
+            this.graphView    = graphView;
+            this.editorWindow = editorWindow;
+
+            indentationIcon = new Texture2D(1, 1);
+            indentationIcon.SetPixel(0, 0, new Color(0, 0, 0, 0));
+            indentationIcon.Apply();
         }
     }
 }

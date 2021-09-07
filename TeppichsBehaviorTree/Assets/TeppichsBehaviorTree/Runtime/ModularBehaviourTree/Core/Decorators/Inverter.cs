@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using TeppichsTools.Data;
 
 namespace ModularBehaviourTree.Core.Decorators
@@ -30,6 +31,6 @@ namespace ModularBehaviourTree.Core.Decorators
     [Serializable]
     internal class InverterMemento : Memento
     {
-        public override Node BuildNode(Library library, Node[] children) => new Inverter(children[0]);
+        public override Node BuildNode(Library library, List<Node> children) => new Inverter(children[0]);
     }
 }

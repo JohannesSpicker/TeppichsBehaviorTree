@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using TeppichsTools.Data;
 using UnityEngine;
 
@@ -22,6 +23,6 @@ namespace ModularBehaviourTree.Conditions
     [Serializable]
     internal class IsInRangeMemento : Memento
     {
-        public override Node BuildNode(Library library, Node[] children) => new IsInRange(library.Read<float>("range"));
+        public override Node BuildNode(Library library, List<Node> children) => new IsInRange(library.Read<float>("range"));
     }
 }

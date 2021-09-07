@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using TeppichsTools.Data;
 using UnityEngine;
 
@@ -26,6 +27,6 @@ namespace ModularBehaviourTree.Leaves
     [Serializable]
     internal class MoveForwardMemento : Memento
     {
-        public override Node BuildNode(Library library, Node[] children) => new MoveForward();
+        public override Node BuildNode(Library library, List<Node> children) => new MoveForward();
     }
 }

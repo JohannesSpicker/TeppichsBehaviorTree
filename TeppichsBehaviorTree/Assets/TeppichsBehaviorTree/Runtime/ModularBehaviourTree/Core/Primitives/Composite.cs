@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 namespace ModularBehaviourTree
 {
@@ -15,9 +16,9 @@ namespace ModularBehaviourTree
     /// </summary>
     public abstract class Composite : Node
     {
-        protected                  int    cursor;
-        [SerializeField] protected Node[] nodes;
-        public Composite(Node[] nodes) { this.nodes = nodes; }
+        protected                  int          cursor;
+        [SerializeField] protected List<Node> nodes;
+        public Composite(List<Node> nodes) { this.nodes = nodes; }
 
         protected override void Initialise(Blackboard blackboard) => cursor = 0;
         protected override void Terminate(Blackboard  blackboard) { }

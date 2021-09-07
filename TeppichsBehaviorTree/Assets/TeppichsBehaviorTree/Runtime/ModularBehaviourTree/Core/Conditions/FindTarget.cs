@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using TeppichsTools.Data;
 using UnityEngine;
 
@@ -32,7 +33,7 @@ namespace ModularBehaviourTree.Conditions
     [Serializable]
     internal class FindTargetMemento : Memento
     {
-        public override Node BuildNode(Library library, Node[] children) =>
+        public override Node BuildNode(Library library, List<Node> children) =>
             new FindTarget(library.Read<float>("range"));
     }
 }

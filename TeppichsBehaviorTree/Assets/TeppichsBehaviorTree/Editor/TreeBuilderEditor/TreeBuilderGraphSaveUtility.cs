@@ -53,8 +53,8 @@ namespace TeppichsBehaviorTree.Editor.TreeRunnerEditor
                 TreeBuilderNode outputNode = connectedPorts[i].output.node as TreeBuilderNode;
                 TreeBuilderNode inputNode  = connectedPorts[i].input.node as TreeBuilderNode;
 
-                treeContainer.links.Add(new LinkData(outputNode.guid, connectedPorts[i].output.portName,
-                                                     inputNode.guid));
+                treeContainer.links.Add(new LinkData(outputNode.Guid, connectedPorts[i].output.portName,
+                                                     inputNode.Guid));
             }
 
             foreach (TreeBuilderNode dialogueNode in Nodes.Where(node => !node.entryPoint))
@@ -92,12 +92,12 @@ namespace TeppichsBehaviorTree.Editor.TreeRunnerEditor
         {
             for (int i = 0; i < Nodes.Count; i++)
             {
-                List<LinkData> connections = _containerCache.links.Where(x => x.baseNodeGuid == Nodes[i].guid).ToList();
+                List<LinkData> connections = _containerCache.links.Where(x => x.baseNodeGuid == Nodes[i].Guid).ToList();
 
                 for (int j = 0; j < connections.Count; j++)
                 {
                     string          targetNodeGuid = connections[j].targetNodeGuid;
-                    TreeBuilderNode targetNode     = Nodes.First(x => x.guid == targetNodeGuid);
+                    TreeBuilderNode targetNode     = Nodes.First(x => x.Guid == targetNodeGuid);
                     LinkNodes(Nodes[i].outputContainer[j].Q<Port>(), (Port) targetNode.inputContainer[0]);
 
                     targetNode.SetPosition(new
@@ -121,7 +121,7 @@ namespace TeppichsBehaviorTree.Editor.TreeRunnerEditor
             foreach (NodeData nodeData in _containerCache.nodeData)
             {
                 TreeBuilderNode tempNode = _targetGraphView.CreateTreeBuilderNode("nodeTitle", Vector2.zero);
-                tempNode.guid = nodeData.guid;
+                tempNode.Guid = nodeData.guid;
                 _targetGraphView.AddElement(tempNode);
 
                 List<LinkData> nodePorts = _containerCache.links.Where(x => x.baseNodeGuid == nodeData.guid).ToList();
@@ -132,7 +132,7 @@ namespace TeppichsBehaviorTree.Editor.TreeRunnerEditor
 
         private void ClearGraph()
         {
-            Nodes.Find(x => x.entryPoint).guid = _containerCache.links[0].baseNodeGuid;
+            Nodes.Find(x => x.entryPoint).Guid = _containerCache.links[0].baseNodeGuid;
 
             foreach (TreeBuilderNode node in Nodes)
             {
