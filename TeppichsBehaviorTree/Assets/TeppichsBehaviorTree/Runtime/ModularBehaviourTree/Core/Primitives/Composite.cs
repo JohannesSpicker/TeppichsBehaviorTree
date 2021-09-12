@@ -16,8 +16,9 @@ namespace ModularBehaviourTree
     /// </summary>
     public abstract class Composite : Node
     {
-        protected                  int          cursor;
+        protected                  int        cursor;
         [SerializeField] protected List<Node> nodes;
+        protected Composite() { }
         public Composite(List<Node> nodes) { this.nodes = nodes; }
 
         protected override void Initialise(Blackboard blackboard) => cursor = 0;

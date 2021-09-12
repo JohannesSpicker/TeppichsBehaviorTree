@@ -8,12 +8,13 @@ namespace ModularBehaviourTree.Conditions
     public class IsInRange : Condition
     {
         private readonly float range;
+        public IsInRange() { }
 
         public IsInRange(float range) { this.range = range; }
 
         protected override void    Initialise(Blackboard blackboard) { }
         protected override void    Terminate(Blackboard  blackboard) { }
-        internal override  Memento BuildMemento()                    => throw new NotImplementedException();
+        internal override  Memento BuildMemento()                    => new IsInRangeMemento();
 
         protected override bool Check(Blackboard blackboard) => blackboard.target != null
                                                                 && Vector3.Distance(blackboard.Position(),
@@ -23,6 +24,7 @@ namespace ModularBehaviourTree.Conditions
     [Serializable]
     internal class IsInRangeMemento : Memento
     {
-        public override Node BuildNode(Library library, List<Node> children) => new IsInRange(library.Read<float>("range"));
+        public override Node BuildNode(Library library, List<Node> children) =>
+            new IsInRange(library.Read<float>("range"));
     }
 }

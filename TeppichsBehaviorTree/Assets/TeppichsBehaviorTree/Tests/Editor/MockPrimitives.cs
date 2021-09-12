@@ -27,6 +27,7 @@ namespace Tests
 
     internal class MockDecorator : Decorator
     {
+        public MockDecorator() : base() { }
         public MockDecorator(Node                        node) : base(node) { }
         protected override void    Initialise(Blackboard blackboard) { }
         protected override void    Terminate(Blackboard  blackboard) { }

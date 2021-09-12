@@ -80,7 +80,7 @@ namespace ModularBehaviourTree
     }
 
     [Serializable]
-    public class MockMemento: Memento
+    public class MockMemento : Memento
     {
         public override Node BuildNode(Library library, List<Node> children) => throw new NotImplementedException();
     }

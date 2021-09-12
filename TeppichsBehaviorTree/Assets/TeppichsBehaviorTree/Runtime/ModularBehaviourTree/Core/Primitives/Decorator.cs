@@ -11,6 +11,7 @@
     public abstract class Decorator : Node
     {
         protected Node node;
+        public Decorator() { }
         protected Decorator(Node                         node) { this.node = node; }
         protected override NodeState Continue(Blackboard blackboard) => node.Tick(blackboard);
     }

@@ -7,7 +7,7 @@ namespace ModularBehaviourTree.Core.Decorators
     internal class Inverter : Decorator
     {
         public Inverter(Node node) : base(node) { }
-
+        public Inverter() { }
         protected override void Initialise(Blackboard blackboard) { }
 
         protected override NodeState Continue(Blackboard blackboard)

@@ -8,6 +8,7 @@ namespace ModularBehaviourTree.Core.Decorators
     {
         private readonly uint repetitions;
         private          uint counter;
+        public Repeater() { }
         public Repeater(Node node, uint repetitions) : base(node) { this.repetitions = repetitions; }
 
         protected override void Initialise(Blackboard blackboard) => counter = 0;

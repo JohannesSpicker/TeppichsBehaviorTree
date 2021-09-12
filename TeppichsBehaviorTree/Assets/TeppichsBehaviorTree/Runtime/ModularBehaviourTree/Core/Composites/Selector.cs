@@ -7,6 +7,7 @@ namespace ModularBehaviourTree.Composites
     internal class Selector : Composite
     {
         internal Selector(List<Node> nodes) : base(nodes) { }
+        public Selector() { }
 
         protected override NodeState Continue(Blackboard blackboard)
         {

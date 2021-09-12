@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Reflection;
+using System.Reflection.Emit;
 using ModularBehaviourTree;
 using TeppichsBehaviorTree.Editor.TreeRunnerEditor;
 using TeppichsBehaviorTree.TreeBuilder;
@@ -22,6 +23,13 @@ namespace TeppichsBehaviorTree.Editor.Tutorial
                 //Debug.Log(param.Name);
                 //Debug.Log(param.ParameterType);
             }
+        }
+
+        public TreeBuilderNode CreateTreeBuilderNode<T>(Memento memento) where T : Node
+        {
+            
+            
+            return null;
         }
 
         public TreeBuilderNode CreateNode(ModularBehaviourTree.Node baseNode)

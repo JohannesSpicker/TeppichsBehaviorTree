@@ -21,7 +21,7 @@ namespace ModularBehaviourTree.Leaves
         protected override void Terminate(Blackboard blackboard) =>
             blackboard.navMeshAgent.SetDestination(blackboard.navMeshAgent.transform.position);
 
-        internal override Memento BuildMemento() => throw new NotImplementedException();
+        internal override Memento BuildMemento() => new MoveForwardMemento();
     }
 
     [Serializable]

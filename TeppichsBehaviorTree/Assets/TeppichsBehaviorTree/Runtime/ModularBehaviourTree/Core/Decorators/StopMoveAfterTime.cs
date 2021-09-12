@@ -9,7 +9,7 @@ namespace ModularBehaviourTree.Core.Decorators
     internal class StopMoveAfterTime : Decorator
     {
         private readonly Ticker ticker;
-
+        public StopMoveAfterTime() { }
         public StopMoveAfterTime(Node node, float duration) : base(node) { ticker = new Ticker(duration); }
 
         protected override void Initialise(Blackboard blackboard) => ticker.Reset();

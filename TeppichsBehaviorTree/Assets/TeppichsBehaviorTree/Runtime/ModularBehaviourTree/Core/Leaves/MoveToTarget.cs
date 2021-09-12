@@ -8,7 +8,7 @@ namespace ModularBehaviourTree.Leaves
     internal class MoveToTarget : Leaf
     {
         private readonly float range;
-
+        public MoveToTarget() { }
         public MoveToTarget(float range) { this.range = range; }
 
         protected override void Initialise(Blackboard blackboard)

@@ -10,6 +10,8 @@ namespace ModularBehaviourTree.Leaves
     {
         private Ticker ticker;
 
+        public Idle() { }
+
         public Idle(float duration) { InitializeTicker(duration); }
 
         private void InitializeTicker(float duration) => ticker = new Ticker(duration);
@@ -31,6 +33,7 @@ namespace ModularBehaviourTree.Leaves
     [Serializable]
     internal class IdleMemento : Memento
     {
-        public override Node BuildNode(Library library, List<Node> children) => new Idle(library.Read<float>("duration"));
+        public override Node BuildNode(Library library, List<Node> children) =>
+            new Idle(library.Read<float>("duration"));
     }
 }

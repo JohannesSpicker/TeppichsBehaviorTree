@@ -10,9 +10,10 @@ namespace ModularBehaviourTree.Conditions
         private readonly float range;
         public FindTarget(float range) { this.range = range; }
 
+        public FindTarget() { }
         protected override void    Initialise(Blackboard blackboard) { }
         protected override void    Terminate(Blackboard  blackboard) { }
-        internal override  Memento BuildMemento()                    => throw new NotImplementedException();
+        internal override  Memento BuildMemento()                    => new FindTargetMemento();
 
         protected override bool Check(Blackboard blackboard) => blackboard.target = GetFirstBestTarget(blackboard);
 

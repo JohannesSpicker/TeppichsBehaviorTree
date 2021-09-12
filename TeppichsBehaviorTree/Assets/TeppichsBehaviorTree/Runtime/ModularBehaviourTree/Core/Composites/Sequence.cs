@@ -6,6 +6,7 @@ namespace ModularBehaviourTree.Composites
 {
     internal class Sequence : Composite
     {
+        public Sequence() { }
         internal Sequence(List<Node> nodes) : base(nodes) { }
 
         protected override NodeState Continue(Blackboard blackboard)

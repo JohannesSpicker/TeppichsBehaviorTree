@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using ModularBehaviourTree;
 using TeppichsTools.Data;
 using UnityEngine;
@@ -28,6 +29,24 @@ namespace TeppichsBehaviorTree.TreeBuilder
             this.position = position;
             this.library  = new Library(library);
         }
+
+        public static NodeData TypeToNoteData(Type nodeType)
+        {
+            if (nodeType.IsSubclassOf(typeof(Node)) && !nodeType.Name.Contains("Mock")
+                                                    && !nodeType.Name.Contains("Test")
+                                                    && HasDefaultConstructor(nodeType))
+            {
+                Memento memento = (Activator.CreateInstance(nodeType) as Node)?.BuildMemento();
+
+                if (memento != null)
+                    return new NodeData(memento, Guid.NewGuid().ToString(), Vector2.zero, new Library());
+            }
+
+            return null;
+        }
+        
+        private static bool HasDefaultConstructor(Type type) =>
+            type.GetConstructors().Any(t => t.GetParameters().Count() == 0);
     }
 
     /// <summary>
