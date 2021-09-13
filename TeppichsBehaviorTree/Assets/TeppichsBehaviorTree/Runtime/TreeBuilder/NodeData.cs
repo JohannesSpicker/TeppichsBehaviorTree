@@ -30,7 +30,7 @@ namespace TeppichsBehaviorTree.TreeBuilder
             this.library  = new Library(library);
         }
 
-        public static NodeData TypeToNoteData(Type nodeType)
+        public static NodeData TypeToNodeData(Type nodeType)
         {
             if (nodeType.IsSubclassOf(typeof(Node)) && !nodeType.Name.Contains("Mock")
                                                     && !nodeType.Name.Contains("Test")

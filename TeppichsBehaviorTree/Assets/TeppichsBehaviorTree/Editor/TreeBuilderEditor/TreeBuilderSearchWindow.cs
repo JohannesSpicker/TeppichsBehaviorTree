@@ -43,74 +43,67 @@ namespace TeppichsBehaviorTree.Editor.TreeRunnerEditor
 
         public List<SearchTreeEntry> CreateSearchTree(SearchWindowContext context)
         {
-            Type[] nodeTypes = TypeReflectionUtility.GetSubtypesFromAllAssemblies(typeof(Node));
+            List<SearchTreeEntry> searchTree = new List<SearchTreeEntry>();
+            searchTree.Add(new SearchTreeGroupEntry(new GUIContent("Create Elements")));
 
-            List<SearchTreeEntry> myTree = new List<SearchTreeEntry>();
-            myTree.Add(new SearchTreeGroupEntry(new GUIContent("Create Elements")));
+            string[] lastNamespace = new string[0];
 
-            List<NodeData> preparedData = new List<NodeData>();
-
-            foreach (Type nodeType in nodeTypes)
+            foreach (Type type in TypeReflectionUtility.GetSubtypesFromAllAssemblies(typeof(Node))
+                                                       .OrderBy(t => t.Namespace).ThenBy(t => t.Name))
             {
-                NodeData nodeData = NodeData.TypeToNoteData(nodeType);
+                int level = 1;
 
-                if (nodeData != null)
-                    preparedData.Add(nodeData);
-            }
-
-            string lastNamespace = "";
-
-            foreach (NodeData nodeData in preparedData.OrderBy(x => x.GetType().Namespace).ThenBy(x => GetType().Name))
-            {
-                string currentNamespace = nodeData.GetType().Namespace;
-
-                if (currentNamespace != lastNamespace)
+                if (type.Namespace != null)
                 {
-                    myTree.Add(new SearchTreeGroupEntry(new GUIContent(currentNamespace), 1));
+                    string[] currentNamespace = type.Namespace.Split('.');
+
+                    for (int i = 0; i < currentNamespace.Length; i++)
+                        if (lastNamespace.Length <= i || lastNamespace[i] != currentNamespace[i])
+                            AddGroupToTree(currentNamespace[i], i + 1);
+
                     lastNamespace = currentNamespace;
+                    level         = currentNamespace.Length + 1;
                 }
 
-                SearchTreeEntry candidate = NodeDataToSearchTreeEntry(nodeData);
+                AddNodeToTree(type, level);
+            }
+
+            return searchTree;
+
+            void AddGroupToTree(string title, int level) =>
+                searchTree.Add(new SearchTreeGroupEntry(new GUIContent(title), level));
+
+            void AddNodeToTree(Type type, int level)
+            {
+                SearchTreeEntry candidate = TypeToSearchTreeEntry(type, level);
 
                 if (null != candidate)
-                    myTree.Add(candidate);
+                    searchTree.Add(candidate);
             }
-
-            List<SearchTreeEntry> tree = new List<SearchTreeEntry>
-            {
-                new SearchTreeGroupEntry(new GUIContent("Create Elements")),
-                new SearchTreeGroupEntry(new GUIContent("Behavior Tree"),  1),
-                new SearchTreeGroupEntry(new GUIContent("Behavior Tree2"), 1),
-                new SearchTreeEntry(new GUIContent("Node", indentationIcon))
-                {
-                    userData =
-                        new TreeBuilderNode(false,
-                                            new NodeData(new MockMemento(), Guid.NewGuid().ToString(),
-                                                         Vector2.down, new Library())),
-                    level = 2
-                },
-                new SearchTreeEntry(new GUIContent("Node2", indentationIcon))
-                {
-                    userData =
-                        new TreeBuilderNode(false,
-                                            new NodeData(new MockMemento(), Guid.NewGuid().ToString(),
-                                                         Vector2.down, new Library())),
-                    level = 2
-                }
-            };
-
-            return myTree;
         }
 
-        private static SearchTreeEntry NodeDataToSearchTreeEntry(NodeData nodeData)
+        private static SearchTreeEntry TypeToSearchTreeEntry(Type type, int level)
         {
-            return new SearchTreeEntry(new GUIContent(nodeData.memento.GetType().Name, new Texture2D(1, 1)))
+            NodeData nodeData = NodeData.TypeToNodeData(type);
+
+            if (nodeData is null)
+                return null;
+
+            return new SearchTreeEntry(new GUIContent(type.Name))
+            {
+                userData = new TreeBuilderNode(false, nodeData), level = level
+            };
+        }
+
+        private static SearchTreeEntry NodeDataToSearchTreeEntry(NodeData nodeData, int level)
+        {
+            return new SearchTreeEntry(new GUIContent(nodeData.memento.GetType().Name))
             {
                 userData =
                     new TreeBuilderNode(false,
                                         new NodeData(new MockMemento(), Guid.NewGuid().ToString(), Vector2.down,
                                                      new Library())),
-                level = 2
+                level = level
             };
 
             return null;
