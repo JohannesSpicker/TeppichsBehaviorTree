@@ -44,9 +44,12 @@ namespace TeppichsBehaviorTree.TreeBuilder
 
             return null;
         }
-        
+
         private static bool HasDefaultConstructor(Type type) =>
             type.GetConstructors().Any(t => t.GetParameters().Count() == 0);
+
+        public static Type NodeDataToType(NodeData nodeData) =>
+            nodeData.memento.BuildNode(new Library(), null).GetType();
     }
 
     /// <summary>

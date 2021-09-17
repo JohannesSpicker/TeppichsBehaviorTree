@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using ModularBehaviourTree;
 using TeppichsBehaviorTree.TreeBuilder;
-using TeppichsTools.Data;
 using TeppichsTools.Runtime.Reflection;
 using UnityEditor;
 using UnityEditor.Experimental.GraphView;
@@ -31,14 +29,14 @@ namespace TeppichsBehaviorTree.Editor.TreeRunnerEditor
 
             Vector2 localMousePosition = graphView.contentViewContainer.WorldToLocal(context.screenMousePosition);
 
-            switch (searchTreeEntry.userData)
+            if (searchTreeEntry.userData is TreeBuilderNode treeBuilderNode)
             {
-                case TreeBuilderNode node:
-                    graphView.CreateNode("Node", localMousePosition);
-
-                    return true;
-                default: return false;
+                //NodeData.NodeDataToType(treeBuilderNode.ToNodeData());
+                //build a node
+                //graphView.CreateNode("Node", localMousePosition);
             }
+
+            return false;
         }
 
         public List<SearchTreeEntry> CreateSearchTree(SearchWindowContext context)
@@ -80,33 +78,19 @@ namespace TeppichsBehaviorTree.Editor.TreeRunnerEditor
                 if (null != candidate)
                     searchTree.Add(candidate);
             }
-        }
 
-        private static SearchTreeEntry TypeToSearchTreeEntry(Type type, int level)
-        {
-            NodeData nodeData = NodeData.TypeToNodeData(type);
-
-            if (nodeData is null)
-                return null;
-
-            return new SearchTreeEntry(new GUIContent(type.Name))
+            static SearchTreeEntry TypeToSearchTreeEntry(Type type, int level)
             {
-                userData = new TreeBuilderNode(false, nodeData), level = level
-            };
-        }
+                NodeData nodeData = NodeData.TypeToNodeData(type);
 
-        private static SearchTreeEntry NodeDataToSearchTreeEntry(NodeData nodeData, int level)
-        {
-            return new SearchTreeEntry(new GUIContent(nodeData.memento.GetType().Name))
-            {
-                userData =
-                    new TreeBuilderNode(false,
-                                        new NodeData(new MockMemento(), Guid.NewGuid().ToString(), Vector2.down,
-                                                     new Library())),
-                level = level
-            };
+                if (nodeData is null)
+                    return null;
 
-            return null;
+                return new SearchTreeEntry(new GUIContent(type.Name))
+                {
+                    userData = new TreeBuilderNode(false, nodeData), level = level
+                };
+            }
         }
 
         public void Initialize(TreeBuilderGraphView graphView, EditorWindow editorWindow)

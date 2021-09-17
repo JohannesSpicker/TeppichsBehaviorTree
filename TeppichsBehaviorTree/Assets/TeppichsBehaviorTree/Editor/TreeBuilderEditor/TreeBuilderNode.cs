@@ -1,5 +1,6 @@
-﻿using TeppichsBehaviorTree.TreeBuilder;
-using UnityEditor.Experimental.GraphView;
+﻿using ModularBehaviourTree;
+using TeppichsBehaviorTree.TreeBuilder;
+using Node = UnityEditor.Experimental.GraphView.Node;
 
 namespace TeppichsBehaviorTree.Editor.TreeRunnerEditor
 {
@@ -27,5 +28,7 @@ namespace TeppichsBehaviorTree.Editor.TreeRunnerEditor
 
             return nodeData;
         }
+
+        public Memento GetMemento() => nodeData.memento;
     }
 }

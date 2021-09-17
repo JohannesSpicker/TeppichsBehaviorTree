@@ -41,7 +41,8 @@ namespace TeppichsBehaviorTree.Editor.TreeRunnerEditor
         {
             TreeBuilderNode node =
                 new TreeBuilderNode(true,
-                                    new NodeData(new MockMemento(), Guid.NewGuid().ToString(), Vector2.up, new Library()));
+                                    new NodeData(new MockMemento(), Guid.NewGuid().ToString(), Vector2.up,
+                                                 new Library()));
 
             Port generatedPort = GeneratePort(node, Direction.Output);
             generatedPort.portName = "Next";
@@ -77,7 +78,8 @@ namespace TeppichsBehaviorTree.Editor.TreeRunnerEditor
         {
             TreeBuilderNode dialogueNode =
                 new TreeBuilderNode(false,
-                                    new NodeData(new MockMemento(), Guid.NewGuid().ToString(), Vector2.up, new Library()));
+                                    new NodeData(new MockMemento(), Guid.NewGuid().ToString(), Vector2.up,
+                                                 new Library()));
 
             Port inputPort = GeneratePort(dialogueNode, Direction.Input, Port.Capacity.Multi);
             inputPort.portName = "Input";
@@ -165,6 +167,8 @@ namespace TeppichsBehaviorTree.Editor.TreeRunnerEditor
             return compatiblePorts;
         }
 
+        #region BlackBoard
+
         public void ClearBlackBoardAndExposedProperties()
         {
             exposedProperties.Clear();
@@ -205,5 +209,7 @@ namespace TeppichsBehaviorTree.Editor.TreeRunnerEditor
 
             blackboardField.Add(container);
         }
+
+        #endregion
     }
 }
