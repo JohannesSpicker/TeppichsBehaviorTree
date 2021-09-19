@@ -120,7 +120,10 @@ namespace TeppichsBehaviorTree.Editor.TreeRunnerEditor
         {
             foreach (NodeData nodeData in _containerCache.nodeData)
             {
-                TreeBuilderNode tempNode = _targetGraphView.CreateTreeBuilderNode("nodeTitle", Vector2.zero);
+                TreeBuilderNode tempNode =
+                    _targetGraphView.CreateTreeBuilderNode(nodeData.memento.BuildNode(null, null).GetType(),
+                                                           Vector2.zero);
+
                 tempNode.Guid = nodeData.guid;
                 _targetGraphView.AddElement(tempNode);
 

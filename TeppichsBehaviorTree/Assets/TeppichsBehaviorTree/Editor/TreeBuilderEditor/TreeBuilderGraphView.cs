@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using ModularBehaviourTree;
 using TeppichsBehaviorTree.TreeBuilder;
 using TeppichsTools.Data;
 using UnityEditor;
 using UnityEditor.Experimental.GraphView;
+using UnityEditor.UIElements;
 using UnityEngine;
 using UnityEngine.UIElements;
 using Blackboard = UnityEditor.Experimental.GraphView.Blackboard;
@@ -74,35 +76,75 @@ namespace TeppichsBehaviorTree.Editor.TreeRunnerEditor
             node.InstantiatePort(Orientation.Horizontal, portDirection, capacity,
                                  typeof(float)); //type float is arbitrary, can be used to pass data
 
-        public TreeBuilderNode CreateTreeBuilderNode(string nodeName, Vector2 localMousePosition)
+        public TreeBuilderNode CreateTreeBuilderNode(Type nodeType, Vector2 localMousePosition)
         {
-            TreeBuilderNode dialogueNode =
-                new TreeBuilderNode(false,
-                                    new NodeData(new MockMemento(), Guid.NewGuid().ToString(), Vector2.up,
-                                                 new Library()));
+            TreeBuilderNode treeBuilderNode = new TreeBuilderNode(false, null); //dont pass null
+            treeBuilderNode.title = nodeType.Name;
 
-            Port inputPort = GeneratePort(dialogueNode, Direction.Input, Port.Capacity.Multi);
+            //get longest constructor of nodeType
+            //construct fields in TreeBuilderNode
+            foreach (ParameterInfo parameter in GetParameters())
+                AddFieldToTreeBuilderNode(parameter);
+
+            //link fields with nodeData library
+
+            //nodeData.
+            //
+
+            Port inputPort = GeneratePort(treeBuilderNode, Direction.Input, Port.Capacity.Multi);
             inputPort.portName = "Input";
-            dialogueNode.inputContainer.Add(inputPort);
+            treeBuilderNode.inputContainer.Add(inputPort);
 
-            dialogueNode.styleSheets.Add(Resources.Load<StyleSheet>("Node"));
+            treeBuilderNode.styleSheets.Add(Resources.Load<StyleSheet>("Node"));
 
-            Button button = new Button(() => { AddChoicePort(dialogueNode); });
-            dialogueNode.titleContainer.Add(button);
+            //composites need add port button
+            Button button = new Button(() => { AddChoicePort(treeBuilderNode); });
+            treeBuilderNode.titleContainer.Add(button);
             button.text = "New Choice";
 
-            TextField textField = new TextField(string.Empty);
+            treeBuilderNode.RefreshPorts();
+            treeBuilderNode.RefreshExpandedState();
+            treeBuilderNode.SetPosition(new Rect(localMousePosition, defaultNodeSize));
 
-            textField.RegisterValueChangedCallback(evt => { dialogueNode.title = evt.newValue; });
+            return treeBuilderNode;
 
-            textField.SetValueWithoutNotify(dialogueNode.title);
-            dialogueNode.mainContainer.Add(textField);
+            ParameterInfo[] GetParameters()
+            {
+                ConstructorInfo longestConstructorInfo = null;
 
-            dialogueNode.RefreshPorts();
-            dialogueNode.RefreshExpandedState();
-            dialogueNode.SetPosition(new Rect(localMousePosition, defaultNodeSize));
+                foreach (ConstructorInfo conInfo in nodeType.GetConstructors())
+                    if (longestConstructorInfo is null
+                        || longestConstructorInfo.GetParameters().Length < conInfo.GetParameters().Length)
+                        longestConstructorInfo = conInfo;
 
-            return dialogueNode;
+                return longestConstructorInfo?.GetParameters();
+            }
+
+            void AddFieldToTreeBuilderNode(ParameterInfo parameter)
+            {
+                Type parameterType = parameter.ParameterType;
+
+                dynamic field = null;
+
+                if (parameterType == typeof(string))
+                {
+                    field = new TextField(parameter.Name);
+                    ApplyDefaultValue<string>();
+                }
+                else if (parameterType == typeof(float))
+                {
+                    field = new FloatField(parameter.Name);
+                    ApplyDefaultValue<float>();
+                }
+
+                treeBuilderNode.mainContainer.Add(field);
+
+                void ApplyDefaultValue<T>()
+                {
+                    if (parameter.HasDefaultValue)
+                        field.value = (T) parameter.DefaultValue;
+                }
+            }
         }
 
         public void AddChoicePort(TreeBuilderNode treeBuilderNode, string overriddenPortName = "")
@@ -151,8 +193,8 @@ namespace TeppichsBehaviorTree.Editor.TreeRunnerEditor
             treeBuilderNode.RefreshExpandedState();
         }
 
-        public void CreateNode(string nodeName, Vector2 mousePosition) =>
-            AddElement(CreateTreeBuilderNode(nodeName, mousePosition));
+        public void CreateNode(Type nodeType, Vector2 mousePosition) =>
+            AddElement(CreateTreeBuilderNode(nodeType, mousePosition));
 
         public override List<Port> GetCompatiblePorts(Port startPort, NodeAdapter nodeAdapter)
         {

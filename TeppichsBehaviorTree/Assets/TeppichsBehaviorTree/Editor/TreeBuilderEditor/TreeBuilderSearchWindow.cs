@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using TeppichsBehaviorTree.TreeBuilder;
 using TeppichsTools.Runtime.Reflection;
 using UnityEditor;
 using UnityEditor.Experimental.GraphView;
@@ -20,20 +19,18 @@ namespace TeppichsBehaviorTree.Editor.TreeRunnerEditor
 
         public bool OnSelectEntry(SearchTreeEntry searchTreeEntry, SearchWindowContext context)
         {
-            //Vector2 worldMousePosition =
-            //    editorWindow.rootVisualElement.ChangeCoordinatesTo(editorWindow.rootVisualElement.parent,
-            //                                                       context.screenMousePosition
-            //                                                       - editorWindow.position.position);
+            Vector2 worldMousePosition =
+                editorWindow.rootVisualElement.ChangeCoordinatesTo(editorWindow.rootVisualElement.parent,
+                                                                   context.screenMousePosition
+                                                                   - editorWindow.position.position);
 
-            //Vector2 localMousePosition = graphView.contentViewContainer.WorldToLocal(worldMousePosition);
+            Vector2 localMousePosition = graphView.contentViewContainer.WorldToLocal(worldMousePosition);
 
-            Vector2 localMousePosition = graphView.contentViewContainer.WorldToLocal(context.screenMousePosition);
-
-            if (searchTreeEntry.userData is TreeBuilderNode treeBuilderNode)
+            if (searchTreeEntry.userData is Type nodeType && nodeType.IsSubclassOf(typeof(Node)))
             {
-                //NodeData.NodeDataToType(treeBuilderNode.ToNodeData());
-                //build a node
-                //graphView.CreateNode("Node", localMousePosition);
+                graphView.CreateNode(nodeType, localMousePosition);
+
+                return true;
             }
 
             return false;
@@ -79,18 +76,8 @@ namespace TeppichsBehaviorTree.Editor.TreeRunnerEditor
                     searchTree.Add(candidate);
             }
 
-            static SearchTreeEntry TypeToSearchTreeEntry(Type type, int level)
-            {
-                NodeData nodeData = NodeData.TypeToNodeData(type);
-
-                if (nodeData is null)
-                    return null;
-
-                return new SearchTreeEntry(new GUIContent(type.Name))
-                {
-                    userData = new TreeBuilderNode(false, nodeData), level = level
-                };
-            }
+            static SearchTreeEntry TypeToSearchTreeEntry(Type type, int level) =>
+                new SearchTreeEntry(new GUIContent(type.Name)) {userData = type, level = level};
         }
 
         public void Initialize(TreeBuilderGraphView graphView, EditorWindow editorWindow)
