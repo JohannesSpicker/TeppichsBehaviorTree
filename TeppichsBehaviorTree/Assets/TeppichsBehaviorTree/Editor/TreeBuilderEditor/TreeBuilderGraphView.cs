@@ -78,29 +78,38 @@ namespace TeppichsBehaviorTree.Editor.TreeRunnerEditor
 
         public TreeBuilderNode CreateTreeBuilderNode(Type nodeType, Vector2 localMousePosition)
         {
+            //construct node
             TreeBuilderNode treeBuilderNode = new TreeBuilderNode(false, null); //dont pass null
             treeBuilderNode.title = nodeType.Name;
+            treeBuilderNode.styleSheets.Add(Resources.Load<StyleSheet>("Node"));
 
-            //get longest constructor of nodeType
-            //construct fields in TreeBuilderNode
+            //add parameter fields
             foreach (ParameterInfo parameter in GetParameters())
                 AddFieldToTreeBuilderNode(parameter);
 
             //link fields with nodeData library
 
-            //nodeData.
-            //
-
+            //create input port
             Port inputPort = GeneratePort(treeBuilderNode, Direction.Input, Port.Capacity.Multi);
             inputPort.portName = "Input";
             treeBuilderNode.inputContainer.Add(inputPort);
 
-            treeBuilderNode.styleSheets.Add(Resources.Load<StyleSheet>("Node"));
+            //decorators need output
+            if (nodeType.IsSubclassOf(typeof(Decorator)))
+            {
+                
+            }
 
+            
             //composites need add port button
-            Button button = new Button(() => { AddChoicePort(treeBuilderNode); });
-            treeBuilderNode.titleContainer.Add(button);
-            button.text = "New Choice";
+            if (nodeType.IsSubclassOf(typeof(Composite))) 
+            {
+                Button button = new Button(() => { AddChoicePort(treeBuilderNode); });
+                treeBuilderNode.titleContainer.Add(button);
+                button.text = "New Choice";
+                
+                AddChoicePort(treeBuilderNode);
+            }
 
             treeBuilderNode.RefreshPorts();
             treeBuilderNode.RefreshExpandedState();
@@ -161,10 +170,6 @@ namespace TeppichsBehaviorTree.Editor.TreeRunnerEditor
                 ? $"Choice {outputPortCount + 1}"
                 : overriddenPortName;
 
-            TextField textField = new TextField {name = string.Empty, value = choicePortName};
-            textField.RegisterValueChangedCallback(evt => generatedPort.portName = evt.newValue);
-            generatedPort.contentContainer.Add(new Label("  "));
-            generatedPort.contentContainer.Add(textField);
             Button deleteButton = new Button(() => RemovePort(treeBuilderNode, generatedPort)) {text = "X"};
             generatedPort.contentContainer.Add(deleteButton);
 
