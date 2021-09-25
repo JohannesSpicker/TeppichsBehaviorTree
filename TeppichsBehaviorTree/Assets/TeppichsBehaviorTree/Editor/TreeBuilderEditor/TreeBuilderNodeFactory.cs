@@ -41,14 +41,26 @@ namespace TeppichsBehaviorTree.Editor.TreeBuilderEditor
             return node;
         }
 
-        public static Port GeneratePort(Node          node, Direction portDirection,
-                                        Port.Capacity capacity = Port.Capacity.Single) =>
+        private static Port GeneratePort(Node          node, Direction portDirection,
+                                         Port.Capacity capacity = Port.Capacity.Single) =>
             node.InstantiatePort(Orientation.Horizontal, portDirection, capacity,
                                  typeof(float)); //type float is arbitrary, can be used to pass data
 
         public static TreeBuilderNode CreateTreeBuilderNode(TreeBuilderGraphView treeBuilderGraphView, Type nodeType,
                                                             Vector2              localMousePosition)
         {
+            {
+                //get constructors of type
+
+                //make fields for parameters of constructor
+
+                //add an input port
+
+                //add output ports and/or ability to add more output ports (for composites)
+
+                //return node;
+            }
+
             //construct node
             TreeBuilderNode treeBuilderNode = new TreeBuilderNode(false, null, nodeType.Name); //dont pass null
             treeBuilderNode.styleSheets.Add(Resources.Load<StyleSheet>("Node"));
@@ -106,20 +118,16 @@ namespace TeppichsBehaviorTree.Editor.TreeBuilderEditor
 
                 if (parameterType == typeof(string))
                 {
-                    field = new TextField(parameter.Name);
-                    ApplyDefaultValue<string>();
+                    field       = new TextField(parameter.Name);
+                    field.value = "";
                 }
                 else if (parameterType == typeof(float))
                 {
-                    field = new FloatField(parameter.Name);
-                    ApplyDefaultValue<float>();
+                    field       = new FloatField(parameter.Name);
+                    field.value = 0f;
                 }
 
                 treeBuilderNode.mainContainer.Add(field);
-
-                void ApplyDefaultValue<T>() =>
-                    //     if (parameter.HasDefaultValue)
-                    field.value = (T)parameter.DefaultValue;
             }
         }
 
@@ -150,8 +158,7 @@ namespace TeppichsBehaviorTree.Editor.TreeBuilderEditor
             treeBuilderNode.RefreshExpandedState();
         }
 
-        public static void RemovePort(TreeBuilderGraphView treeBuilderGraphView, Node treeBuilderNode,
-                                      Port                 generatedPort)
+        private static void RemovePort(GraphView treeBuilderGraphView, Node treeBuilderNode, Port generatedPort)
         {
             IEnumerable<Edge> targetEdge = treeBuilderGraphView.edges.ToList()
                                                                .Where(x => x.output.portName == generatedPort.portName
