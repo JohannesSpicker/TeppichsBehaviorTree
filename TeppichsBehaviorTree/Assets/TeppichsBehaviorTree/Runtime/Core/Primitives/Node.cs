@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Reflection;
 using TeppichsBehaviorTree.Runtime.ModularBehaviourTree.Core;
 using TeppichsTools.Data;
@@ -95,6 +96,9 @@ namespace TeppichsBehaviorTree.Runtime.Core.Primitives
             return cstr.Invoke(BindingFlags.Default, filledOut.ToArray()) as Node;
         }
 
-        private static ConstructorInfo GetLongestConstructor(Type type) => null;
+        private static ConstructorInfo GetLongestConstructor(Type type) => type.GetConstructors()
+                                                                               .OrderByDescending(info => info
+                                                                                   .GetParameters().Length)
+                                                                               .First();
     }
 }
