@@ -1,4 +1,4 @@
-﻿namespace ModularBehaviourTree
+﻿namespace TeppichsBehaviorTree.Runtime
 {
     public static class StringCollection
     {

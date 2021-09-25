@@ -1,13 +1,15 @@
 ﻿using System.Collections.Generic;
-using ModularBehaviourTree;
-using ModularBehaviourTree.Composites;
-using ModularBehaviourTree.Core.Decorators;
+using TeppichsBehaviorTree.Runtime.Core.Composites;
+using TeppichsBehaviorTree.Runtime.Core.Decorators;
+using TeppichsBehaviorTree.Runtime.Core.Primitives;
+using TeppichsBehaviorTree.Runtime.ModularBehaviourTree.Core;
+using Tests;
 using UnityEngine;
 using UnityEngine.AI;
 
-namespace Tests
+namespace TeppichsBehaviorTree.Tests.Editor
 {
-    internal class TestSetup
+    internal static class TestSetup
     {
         internal static void Setup(out Blackboard blackboard) => SetupBlackboard(out blackboard);
 
@@ -27,14 +29,14 @@ namespace Tests
         {
             inverter = new Inverter(new MockPrimitives.MockLeaf());
             SetupBlackboard(out blackboard);
-
         }
 
         internal static void Setup(out Blackboard blackboard, out Selector selector)
         {
             selector = new Selector(new List<Node>
             {
-                new MockPrimitives.MockLeaf(), new MockPrimitives.MockLeaf(),
+                new MockPrimitives.MockLeaf(),
+                new MockPrimitives.MockLeaf(),
                 new MockPrimitives.MockLeaf()
             });
 
@@ -45,7 +47,8 @@ namespace Tests
         {
             sequence = new Sequence(new List<Node>
             {
-                new MockPrimitives.MockLeaf(), new MockPrimitives.MockLeaf(),
+                new MockPrimitives.MockLeaf(),
+                new MockPrimitives.MockLeaf(),
                 new MockPrimitives.MockLeaf()
             });
 

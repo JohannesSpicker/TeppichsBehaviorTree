@@ -1,19 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using TeppichsTools.Data;
+﻿using TeppichsBehaviorTree.Runtime.Core.Primitives;
+using TeppichsBehaviorTree.Runtime.ModularBehaviourTree.Core;
 using UnityEngine;
 
-namespace ModularBehaviourTree.Conditions
+namespace TeppichsBehaviorTree.Runtime.Core.Conditions
 {
     internal class FindTarget : Condition
     {
         private readonly float range;
         public FindTarget(float range) { this.range = range; }
 
-        public FindTarget() { }
-        protected override void    Initialise(Blackboard blackboard) { }
-        protected override void    Terminate(Blackboard  blackboard) { }
-        internal override  Memento BuildMemento()                    => new FindTargetMemento();
+        protected override void Initialise(Blackboard blackboard) { }
+        protected override void Terminate(Blackboard  blackboard) { }
 
         protected override bool Check(Blackboard blackboard) => blackboard.target = GetFirstBestTarget(blackboard);
 
@@ -29,12 +26,5 @@ namespace ModularBehaviourTree.Conditions
 
             return candidates[0]?.transform;
         }
-    }
-
-    [Serializable]
-    internal class FindTargetMemento : Memento
-    {
-        public override Node BuildNode(Library library, List<Node> children) =>
-            new FindTarget(library.Read<float>("range"));
     }
 }

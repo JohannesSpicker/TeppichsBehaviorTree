@@ -1,4 +1,6 @@
-﻿namespace ModularBehaviourTree
+﻿using TeppichsBehaviorTree.Runtime.ModularBehaviourTree.Core;
+
+namespace TeppichsBehaviorTree.Runtime.Core.Primitives
 {
     //[CreateAssetMenu(fileName = "FILENAME", menuName = "MENUNAME", order = 0)]
     /// <summary>
@@ -11,7 +13,6 @@
     public abstract class Decorator : Node
     {
         protected Node node;
-        public Decorator() { }
         protected Decorator(Node                         node) { this.node = node; }
         protected override NodeState Continue(Blackboard blackboard) => node.Tick(blackboard);
     }

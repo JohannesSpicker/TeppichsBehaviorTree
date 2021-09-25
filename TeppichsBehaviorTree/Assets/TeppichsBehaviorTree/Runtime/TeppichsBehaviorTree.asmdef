@@ -1,16 +1,16 @@
 {
-    "name": "Unity.TeppichsBehaviorTree",
-    "rootNamespace": "",
-    "references": [
-        "GUID:421fd12279173a649a2ff04b70fb29de"
-    ],
-    "includePlatforms": [],
-    "excludePlatforms": [],
-    "allowUnsafeCode": false,
-    "overrideReferences": false,
-    "precompiledReferences": [],
-    "autoReferenced": true,
-    "defineConstraints": [],
-    "versionDefines": [],
-    "noEngineReferences": false
+  "name": "Unity.TeppichsBehaviorTree",
+  "rootNamespace": "",
+  "references": [
+    "GUID:421fd12279173a649a2ff04b70fb29de"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
 }

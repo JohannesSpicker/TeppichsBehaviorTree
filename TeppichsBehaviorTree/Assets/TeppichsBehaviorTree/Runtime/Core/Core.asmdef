@@ -1,5 +1,5 @@
 {
-    "name": "ModularBehaviourTree",
+    "name": "Core",
     "rootNamespace": "",
     "references": [
         "GUID:421fd12279173a649a2ff04b70fb29de",

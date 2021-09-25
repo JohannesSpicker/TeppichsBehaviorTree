@@ -1,14 +1,14 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using ModularBehaviourTree;
-using TeppichsBehaviorTree.Editor.TreeBuilderEditor;
+using TeppichsBehaviorTree.Runtime;
+using TeppichsBehaviorTree.Runtime.TreeBuilder;
 using TeppichsBehaviorTree.TreeBuilder;
 using UnityEditor;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-namespace TeppichsBehaviorTree.Editor.TreeRunnerEditor
+namespace TeppichsBehaviorTree.Editor.TreeBuilderEditor
 {
     public class TreeBuilderGraphSaveUtility
     {
@@ -145,9 +145,7 @@ namespace TeppichsBehaviorTree.Editor.TreeRunnerEditor
             foreach (NodeData nodeData in containerCache.nodeData)
             {
                 TreeBuilderNode tempNode =
-                    TreeBuilderNodeFactory.CreateTreeBuilderNode(targetGraphView,
-                                                                 nodeData.memento.BuildNode(null, null).GetType(),
-                                                                 Vector2.zero);
+                    TreeBuilderNodeFactory.CreateTreeBuilderNode(targetGraphView, nodeData.nodeType, Vector2.zero);
 
                 tempNode.Guid = nodeData.guid;
                 targetGraphView.AddElement(tempNode);

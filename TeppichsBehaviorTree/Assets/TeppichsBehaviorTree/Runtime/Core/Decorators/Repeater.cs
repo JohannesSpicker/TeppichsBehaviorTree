@@ -1,14 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using TeppichsTools.Data;
+﻿using TeppichsBehaviorTree.Runtime.Core.Primitives;
+using TeppichsBehaviorTree.Runtime.ModularBehaviourTree.Core;
 
-namespace ModularBehaviourTree.Core.Decorators
+namespace TeppichsBehaviorTree.Runtime.Core.Decorators
 {
     internal class Repeater : Decorator
     {
         private readonly uint repetitions;
         private          uint counter;
-        public Repeater() { }
         public Repeater(Node node, uint repetitions) : base(node) { this.repetitions = repetitions; }
 
         protected override void Initialise(Blackboard blackboard) => counter = 0;
@@ -26,14 +24,6 @@ namespace ModularBehaviourTree.Core.Decorators
             return NodeState.Success;
         }
 
-        protected override void    Terminate(Blackboard blackboard) { }
-        internal override  Memento BuildMemento()                   => new RepeaterMemento();
-    }
-
-    [Serializable]
-    internal class RepeaterMemento : Memento
-    {
-        public override Node BuildNode(Library library, List<Node> children) =>
-            new Repeater(children[0], library.Read<uint>("repetitions"));
+        protected override void Terminate(Blackboard blackboard) { }
     }
 }

@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Reflection;
+using TeppichsBehaviorTree.Runtime.ModularBehaviourTree.Core;
 using TeppichsTools.Data;
 
-namespace ModularBehaviourTree
+namespace TeppichsBehaviorTree.Runtime.Core.Primitives
 {
     //[CreateAssetMenu(fileName = "FILENAME", menuName = "MENUNAME", order = 0)]
     /// <summary>
@@ -70,18 +72,29 @@ namespace ModularBehaviourTree
         /// </summary>
         protected abstract void Terminate(Blackboard blackboard);
 
-        internal abstract Memento BuildMemento();
-    }
+        internal static Node BuildNode(Type nodeType, Library library, List<Node> children)
+        {
+            if (!nodeType.IsSubclassOf(typeof(Node)))
+                return null;
 
-    [Serializable]
-    public abstract class Memento
-    {
-        public abstract Node BuildNode(Library library, List<Node> children);
-    }
+            ConstructorInfo cstr = GetLongestConstructor(nodeType);
 
-    [Serializable]
-    public class MockMemento : Memento
-    {
-        public override Node BuildNode(Library library, List<Node> children) => throw new NotImplementedException();
+            //get parameters
+            ParameterInfo[] parameters = cstr.GetParameters();
+
+            //get value per parameter
+            List<object> filledOut = new List<object>();
+
+            foreach (ParameterInfo parameterInfo in parameters)
+                if (parameterInfo.ParameterType == typeof(List<Node>)) //children
+                    filledOut.Add(children);
+                else
+                    filledOut.Add(library.Read(parameterInfo.ParameterType, parameterInfo.Name));
+
+            //put values in constructor to make node
+            return cstr.Invoke(BindingFlags.Default, filledOut.ToArray()) as Node;
+        }
+
+        private static ConstructorInfo GetLongestConstructor(Type type) => null;
     }
 }

@@ -6,7 +6,7 @@ using UnityEditor;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.UIElements;
-using Node = ModularBehaviourTree.Node;
+using Node = TeppichsBehaviorTree.Runtime.Core.Primitives.Node;
 
 namespace TeppichsBehaviorTree.Editor.TreeBuilderEditor
 {

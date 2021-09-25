@@ -2,7 +2,8 @@
     "name": "Unity.TeppichsBehaviorTree.Editor",
     "rootNamespace": "",
     "references": [
-        "GUID:8b48682bd9db70548b815786f0ec86cd"
+        "GUID:8b48682bd9db70548b815786f0ec86cd",
+        "GUID:ebc8aa3a2559e874cb0ee7c9f7a62cfa"
     ],
     "includePlatforms": [
         "Editor"

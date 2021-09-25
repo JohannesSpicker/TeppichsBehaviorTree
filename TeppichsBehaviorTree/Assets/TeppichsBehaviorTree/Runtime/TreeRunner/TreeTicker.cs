@@ -1,4 +1,5 @@
-﻿using ModularBehaviourTree;
+﻿using TeppichsBehaviorTree.Runtime.Core.Primitives;
+using TeppichsBehaviorTree.Runtime.ModularBehaviourTree.Core;
 using UnityEngine;
 using UnityEngine.AI;
 

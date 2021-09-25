@@ -1,6 +1,8 @@
-﻿using ModularBehaviourTree;
-using ModularBehaviourTree.Composites;
-using NUnit.Framework;
+﻿using NUnit.Framework;
+using TeppichsBehaviorTree.Runtime.Core.Composites;
+using TeppichsBehaviorTree.Runtime.Core.Primitives;
+using TeppichsBehaviorTree.Runtime.ModularBehaviourTree.Core;
+using TeppichsBehaviorTree.Tests.Editor;
 
 namespace Tests.PrimitiveTests
 {
