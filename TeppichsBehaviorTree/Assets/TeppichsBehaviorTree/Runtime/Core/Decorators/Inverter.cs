@@ -1,13 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using TeppichsTools.Data;
+using TeppichsBehaviorTree.Runtime.Core.Primitives;
+using TeppichsBehaviorTree.Runtime.ModularBehaviourTree.Core;
 
-namespace ModularBehaviourTree.Core.Decorators
+namespace TeppichsBehaviorTree.Runtime.Core.Decorators
 {
     internal class Inverter : Decorator
     {
-        public Inverter(Node node) : base(node) { }
-        public Inverter() { }
+        public Inverter(Node                          node) : base(node) { }
         protected override void Initialise(Blackboard blackboard) { }
 
         protected override NodeState Continue(Blackboard blackboard)
@@ -24,13 +23,5 @@ namespace ModularBehaviourTree.Core.Decorators
         }
 
         protected override void Terminate(Blackboard blackboard) { }
-
-        internal override Memento BuildMemento() => new InverterMemento();
-    }
-
-    [Serializable]
-    internal class InverterMemento : Memento
-    {
-        public override Node BuildNode(Library library, List<Node> children) => new Inverter(children[0]);
     }
 }

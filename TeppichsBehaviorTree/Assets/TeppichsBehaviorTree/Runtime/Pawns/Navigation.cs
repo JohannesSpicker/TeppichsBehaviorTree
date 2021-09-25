@@ -5,7 +5,7 @@ namespace Pawns
 {
     public class Navigation
     {
-        private NavMeshAgent navMeshAgent;
+        private readonly NavMeshAgent navMeshAgent;
 
         public Navigation(NavMeshAgent navMeshAgent) { this.navMeshAgent = navMeshAgent; }
 

@@ -1,5 +1,4 @@
 using System.Linq;
-using TeppichsBehaviorTree.Editor.TreeRunnerEditor;
 using TeppichsBehaviorTree.TreeBuilder;
 using UnityEditor;
 using UnityEditor.Experimental.GraphView;
@@ -25,31 +24,26 @@ namespace TeppichsBehaviorTree.Editor.TreeBuilderEditor
 
         private void OnDisable() => rootVisualElement.Remove(graphView);
 
-        
         private void GenerateBlackBoard()
         {
             Blackboard blackBoard = new Blackboard(graphView);
-            blackBoard.Add(new BlackboardSection {title = "Exposed Properties"});
+            blackBoard.Add(new BlackboardSection { title = "Exposed Properties" });
 
-            blackBoard.addItemRequested = _blackBoard =>
-            {
-                graphView.AddPropertyToBlackBoard(new ExposedProperty());
-            };
+            blackBoard.addItemRequested = _blackBoard => { graphView.AddPropertyToBlackBoard(new ExposedProperty()); };
 
             blackBoard.editTextRequested = (blackboard, element, newValue) =>
             {
-                string oldPropertyName = ((BlackboardField) element).text;
+                string oldPropertyName = ((BlackboardField)element).text;
 
                 if (graphView.exposedProperties.Any(x => x.propertyName == newValue))
                     EditorUtility.DisplayDialog("Error",
                                                 "This property name already exists, please choose another one!", "OK");
 
-                int propertyIndex =
-                    graphView.exposedProperties.FindIndex(x => x.propertyName == oldPropertyName);
+                int propertyIndex = graphView.exposedProperties.FindIndex(x => x.propertyName == oldPropertyName);
 
                 graphView.exposedProperties[propertyIndex].propertyName = newValue;
 
-                ((BlackboardField) element).text = newValue;
+                ((BlackboardField)element).text = newValue;
             };
 
             blackBoard.SetPosition(new Rect(10, 30, 200, 140));
@@ -57,7 +51,7 @@ namespace TeppichsBehaviorTree.Editor.TreeBuilderEditor
             graphView.Add(blackBoard);
             graphView.blackboard = blackBoard;
         }
-        
+
         [MenuItem("Behavior Tree/TreeBuilder")]
         public static void Open()
         {
@@ -67,7 +61,7 @@ namespace TeppichsBehaviorTree.Editor.TreeBuilderEditor
 
         private void GenerateGraphView()
         {
-            graphView = new TreeBuilderGraphView(this) {name = "Tree Builder Graph View"};
+            graphView = new TreeBuilderGraphView(this) { name = "Tree Builder Graph View" };
             graphView.StretchToParentSize();
             rootVisualElement.Add(graphView);
         }
@@ -82,8 +76,8 @@ namespace TeppichsBehaviorTree.Editor.TreeBuilderEditor
             fileNameTextField.RegisterValueChangedCallback(evt => fileName = evt.newValue);
             toolbar.Add(fileNameTextField);
 
-            toolbar.Add(new Button(() => RequestDataOperation(true)) {text  = "Save Data"});
-            toolbar.Add(new Button(() => RequestDataOperation(false)) {text = "Load Data"});
+            toolbar.Add(new Button(() => RequestDataOperation(true)) { text  = "Save Data" });
+            toolbar.Add(new Button(() => RequestDataOperation(false)) { text = "Load Data" });
 
             rootVisualElement.Add(toolbar);
         }

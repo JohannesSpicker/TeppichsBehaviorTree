@@ -1,16 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using TeppichsTools.Data;
+﻿using TeppichsBehaviorTree.Runtime.Core.Primitives;
+using TeppichsBehaviorTree.Runtime.ModularBehaviourTree.Core;
 using TeppichsTools.Time;
 using UnityEngine;
 
-namespace ModularBehaviourTree.Leaves
+namespace TeppichsBehaviorTree.Runtime.Core.Leaves
 {
     internal class Idle : Leaf
     {
         private Ticker ticker;
-
-        public Idle() { }
 
         public Idle(float duration) { InitializeTicker(duration); }
 
@@ -26,14 +23,6 @@ namespace ModularBehaviourTree.Leaves
             return NodeState.Running;
         }
 
-        protected override void    Terminate(Blackboard blackboard) { }
-        internal override  Memento BuildMemento()                   => new IdleMemento();
-    }
-
-    [Serializable]
-    internal class IdleMemento : Memento
-    {
-        public override Node BuildNode(Library library, List<Node> children) =>
-            new Idle(library.Read<float>("duration"));
+        protected override void Terminate(Blackboard blackboard) { }
     }
 }

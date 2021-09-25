@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "com.teppich.teppichstools": {
-      "version": "0.0.18",
+      "version": "0.0.22",
       "depth": 0,
       "source": "registry",
       "dependencies": {},

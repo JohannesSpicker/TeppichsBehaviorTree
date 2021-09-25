@@ -1,15 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using ModularBehaviourTree;
+using TeppichsBehaviorTree.Runtime.Core.Primitives;
 using TeppichsTools.Data;
 using UnityEngine;
 
-namespace TeppichsBehaviorTree.TreeBuilder
+namespace TeppichsBehaviorTree.Runtime.TreeBuilder
 {
     /// <summary>
-    ///     Base NodeData
-    ///     Memento holds the type.
     ///     Used and wrapped in TreeBuilderGraph.
     /// </summary>
     [Serializable]
@@ -19,12 +17,11 @@ namespace TeppichsBehaviorTree.TreeBuilder
         public Vector2 position;
 
         public Library library;
+        public Type    nodeType;
 
-        public Memento memento;
-
-        public NodeData(Memento memento, string guid, Vector2 position, Library library)
+        public NodeData(Type nodeType, string guid, Vector2 position, Library library)
         {
-            this.memento  = memento;
+            this.nodeType = nodeType;
             this.guid     = guid;
             this.position = position;
             this.library  = new Library(library);
@@ -33,23 +30,17 @@ namespace TeppichsBehaviorTree.TreeBuilder
         public static NodeData TypeToNodeData(Type nodeType)
         {
             if (nodeType.IsSubclassOf(typeof(Node)) && !nodeType.Name.Contains("Mock")
-                                                    && !nodeType.Name.Contains("Test")
-                                                    && HasDefaultConstructor(nodeType))
-            {
-                Memento memento = (Activator.CreateInstance(nodeType) as Node)?.BuildMemento();
-
-                if (memento != null)
-                    return new NodeData(memento, Guid.NewGuid().ToString(), Vector2.zero, new Library());
-            }
+                                                    && !nodeType.Name
+                                                                .Contains("Test")) //&& HasDefaultConstructor(nodeType))
+                return new NodeData(nodeType, Guid.NewGuid().ToString(), Vector2.zero, new Library());
 
             return null;
         }
 
-        private static bool HasDefaultConstructor(Type type) =>
-            type.GetConstructors().Any(t => t.GetParameters().Count() == 0);
+        //private static bool HasDefaultConstructor(Type type) =>
+        //    type.GetConstructors().Any(t => !t.GetParameters().Any());
 
-        public static Type NodeDataToType(NodeData nodeData) =>
-            nodeData.memento.BuildNode(new Library(), null).GetType();
+        public virtual Node BuildNode() => Node.BuildNode(nodeType, library, null);
     }
 
     /// <summary>
@@ -61,22 +52,14 @@ namespace TeppichsBehaviorTree.TreeBuilder
     {
         public List<NodeDataWithChildren> children;
 
-        public NodeDataWithChildren(Memento                    memento, string guid, Vector2 position, Library library,
-                                    List<NodeDataWithChildren> children) : base(memento, guid, position, library)
+        public NodeDataWithChildren(Type                       nodeType, string guid, Vector2 position, Library library,
+                                    List<NodeDataWithChildren> children) : base(nodeType, guid, position, library)
         {
             this.children = children;
         }
 
-        public Node BuildNode() => memento.BuildNode(library, BuildChildren());
+        public override Node BuildNode() => Node.BuildNode(nodeType, library, BuildChildren());
 
-        private List<Node> BuildChildren()
-        {
-            List<Node> nodes = new List<Node>();
-
-            foreach (NodeDataWithChildren child in children)
-                nodes.Add(child.BuildNode());
-
-            return nodes;
-        }
+        private List<Node> BuildChildren() => children.Select(child => child.BuildNode()).ToList();
     }
 }

@@ -1,7 +1,8 @@
 ﻿using System.Collections.Generic;
+using TeppichsBehaviorTree.Runtime.ModularBehaviourTree.Core;
 using UnityEngine;
 
-namespace ModularBehaviourTree
+namespace TeppichsBehaviorTree.Runtime.Core.Primitives
 {
     //[UnityEngine.CreateAssetMenu(fileName = "FILENAME", menuName = "MENUNAME", order = 0)]
     /// <summary>
@@ -18,7 +19,6 @@ namespace ModularBehaviourTree
     {
         protected                  int        cursor;
         [SerializeField] protected List<Node> nodes;
-        protected Composite() { }
         public Composite(List<Node> nodes) { this.nodes = nodes; }
 
         protected override void Initialise(Blackboard blackboard) => cursor = 0;

@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.AI;
 
-namespace ModularBehaviourTree
+namespace TeppichsBehaviorTree.Runtime.ModularBehaviourTree.Core
 {
     public class Blackboard
     {

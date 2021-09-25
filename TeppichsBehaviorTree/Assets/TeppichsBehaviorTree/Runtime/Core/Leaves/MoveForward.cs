@@ -1,9 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using TeppichsTools.Data;
+﻿using TeppichsBehaviorTree.Runtime.Core.Primitives;
+using TeppichsBehaviorTree.Runtime.ModularBehaviourTree.Core;
 using UnityEngine;
 
-namespace ModularBehaviourTree.Leaves
+namespace TeppichsBehaviorTree.Runtime.Core.Leaves
 {
     internal class MoveForward : Leaf
     {
@@ -20,13 +19,5 @@ namespace ModularBehaviourTree.Leaves
 
         protected override void Terminate(Blackboard blackboard) =>
             blackboard.navMeshAgent.SetDestination(blackboard.navMeshAgent.transform.position);
-
-        internal override Memento BuildMemento() => new MoveForwardMemento();
-    }
-
-    [Serializable]
-    internal class MoveForwardMemento : Memento
-    {
-        public override Node BuildNode(Library library, List<Node> children) => new MoveForward();
     }
 }

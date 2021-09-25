@@ -1,17 +1,17 @@
 {
-    "name": "TreeBuilder",
-    "rootNamespace": "",
-    "references": [
-        "GUID:421fd12279173a649a2ff04b70fb29de",
-        "GUID:ebc8aa3a2559e874cb0ee7c9f7a62cfa"
-    ],
-    "includePlatforms": [],
-    "excludePlatforms": [],
-    "allowUnsafeCode": false,
-    "overrideReferences": false,
-    "precompiledReferences": [],
-    "autoReferenced": true,
-    "defineConstraints": [],
-    "versionDefines": [],
-    "noEngineReferences": false
+  "name": "TreeBuilder",
+  "rootNamespace": "",
+  "references": [
+    "GUID:421fd12279173a649a2ff04b70fb29de",
+    "GUID:ebc8aa3a2559e874cb0ee7c9f7a62cfa"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
 }

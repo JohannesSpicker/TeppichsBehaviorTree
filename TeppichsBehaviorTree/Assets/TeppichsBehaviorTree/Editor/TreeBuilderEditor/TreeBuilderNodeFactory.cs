@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using ModularBehaviourTree;
-using TeppichsBehaviorTree.TreeBuilder;
+using TeppichsBehaviorTree.Runtime.Core.Primitives;
+using TeppichsBehaviorTree.Runtime.TreeBuilder;
 using TeppichsTools.Data;
 using UnityEditor.Experimental.GraphView;
 using UnityEditor.UIElements;
@@ -21,9 +21,8 @@ namespace TeppichsBehaviorTree.Editor.TreeBuilderEditor
         public static TreeBuilderNode GenerateEntryPoint()
         {
             TreeBuilderNode node =
-                new TreeBuilderNode(true,
-                                    new NodeData(new MockMemento(), Guid.NewGuid().ToString(), Vector2.up,
-                                                 new Library()), "NoTitle");
+                new TreeBuilderNode(true, new NodeData(null, Guid.NewGuid().ToString(), Vector2.up, new Library()),
+                                    "NoTitle");
 
             Port generatedPort = GeneratePort(node, Direction.Output);
             generatedPort.portName = "Next";
@@ -114,20 +113,25 @@ namespace TeppichsBehaviorTree.Editor.TreeBuilderEditor
             {
                 Type parameterType = parameter.ParameterType;
 
-                dynamic field = null;
-
                 if (parameterType == typeof(string))
                 {
-                    field       = new TextField(parameter.Name);
-                    field.value = "";
+                    TextField field = new TextField(parameter.Name) { value = "" };
+                    treeBuilderNode.mainContainer.Add(field);
+//field.RegisterValueChangedCallback(evt => node)
                 }
                 else if (parameterType == typeof(float))
                 {
-                    field       = new FloatField(parameter.Name);
-                    field.value = 0f;
+                    FloatField field = new FloatField(parameter.Name) { value = 0f };
+                    treeBuilderNode.mainContainer.Add(field);
                 }
 
-                treeBuilderNode.mainContainer.Add(field);
+                /*
+                textField.RegisterValueChangedCallback(evt =>
+                {
+                    dialogueNode.dialogueText = evt.newValue;
+                    dialogueNode.title        = evt.newValue;
+                });
+                */
             }
         }
 
@@ -178,10 +182,7 @@ namespace TeppichsBehaviorTree.Editor.TreeBuilderEditor
 
         #region Old Attempts
 
-        public static TreeBuilderNode CreateTreeBuilderNode<T>(Memento memento) where T : ModularBehaviourTree.Node =>
-            null;
-
-        public static TreeBuilderNode CreateNode(ModularBehaviourTree.Node baseNode)
+        public static TreeBuilderNode CreateNode(Runtime.Core.Primitives.Node baseNode)
         {
             //var node = new TreeBuilderNode 
             //    {type = baseNode.GetType(), Guid = Guid.NewGuid().ToString()};

@@ -1,4 +1,6 @@
-﻿namespace ModularBehaviourTree
+﻿using TeppichsBehaviorTree.Runtime.ModularBehaviourTree.Core;
+
+namespace TeppichsBehaviorTree.Runtime.Core.Primitives
 {
     /// <summary>
     ///     Conditions are also leaf nodes in the tree and are the tree’s primary way of checking for information in the world.

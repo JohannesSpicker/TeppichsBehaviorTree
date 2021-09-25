@@ -1,13 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using TeppichsTools.Data;
+﻿using System.Collections.Generic;
+using TeppichsBehaviorTree.Runtime.Core.Primitives;
+using TeppichsBehaviorTree.Runtime.ModularBehaviourTree.Core;
 
-namespace ModularBehaviourTree.Composites
+namespace TeppichsBehaviorTree.Runtime.Core.Composites
 {
     internal class Selector : Composite
     {
         internal Selector(List<Node> nodes) : base(nodes) { }
-        public Selector() { }
 
         protected override NodeState Continue(Blackboard blackboard)
         {
@@ -21,13 +20,5 @@ namespace ModularBehaviourTree.Composites
 
             return NodeState.Failure;
         }
-
-        internal override Memento BuildMemento() => new SelectorMemento();
-    }
-
-    [Serializable]
-    internal class SelectorMemento : Memento
-    {
-        public override Node BuildNode(Library library, List<Node> children) => new Selector(children);
     }
 }
