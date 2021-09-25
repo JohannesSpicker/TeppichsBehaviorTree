@@ -2,12 +2,12 @@ using System.Linq;
 using TeppichsBehaviorTree.Editor.TreeRunnerEditor;
 using TeppichsBehaviorTree.TreeBuilder;
 using UnityEditor;
+using UnityEditor.Experimental.GraphView;
 using UnityEditor.UIElements;
 using UnityEngine;
 using UnityEngine.UIElements;
-using UnityEditor.Experimental.GraphView;
 
-namespace TeppichsBehaviorTree.Editor.TreeRunnerEditor
+namespace TeppichsBehaviorTree.Editor.TreeBuilderEditor
 {
     public class TreeBuilderWindow : EditorWindow
     {
@@ -98,8 +98,8 @@ namespace TeppichsBehaviorTree.Editor.TreeRunnerEditor
             miniMap.SetPosition(new Rect(coords.x, coords.y, 200, 140));
             graphView.Add(miniMap);
         }
-        
-        public void RequestDataOperation(bool save)
+
+        private void RequestDataOperation(bool save)
         {
             if (string.IsNullOrEmpty(fileName))
             {

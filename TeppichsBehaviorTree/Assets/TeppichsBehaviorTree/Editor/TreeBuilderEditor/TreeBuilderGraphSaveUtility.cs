@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using ModularBehaviourTree;
+using TeppichsBehaviorTree.Editor.TreeBuilderEditor;
 using TeppichsBehaviorTree.TreeBuilder;
 using UnityEditor;
 using UnityEditor.Experimental.GraphView;
@@ -11,14 +12,34 @@ namespace TeppichsBehaviorTree.Editor.TreeRunnerEditor
 {
     public class TreeBuilderGraphSaveUtility
     {
-        private TreeContainer        _containerCache;
-        private TreeBuilderGraphView _targetGraphView;
+        private TreeContainer        containerCache;
+        private TreeBuilderGraphView targetGraphView;
 
-        private List<Edge>            Edges => _targetGraphView.edges.ToList();
-        private List<TreeBuilderNode> Nodes => _targetGraphView.nodes.ToList().Cast<TreeBuilderNode>().ToList();
+        private List<Edge>            Edges => targetGraphView.edges.ToList();
+        private List<TreeBuilderNode> Nodes => targetGraphView.nodes.ToList().Cast<TreeBuilderNode>().ToList();
 
         public static TreeBuilderGraphSaveUtility GetInstance(TreeBuilderGraphView targetGraphView) =>
-            new TreeBuilderGraphSaveUtility {_targetGraphView = targetGraphView};
+            new TreeBuilderGraphSaveUtility { targetGraphView = targetGraphView };
+
+        #region Clear
+
+        private void ClearGraph()
+        {
+            Nodes.Find(x => x.entryPoint).Guid = containerCache.links[0].baseNodeGuid;
+
+            foreach (TreeBuilderNode node in Nodes.Where(node => !node.entryPoint))
+            {
+                //remove edges connected to this node
+                Edges.Where(x => x.input.node == node).ToList().ForEach(edge => targetGraphView.RemoveElement(edge));
+
+                //then remove the node
+                targetGraphView.RemoveElement(node);
+            }
+        }
+
+        #endregion
+
+        #region Save
 
         public void SaveGraph(string fileName)
         {
@@ -39,7 +60,7 @@ namespace TeppichsBehaviorTree.Editor.TreeRunnerEditor
         }
 
         private void SaveExposedProperties(TreeContainer dialogueContainer) =>
-            dialogueContainer.exposedProperties.AddRange(_targetGraphView.exposedProperties);
+            dialogueContainer.exposedProperties.AddRange(targetGraphView.exposedProperties);
 
         private bool SaveNodes(TreeContainer treeContainer)
         {
@@ -48,13 +69,12 @@ namespace TeppichsBehaviorTree.Editor.TreeRunnerEditor
 
             Edge[] connectedPorts = Edges.Where(x => x.input.node != null).ToArray();
 
-            for (int i = 0; i < connectedPorts.Length; i++)
+            foreach (Edge t in connectedPorts)
             {
-                TreeBuilderNode outputNode = connectedPorts[i].output.node as TreeBuilderNode;
-                TreeBuilderNode inputNode  = connectedPorts[i].input.node as TreeBuilderNode;
+                TreeBuilderNode outputNode = t.output.node as TreeBuilderNode;
+                TreeBuilderNode inputNode  = t.input.node as TreeBuilderNode;
 
-                treeContainer.links.Add(new LinkData(outputNode.Guid, connectedPorts[i].output.portName,
-                                                     inputNode.Guid));
+                treeContainer.links.Add(new LinkData(outputNode.Guid, t.output.portName, inputNode.Guid));
             }
 
             foreach (TreeBuilderNode dialogueNode in Nodes.Where(node => !node.entryPoint))
@@ -63,11 +83,15 @@ namespace TeppichsBehaviorTree.Editor.TreeRunnerEditor
             return true;
         }
 
+        #endregion
+
+        #region Load
+
         public void LoadGraph(string fileName)
         {
-            _containerCache = Resources.Load<TreeContainer>(fileName);
+            containerCache = Resources.Load<TreeContainer>(fileName);
 
-            if (_containerCache == null)
+            if (containerCache == null)
             {
                 EditorUtility.DisplayDialog("File Not Found", "Target dialogue graph file does not exists!", "OK");
 
@@ -82,72 +106,58 @@ namespace TeppichsBehaviorTree.Editor.TreeRunnerEditor
 
         private void CreateExposedProperties()
         {
-            _targetGraphView.ClearBlackBoardAndExposedProperties();
+            targetGraphView.ClearBlackBoardAndExposedProperties();
 
-            foreach (ExposedProperty exposedProperty in _containerCache.exposedProperties)
-                _targetGraphView.AddPropertyToBlackBoard(exposedProperty);
+            foreach (ExposedProperty exposedProperty in containerCache.exposedProperties)
+                targetGraphView.AddPropertyToBlackBoard(exposedProperty);
         }
 
         private void ConnectNodes()
         {
             for (int i = 0; i < Nodes.Count; i++)
             {
-                List<LinkData> connections = _containerCache.links.Where(x => x.baseNodeGuid == Nodes[i].Guid).ToList();
+                List<LinkData> connections = containerCache.links.Where(x => x.baseNodeGuid == Nodes[i].Guid).ToList();
 
                 for (int j = 0; j < connections.Count; j++)
                 {
                     string          targetNodeGuid = connections[j].targetNodeGuid;
                     TreeBuilderNode targetNode     = Nodes.First(x => x.Guid == targetNodeGuid);
-                    LinkNodes(Nodes[i].outputContainer[j].Q<Port>(), (Port) targetNode.inputContainer[0]);
+                    LinkNodes(Nodes[i].outputContainer[j].Q<Port>(), (Port)targetNode.inputContainer[0]);
 
                     targetNode.SetPosition(new
-                                               Rect(_containerCache.nodeData.First(x => x.guid == targetNodeGuid).position,
-                                                    _targetGraphView.defaultNodeSize));
+                                               Rect(containerCache.nodeData.First(x => x.guid == targetNodeGuid).position,
+                                                    targetGraphView.defaultNodeSize));
                 }
             }
         }
 
         private void LinkNodes(Port input, Port output)
         {
-            Edge tempEdge = new Edge {input = input, output = output};
+            Edge tempEdge = new Edge { input = input, output = output };
 
             tempEdge?.input.Connect(tempEdge);
             tempEdge?.output.Connect(tempEdge);
-            _targetGraphView.Add(tempEdge);
+            targetGraphView.Add(tempEdge);
         }
 
         private void CreateNodes()
         {
-            foreach (NodeData nodeData in _containerCache.nodeData)
+            foreach (NodeData nodeData in containerCache.nodeData)
             {
                 TreeBuilderNode tempNode =
-                    _targetGraphView.CreateTreeBuilderNode(nodeData.memento.BuildNode(null, null).GetType(),
-                                                           Vector2.zero);
+                    TreeBuilderNodeFactory.CreateTreeBuilderNode(targetGraphView,
+                                                                 nodeData.memento.BuildNode(null, null).GetType(),
+                                                                 Vector2.zero);
 
                 tempNode.Guid = nodeData.guid;
-                _targetGraphView.AddElement(tempNode);
+                targetGraphView.AddElement(tempNode);
 
-                List<LinkData> nodePorts = _containerCache.links.Where(x => x.baseNodeGuid == nodeData.guid).ToList();
+                List<LinkData> nodePorts = containerCache.links.Where(x => x.baseNodeGuid == nodeData.guid).ToList();
 
-                nodePorts.ForEach(x => _targetGraphView.AddChoicePort(tempNode, x.portName));
+                nodePorts.ForEach(x => TreeBuilderNodeFactory.AddChoicePort(targetGraphView, tempNode, x.portName));
             }
         }
 
-        private void ClearGraph()
-        {
-            Nodes.Find(x => x.entryPoint).Guid = _containerCache.links[0].baseNodeGuid;
-
-            foreach (TreeBuilderNode node in Nodes)
-            {
-                if (node.entryPoint)
-                    continue;
-
-                //remove edges connected to this node
-                Edges.Where(x => x.input.node == node).ToList().ForEach(edge => _targetGraphView.RemoveElement(edge));
-
-                //then remove the node
-                _targetGraphView.RemoveElement(node);
-            }
-        }
+        #endregion
     }
 }

@@ -2,7 +2,7 @@
 using TeppichsBehaviorTree.TreeBuilder;
 using Node = UnityEditor.Experimental.GraphView.Node;
 
-namespace TeppichsBehaviorTree.Editor.TreeRunnerEditor
+namespace TeppichsBehaviorTree.Editor.TreeBuilderEditor
 {
     /// <summary>
     ///     Visual node seen in the graphView
@@ -12,10 +12,11 @@ namespace TeppichsBehaviorTree.Editor.TreeRunnerEditor
         public  bool     entryPoint;
         private NodeData nodeData;
 
-        public TreeBuilderNode(bool entryPoint, NodeData nodeData)
+        public TreeBuilderNode(bool entryPoint, NodeData nodeData, string title)
         {
             this.entryPoint = entryPoint;
             this.nodeData   = nodeData;
+            this.title      = title;
         }
 
         public string Guid { get => nodeData.guid; set => nodeData.guid = value; }

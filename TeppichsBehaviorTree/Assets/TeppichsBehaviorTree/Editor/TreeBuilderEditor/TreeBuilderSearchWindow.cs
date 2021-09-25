@@ -8,7 +8,7 @@ using UnityEngine;
 using UnityEngine.UIElements;
 using Node = ModularBehaviourTree.Node;
 
-namespace TeppichsBehaviorTree.Editor.TreeRunnerEditor
+namespace TeppichsBehaviorTree.Editor.TreeBuilderEditor
 {
     public class TreeBuilderSearchWindow : ScriptableObject, ISearchWindowProvider
     {
@@ -19,6 +19,9 @@ namespace TeppichsBehaviorTree.Editor.TreeRunnerEditor
 
         public bool OnSelectEntry(SearchTreeEntry searchTreeEntry, SearchWindowContext context)
         {
+            if (!(searchTreeEntry.userData is Type nodeType) || !nodeType.IsSubclassOf(typeof(Node)))
+                return false;
+
             Vector2 worldMousePosition =
                 editorWindow.rootVisualElement.ChangeCoordinatesTo(editorWindow.rootVisualElement.parent,
                                                                    context.screenMousePosition
@@ -26,20 +29,15 @@ namespace TeppichsBehaviorTree.Editor.TreeRunnerEditor
 
             Vector2 localMousePosition = graphView.contentViewContainer.WorldToLocal(worldMousePosition);
 
-            if (searchTreeEntry.userData is Type nodeType && nodeType.IsSubclassOf(typeof(Node)))
-            {
-                graphView.CreateNode(nodeType, localMousePosition);
+            graphView.CreateNode(nodeType, localMousePosition);
 
-                return true;
-            }
-
-            return false;
+            return true;
         }
 
         public List<SearchTreeEntry> CreateSearchTree(SearchWindowContext context)
         {
-            List<SearchTreeEntry> searchTree = new List<SearchTreeEntry>();
-            searchTree.Add(new SearchTreeGroupEntry(new GUIContent("Create Elements")));
+            List<SearchTreeEntry> searchTree =
+                new List<SearchTreeEntry> { new SearchTreeGroupEntry(new GUIContent("Create Elements")) };
 
             string[] lastNamespace = new string[0];
 
@@ -77,7 +75,7 @@ namespace TeppichsBehaviorTree.Editor.TreeRunnerEditor
             }
 
             static SearchTreeEntry TypeToSearchTreeEntry(Type type, int level) =>
-                new SearchTreeEntry(new GUIContent(type.Name)) {userData = type, level = level};
+                new SearchTreeEntry(new GUIContent(type.Name)) { userData = type, level = level };
         }
 
         public void Initialize(TreeBuilderGraphView graphView, EditorWindow editorWindow)
